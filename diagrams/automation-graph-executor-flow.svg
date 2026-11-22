@@ -1,0 +1,68 @@
+<svg width="820" height="735" viewBox="0 0 820 735" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#5F5E5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#534AB7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="820" height="735" fill="#FFFFFF"/>
+<g fill="none" stroke="#5F5E5A" stroke-width="1.4" marker-end="url(#a)">
+<path d="M380 66V90"/><path d="M380 142V166"/><path d="M380 218V242"/><path d="M380 294V318"/>
+<path d="M380 370V394"/><path d="M380 446V470"/><path d="M380 522V546"/>
+<path d="M270 573H182"/>
+<path d="M95 548V269H268"/>
+<path d="M490 573H598"/>
+<path d="M490 345H598"/>
+<path d="M700 548V372"/>
+<path d="M700 320V296"/>
+</g>
+<path d="M600 558H510V193H492" fill="none" stroke="#534AB7" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#p)"/>
+<g stroke-width="1" text-anchor="middle" dominant-baseline="central">
+<rect x="270" y="16" width="220" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="380" y="41" font-size="13" font-weight="600" fill="#444441">模板 / CSX 流程定义</text>
+<rect x="270" y="92" width="220" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="380" y="112" font-size="13" font-weight="600" fill="#444441">编译校验</text>
+<text x="380" y="130" font-size="11" fill="#5F5E5A">节点、通道、依赖、类型与图指纹</text>
+<rect x="270" y="168" width="220" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="380" y="193" font-size="13" font-weight="600" fill="#444441">新建运行或加载检查点</text>
+<rect x="270" y="244" width="220" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="380" y="264" font-size="13" font-weight="600" fill="#444441">Planner</text>
+<text x="380" y="282" font-size="11" fill="#5F5E5A">根据已提交状态规划下一超步</text>
+<rect x="270" y="320" width="220" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="380" y="345" font-size="13" font-weight="600" fill="#085041">是否有待执行节点？</text>
+<rect x="270" y="396" width="220" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="380" y="416" font-size="13" font-weight="600" fill="#444441">节点执行</text>
+<text x="380" y="434" font-size="11" fill="#5F5E5A">按依赖并行，遵守资源与重试规则</text>
+<rect x="270" y="472" width="220" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="380" y="492" font-size="13" font-weight="600" fill="#3C3489">持久化节点 Outcome</text>
+<text x="380" y="510" font-size="11" fill="#534AB7">结果、错误、尝试身份与局部写入</text>
+<rect x="270" y="548" width="220" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="380" y="573" font-size="13" font-weight="600" fill="#085041">是否具备继续提交条件？</text>
+<rect x="10" y="548" width="170" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="95" y="568" font-size="13" font-weight="600" fill="#3C3489">Barrier 原子提交</text>
+<text x="95" y="586" font-size="11" fill="#534AB7">合并通道写入与新检查点</text>
+<rect x="600" y="548" width="200" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="700" y="568" font-size="13" font-weight="600" fill="#3C3489">持久保存当前位置</text>
+<text x="700" y="586" font-size="11" fill="#534AB7">按语义等待恢复或进入收尾</text>
+<rect x="600" y="320" width="200" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="700" y="345" font-size="13" font-weight="600" fill="#444441">执行已声明的 Finally</text>
+<rect x="600" y="244" width="200" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="700" y="264" font-size="13" font-weight="600" fill="#444441">发布实际结果</text>
+<text x="700" y="282" font-size="11" fill="#5F5E5A">收尾未完成则保留待处理状态</text>
+</g>
+<g font-size="11" fill="#5F5E5A" dominant-baseline="central">
+<text x="392" y="382">有</text>
+<g text-anchor="middle">
+<text x="226" y="552">成功、跳过或</text><text x="226" y="565">显式允许继续</text>
+<text x="554" y="337">无后续工作</text>
+<text x="554" y="588">失败、中断</text><text x="554" y="601">或取消</text>
+</g>
+<text x="708" y="460">需结束正文时</text>
+<text x="518" y="440" fill="#534AB7">可恢复中断</text>
+</g>
+<rect x="10" y="640" width="790" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-dasharray="5 4"/>
+<text x="405" y="662" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">旁路记录：节点结果、屏障提交、最终结果，均写入原生事件、日志与运行记录</text>
+<g font-size="11" fill="#5F5E5A" dominant-baseline="central">
+<rect x="10" y="705" width="14" height="14" rx="3" fill="#E1F5EE" stroke="#0F6E56"/><text x="30" y="712">判断</text>
+<rect x="76" y="705" width="14" height="14" rx="3" fill="#EEEDFE" stroke="#534AB7"/><text x="96" y="712">持久化 / 提交</text>
+<rect x="190" y="705" width="14" height="14" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/><text x="210" y="712">普通步骤</text>
+</g>
+</svg>
