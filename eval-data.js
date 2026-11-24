@@ -1,1 +1,5672 @@
-window.EVAL_BENCHMARK_DATA = {"schemaVersion": 2, "benchmark": {"model": "deepseek-v4.1-flash", "reasoningEffort": "default", "machine": "WIN-BENCH-01", "questionCount": 15, "trialsPerQuestion": 3, "totalTrialsPerVersion": 45, "timeLimitMinutes": 45, "maxPossibleScore": 51, "v1FrozenMedianMin": 11.8}, "versions": {"v1": {"passedTrials": 27, "inLimitPassedTrials": 27, "totalTrials": 45, "coveredQuestions": 12, "coveredInLimitQuestions": 12, "all3StableQuestions": 6, "all3InLimitQuestions": 6, "passAtK": [0.6, 0.733333, 0.8], "passPowK": [0.6, 0.466667, 0.4], "passAtKInLimit": [0.6, 0.733333, 0.8], "passPowKInLimit": [0.6, 0.466667, 0.4], "greenCoefficient": 0.66, "scoreBeforeFalseGreenReview": 15.277847, "zeroPointPasses": 0, "statusBreakdown": {"passed_in_limit": {"count": 27, "trials": ["Q01-T1", "Q01-T2", "Q01-T3", "Q02-T2", "Q02-T3", "Q02A-T1", "Q04-T1", "Q04-T2", "Q04-T3", "Q07-T1", "Q07-T2", "Q07-T3", "Q10-T1", "Q10-T2", "Q10-T3", "Q12-T1", "Q12-T2", "Q12-T3", "Q17-T2", "Q17-T3", "Q17A-T1", "Q17A-T2", "Q17A-T3", "Q18B-T2", "Q19-T1", "Q19-T2", "Q19A-T1"]}, "passed_timeout": {"count": 0, "trials": []}, "failed": {"count": 8, "trials": ["Q02-T1", "Q02A-T2", "Q17-T1", "Q18-T2", "Q19-T3", "Q19A-T2", "Q19A-T3", "Q05-T3"]}, "environment_blocked": {"count": 7, "trials": ["Q18-T1", "Q18-T3", "Q18A-T1", "Q18A-T2", "Q18A-T3", "Q05-T1", "Q05-T2"]}, "manual_stopped": {"count": 2, "trials": ["Q18B-T1", "Q18B-T3"]}, "outbound_violation": {"count": 1, "trials": ["Q02A-T3"]}}, "durationSession": {"p25": 2.46, "p50": 10.34, "p75": 29.99, "p90": 30.0, "mean": 14.26, "max": 48.15, "totalHours": 10.7}, "durationReportedAvgMean": 15.05, "process": {"medianSteps": 98.0, "meanSteps": 118.5, "totalSteps": 5333, "medianToolCalls": 111.0, "meanToolCalls": 129.6, "totalToolCalls": 5831, "totalToolErrors": 43, "toolErrorRate": 0.0074, "topTools": [{"name": "pwsh", "count": 3744}, {"name": "read", "count": 884}, {"name": "edit", "count": 551}, {"name": "write", "count": 413}, {"name": "grep", "count": 130}, {"name": "skill", "count": 45}, {"name": "job_output", "count": 24}, {"name": "glob", "count": 16}]}, "tokens": {"totalOutput": 1880559, "medianOutput": 30987, "meanOutput": 41790, "totalInput": 4470750, "totalCacheRead": 647255296, "cacheHitRate": 0.9931, "outputTokensPerPass": 69650, "outputTokensPerPoint": 123091}}, "v2": {"passedTrials": 44, "inLimitPassedTrials": 43, "totalTrials": 45, "coveredQuestions": 15, "coveredInLimitQuestions": 15, "all3StableQuestions": 14, "all3InLimitQuestions": 13, "passAtK": [0.977778, 1.0, 1.0], "passPowK": [0.977778, 0.955556, 0.933333], "passAtKInLimit": [0.955556, 1.0, 1.0], "passPowKInLimit": [0.955556, 0.911111, 0.866667], "greenCoefficient": 0.984444, "scoreBeforeFalseGreenReview": 37.909027, "zeroPointPasses": 1, "statusBreakdown": {"passed_in_limit": {"count": 43, "trials": ["Q01-T1", "Q01-T2", "Q01-T3", "Q02-T1", "Q02-T2", "Q02-T3", "Q02A-T1", "Q02A-T2", "Q02A-T3", "Q04-T1", "Q04-T2", "Q04-T3", "Q07-T1", "Q07-T2", "Q07-T3", "Q10-T1", "Q10-T2", "Q10-T3", "Q12-T1", "Q12-T2", "Q12-T3", "Q17-T1", "Q17-T2", "Q17-T3", "Q17A-T1", "Q17A-T2", "Q17A-T3", "Q18-T1", "Q18-T2", "Q18-T3", "Q18A-T1", "Q18A-T3", "Q18B-T1", "Q18B-T2", "Q18B-T3", "Q19-T1", "Q19-T2", "Q19-T3", "Q19A-T1", "Q19A-T2", "Q19A-T3", "Q05-T1", "Q05-T3"]}, "passed_timeout": {"count": 1, "trials": ["Q05-T2"]}, "failed": {"count": 1, "trials": ["Q18A-T2"]}, "environment_blocked": {"count": 0, "trials": []}, "manual_stopped": {"count": 0, "trials": []}, "outbound_violation": {"count": 0, "trials": []}}, "durationSession": {"p25": 2.06, "p50": 3.34, "p75": 10.62, "p90": 21.04, "mean": 9.02, "max": 94.87, "totalHours": 6.77}, "durationReportedAvgMean": 9.02, "process": {"medianSteps": 44.0, "meanSteps": 97.3, "totalSteps": 4378, "medianToolCalls": 53.0, "meanToolCalls": 109.0, "totalToolCalls": 4904, "totalToolErrors": 28, "toolErrorRate": 0.0057, "topTools": [{"name": "pwsh", "count": 2888}, {"name": "read", "count": 775}, {"name": "edit", "count": 600}, {"name": "write", "count": 410}, {"name": "job_output", "count": 66}, {"name": "grep", "count": 60}, {"name": "todo_write", "count": 46}, {"name": "present", "count": 45}]}, "tokens": {"totalOutput": 1835509, "medianOutput": 16043, "meanOutput": 40789, "totalInput": 4511052, "totalCacheRead": 787975168, "cacheHitRate": 0.9943, "outputTokensPerPass": 41716, "outputTokensPerPoint": 48419}}}, "dimensions": {"category": [{"key": "基础建图与调度", "label": "基础建图与调度", "questionCount": 3, "questionIds": ["01", "04", "12"], "v1": {"passedTrials": 9, "totalTrials": 9, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 5.629, "medianDurationMin": 1.42, "meanDurationMin": 2.36, "medianSteps": 23.0, "medianToolCalls": 26.0, "totalOutputTokens": 89727}, "v2": {"passedTrials": 9, "totalTrials": 9, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 8.551, "medianDurationMin": 1.55, "meanDurationMin": 1.57, "medianSteps": 23.0, "medianToolCalls": 26.0, "totalOutputTokens": 75375}}, {"key": "文件解析与集成", "label": "文件解析与集成", "questionCount": 2, "questionIds": ["02", "02A"], "v1": {"passedTrials": 3, "totalTrials": 6, "passAt1": 0.5, "passAt3": 1.0, "passPow2": 0.1667, "passPow3": 0.0, "passAt1InLimit": 0.5, "passPow3InLimit": 0.0, "totalScore": 1.533, "medianDurationMin": 11.53, "meanDurationMin": 12.4, "medianSteps": 130.5, "medianToolCalls": 135.5, "totalOutputTokens": 287404}, "v2": {"passedTrials": 6, "totalTrials": 6, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 5.606, "medianDurationMin": 2.16, "meanDurationMin": 2.29, "medianSteps": 29.5, "medianToolCalls": 34.5, "totalOutputTokens": 68535}}, {"key": "代码排障与修复", "label": "代码排障与修复", "questionCount": 2, "questionIds": ["07", "10"], "v1": {"passedTrials": 6, "totalTrials": 6, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 3.773, "medianDurationMin": 2.01, "meanDurationMin": 2.13, "medianSteps": 24.5, "medianToolCalls": 27.0, "totalOutputTokens": 39956}, "v2": {"passedTrials": 6, "totalTrials": 6, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 5.622, "medianDurationMin": 2.03, "meanDurationMin": 2.17, "medianSteps": 30.5, "medianToolCalls": 34.0, "totalOutputTokens": 55234}}, {"key": "动态展开与分支", "label": "动态展开与分支", "questionCount": 4, "questionIds": ["17", "17A", "19", "19A"], "v1": {"passedTrials": 8, "totalTrials": 12, "passAt1": 0.6667, "passAt3": 1.0, "passPow2": 0.4167, "passPow3": 0.25, "passAt1InLimit": 0.6667, "passPow3InLimit": 0.25, "totalScore": 3.804, "medianDurationMin": 13.22, "meanDurationMin": 15.89, "medianSteps": 154.5, "medianToolCalls": 169.0, "totalOutputTokens": 849246}, "v2": {"passedTrials": 12, "totalTrials": 12, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 8.147, "medianDurationMin": 11.41, "meanDurationMin": 13.96, "medianSteps": 120.0, "medianToolCalls": 131.0, "totalOutputTokens": 826336}}, {"key": "AI 节点与复合链路", "label": "AI 节点与复合链路", "questionCount": 4, "questionIds": ["18", "18A", "18B", "05"], "v1": {"passedTrials": 1, "totalTrials": 12, "passAt1": 0.0833, "passAt3": 0.25, "passPow2": 0.0, "passPow3": 0.0, "passAt1InLimit": 0.0833, "passPow3InLimit": 0.0, "totalScore": 0.54, "medianDurationMin": 29.99, "meanDurationMin": 28.56, "medianSteps": 148.5, "medianToolCalls": 164.0, "totalOutputTokens": 614226}, "v2": {"passedTrials": 11, "totalTrials": 12, "passAt1": 0.9167, "passAt3": 1.0, "passPow2": 0.8333, "passPow3": 0.75, "passAt1InLimit": 0.8333, "passPow3InLimit": 0.5, "totalScore": 9.982, "medianDurationMin": 8.75, "meanDurationMin": 16.47, "medianSteps": 111.0, "medianToolCalls": 127.0, "totalOutputTokens": 810029}}], "tier": [{"key": "L1 基础", "label": "L1 基础", "questionCount": 4, "questionIds": ["01", "04", "07", "12"], "v1": {"passedTrials": 12, "totalTrials": 12, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 7.55, "medianDurationMin": 1.35, "meanDurationMin": 2.1, "medianSteps": 20.5, "medianToolCalls": 24.5, "totalOutputTokens": 102896}, "v2": {"passedTrials": 12, "totalTrials": 12, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 11.379, "medianDurationMin": 1.57, "meanDurationMin": 1.65, "medianSteps": 23.0, "medianToolCalls": 29.5, "totalOutputTokens": 100574}}, {"key": "L2 进阶", "label": "L2 进阶", "questionCount": 7, "questionIds": ["02", "02A", "10", "17", "17A", "19", "19A"], "v1": {"passedTrials": 14, "totalTrials": 21, "passAt1": 0.6667, "passAt3": 1.0, "passPow2": 0.4286, "passPow3": 0.2857, "passAt1InLimit": 0.6667, "passPow3InLimit": 0.2857, "totalScore": 7.188, "medianDurationMin": 11.72, "meanDurationMin": 13.04, "medianSteps": 138.0, "medianToolCalls": 147.0, "totalOutputTokens": 1163437}, "v2": {"passedTrials": 21, "totalTrials": 21, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 16.548, "medianDurationMin": 3.53, "meanDurationMin": 8.98, "medianSteps": 49.0, "medianToolCalls": 59.0, "totalOutputTokens": 924906}}, {"key": "L3 复合 / AI", "label": "L3 复合 / AI", "questionCount": 4, "questionIds": ["18", "18A", "18B", "05"], "v1": {"passedTrials": 1, "totalTrials": 12, "passAt1": 0.0833, "passAt3": 0.25, "passPow2": 0.0, "passPow3": 0.0, "passAt1InLimit": 0.0833, "passPow3InLimit": 0.0, "totalScore": 0.54, "medianDurationMin": 29.99, "meanDurationMin": 28.56, "medianSteps": 148.5, "medianToolCalls": 164.0, "totalOutputTokens": 614226}, "v2": {"passedTrials": 11, "totalTrials": 12, "passAt1": 0.9167, "passAt3": 1.0, "passPow2": 0.8333, "passPow3": 0.75, "passAt1InLimit": 0.8333, "passPow3InLimit": 0.5, "totalScore": 9.982, "medianDurationMin": 8.75, "meanDurationMin": 16.47, "medianSteps": 111.0, "medianToolCalls": 127.0, "totalOutputTokens": 810029}}], "aiNode": [{"key": "False", "label": "常规 Pregel / 工具编排", "questionCount": 11, "questionIds": ["01", "02", "02A", "04", "07", "10", "12", "17", "17A", "19", "19A"], "v1": {"passedTrials": 26, "totalTrials": 33, "passAt1": 0.7879, "passAt3": 1.0, "passPow2": 0.6364, "passPow3": 0.5455, "passAt1InLimit": 0.7879, "passPow3InLimit": 0.5455, "totalScore": 14.738, "medianDurationMin": 5.19, "meanDurationMin": 9.06, "medianSteps": 58.0, "medianToolCalls": 75.0, "totalOutputTokens": 1266333}, "v2": {"passedTrials": 33, "totalTrials": 33, "passAt1": 1.0, "passAt3": 1.0, "passPow2": 1.0, "passPow3": 1.0, "passAt1InLimit": 1.0, "passPow3InLimit": 1.0, "totalScore": 27.927, "medianDurationMin": 2.29, "meanDurationMin": 6.32, "medianSteps": 32.0, "medianToolCalls": 39.0, "totalOutputTokens": 1025480}}, {"key": "True", "label": "含 AI 节点 / DSH 嵌套", "questionCount": 4, "questionIds": ["18", "18A", "18B", "05"], "v1": {"passedTrials": 1, "totalTrials": 12, "passAt1": 0.0833, "passAt3": 0.25, "passPow2": 0.0, "passPow3": 0.0, "passAt1InLimit": 0.0833, "passPow3InLimit": 0.0, "totalScore": 0.54, "medianDurationMin": 29.99, "meanDurationMin": 28.56, "medianSteps": 148.5, "medianToolCalls": 164.0, "totalOutputTokens": 614226}, "v2": {"passedTrials": 11, "totalTrials": 12, "passAt1": 0.9167, "passAt3": 1.0, "passPow2": 0.8333, "passPow3": 0.75, "passAt1InLimit": 0.8333, "passPow3InLimit": 0.5, "totalScore": 9.982, "medianDurationMin": 8.75, "meanDurationMin": 16.47, "medianSteps": 111.0, "medianToolCalls": 127.0, "totalOutputTokens": 810029}}]}, "questions": [{"id": "01", "title": "Hello Pregel", "weight": 1, "category": "基础建图与调度", "tier": "L1 基础", "aiNode": false, "mode": "新建图", "isRetestedInV2": false, "prompt": "# Hello Pregel\r\n\r\n写一个可手动运行的 Pregel 自动化。它要读取可覆盖的问候参数，默认输出 `Hello, Pregel!`。用同一图实际运行默认输入和自选的一条不同问候，验证日志和图输出各自来自该次输入。交付入口 CSX、输入文件、CLI 校验及完整运行日志，并给出两次运行 ID。\r\n", "v2VerdictsPath": "q01-verdicts.json", "deltaPassed": 0, "deltaScore": 1.0404, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 4.94, "avgDurationMin": 4.83, "medianSteps": 57.0, "medianTools": 75.0, "reportedTokens": 58725, "tokens": {"input": 142902, "cacheRead": 6241664, "output": 58725}, "score": 1.767662, "scorePassAt1Part": 1.124876, "scorePassAt3Part": 0.642786, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.7164, "steps": 38, "toolCalls": 47, "toolErrors": 0, "topTools": {"pwsh": 20, "read": 10, "write": 7, "edit": 6, "skill": 1, "working_directory": 1}, "allTools": {"skill": 1, "working_directory": 1, "read": 10, "pwsh": 20, "glob": 1, "grep": 1, "write": 7, "edit": 6}, "tokens": {"input": 41477, "cacheRead": 1252224, "output": 14554, "totalContext": 1293701, "hasUsage": true}, "cacheHitRate": 0.9679, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.917413, "score": 0.605493}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 5.771, "steps": 66, "toolCalls": 76, "toolErrors": 0, "topTools": {"pwsh": 40, "read": 17, "edit": 8, "write": 7, "grep": 3, "skill": 1}, "allTools": {"skill": 1, "read": 17, "pwsh": 40, "grep": 3, "write": 7, "edit": 8}, "tokens": {"input": 56161, "cacheRead": 2820352, "output": 22774, "totalContext": 2876513, "hasUsage": true}, "cacheHitRate": 0.9805, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.871756, "score": 0.575359}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 4.9902, "steps": 57, "toolCalls": 75, "toolErrors": 0, "topTools": {"pwsh": 36, "read": 17, "write": 12, "edit": 4, "grep": 3, "skill": 1}, "allTools": {"skill": 1, "working_directory": 1, "read": 17, "pwsh": 36, "glob": 1, "grep": 3, "write": 12, "edit": 4}, "tokens": {"input": 45264, "cacheRead": 2169088, "output": 21397, "totalContext": 2214352, "hasUsage": true}, "cacheHitRate": 0.9796, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.889107, "score": 0.58681}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 2.21, "avgDurationMin": 2.21, "medianSteps": 24.0, "medianTools": 34.0, "reportedTokens": 31327, "tokens": {"input": 117885, "cacheRead": 2841088, "output": 31327}, "score": 2.808014, "scorePassAt1Part": 1.952298, "scorePassAt3Part": 0.855715, "trials": [{"trial": 1, "rawStatus": "PASS", "passed": true, "review": "通过全部验收", "durationMin": 2.2912, "steps": 31, "toolCalls": 39, "toolErrors": 0, "topTools": {"pwsh": 20, "read": 10, "write": 5, "todo_write": 3, "present": 1}, "allTools": {"read": 10, "pwsh": 20, "todo_write": 3, "write": 5, "present": 1}, "tokens": {"input": 37623, "cacheRead": 1122432, "output": 10984, "totalContext": 1160055, "hasUsage": true}, "cacheHitRate": 0.9676, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.949084, "score": 0.934321}, {"trial": 2, "rawStatus": "PASS", "passed": true, "review": "通过全部验收", "durationMin": 2.2963, "steps": 23, "toolCalls": 34, "toolErrors": 0, "topTools": {"pwsh": 14, "read": 11, "write": 5, "skill": 1, "grep": 1, "edit": 1}, "allTools": {"skill": 1, "read": 11, "pwsh": 14, "grep": 1, "write": 5, "edit": 1, "present": 1}, "tokens": {"input": 45741, "cacheRead": 964352, "output": 11693, "totalContext": 1010093, "hasUsage": true}, "cacheHitRate": 0.9547, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.948971, "score": 0.934209}, {"trial": 3, "rawStatus": "PASS", "passed": true, "review": "通过全部验收", "durationMin": 2.0552, "steps": 24, "toolCalls": 34, "toolErrors": 0, "topTools": {"pwsh": 17, "read": 8, "write": 5, "edit": 2, "grep": 1, "present": 1}, "allTools": {"read": 8, "pwsh": 17, "grep": 1, "write": 5, "edit": 2, "present": 1}, "tokens": {"input": 34521, "cacheRead": 754304, "output": 8650, "totalContext": 788825, "hasUsage": true}, "cacheHitRate": 0.9562, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.954329, "score": 0.939484}]}}, {"id": "02", "title": "PerfDog XLSX 转 JSON", "weight": 1, "category": "文件解析与集成", "tier": "L2 进阶", "aiNode": false, "mode": "参数接入", "isRetestedInV2": true, "prompt": "# PerfDog XLSX 转 JSON\r\n\r\n用给定的 PerfDogTools 和本机康师傅 CLI，把 `PerfDog-source.xlsx` 导出为完整 JSON。工作簿是脱敏后的基础数据，包含主表与两个子区域。按题目目录内的 Python 虚拟环境准备依赖，记录使用的解释器和依赖处理过程。\r\n\r\n用同一 Pregel 入口实际运行 `export`，保留生成的 JSON、运行日志和 Run ID。附上原始工作簿和输出文件的 SHA-256，并给出输出的最上层字段、主表采样数及子区域数。\r\n", "v2VerdictsPath": "q02r-verdicts.json", "deltaPassed": 1, "deltaScore": 1.7427, "v1": {"passed": 2, "passedInLimit": 2, "passAtK": [0.666667, 1.0, 1.0], "passPowK": [0.666667, 0.333333, 0.0], "passPowKIid": [0.666667, 0.444444, 0.296296], "reportedAvgMin": 10.48, "avgDurationMin": 5.57, "medianSteps": 58.0, "medianTools": 60.0, "reportedTokens": 47082, "tokens": {"input": 186753, "cacheRead": 10142976, "output": 47082}, "score": 1.092211, "scorePassAt1Part": 0.695043, "scorePassAt3Part": 0.397168, "trials": [{"trial": 1, "rawStatus": "failed", "passed": false, "review": "运行中途停止/未正常收包（15.7 分钟，无退出码）", "durationMin": 1.175, "steps": 20, "toolCalls": 27, "toolErrors": 0, "topTools": {"pwsh": 18, "read": 7, "working_directory": 1, "skill": 1}, "allTools": {"working_directory": 1, "pwsh": 18, "skill": 1, "read": 7}, "tokens": {"input": 26599, "cacheRead": 394496, "output": 2987, "totalContext": 421095, "hasUsage": true}, "cacheHitRate": 0.9368, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 5.1909, "steps": 58, "toolCalls": 60, "toolErrors": 0, "topTools": {"pwsh": 47, "read": 9, "write": 3, "skill": 1}, "allTools": {"skill": 1, "pwsh": 47, "read": 9, "write": 3}, "tokens": {"input": 63711, "cacheRead": 2450304, "output": 16960, "totalContext": 2514015, "hasUsage": true}, "cacheHitRate": 0.9747, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.884647, "score": 0.583867}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 10.3402, "steps": 110, "toolCalls": 117, "toolErrors": 0, "topTools": {"pwsh": 91, "read": 11, "write": 11, "skill": 1, "job_kill": 1, "edit": 1}, "allTools": {"pwsh": 91, "skill": 1, "read": 11, "job_kill": 1, "write": 11, "edit": 1, "grep": 1}, "tokens": {"input": 96443, "cacheRead": 7298176, "output": 27135, "totalContext": 7394619, "hasUsage": true}, "cacheHitRate": 0.987, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.770218, "score": 0.508344}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.8, "avgDurationMin": 1.8, "medianSteps": 23.0, "medianTools": 26.0, "reportedTokens": 25635, "tokens": {"input": 96518, "cacheRead": 2450816, "output": 25635}, "score": 2.834896, "scorePassAt1Part": 1.970989, "scorePassAt3Part": 0.863907, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.5173, "steps": 22, "toolCalls": 25, "toolErrors": 0, "topTools": {"pwsh": 14, "read": 8, "write": 2, "present": 1}, "allTools": {"read": 8, "pwsh": 14, "write": 2, "present": 1}, "tokens": {"input": 27788, "cacheRead": 618240, "output": 6891, "totalContext": 646028, "hasUsage": true}, "cacheHitRate": 0.957, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.966282, "score": 0.951251}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.7135, "steps": 23, "toolCalls": 26, "toolErrors": 0, "topTools": {"pwsh": 16, "read": 7, "write": 2, "present": 1}, "allTools": {"read": 7, "pwsh": 16, "write": 2, "present": 1}, "tokens": {"input": 34874, "cacheRead": 718720, "output": 7982, "totalContext": 753594, "hasUsage": true}, "cacheHitRate": 0.9537, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.961922, "score": 0.946959}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.1831, "steps": 32, "toolCalls": 37, "toolErrors": 0, "topTools": {"pwsh": 22, "read": 12, "write": 2, "present": 1}, "allTools": {"read": 12, "pwsh": 22, "write": 2, "present": 1}, "tokens": {"input": 33856, "cacheRead": 1113856, "output": 10762, "totalContext": 1147712, "hasUsage": true}, "cacheHitRate": 0.9705, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.951487, "score": 0.936686}]}}, {"id": "02A", "title": "PerfDog 导出后的企微收尾", "weight": 1, "category": "文件解析与集成", "tier": "L2 进阶", "aiNode": false, "mode": "改造既有图", "isRetestedInV2": false, "prompt": "# PerfDog 导出后的企微通知变体\r\n\r\n给已有 PerfDog 导出流程加收尾。成功导出后，使用本轮 JSON 生成一条用于企微的消息，包含本轮运行 ID、导出结果、主表采样数和子区域数。失败时保留失败原因。用给定的人造工作簿验证，请保留 `export.json`、消息载荷、运行 ID 和原始日志。\r\n\r\n先在包含 `PerfDogTools/`、`Shared/` 和 `PerfDog-sample.xlsx` 的题目目录运行原版导出。用已安装的 Ksf CLI 和可导入 openpyxl 3.1.5 的 Python 3.12+ 环境。以下命令在同一个 PowerShell 工具调用中执行：\r\n\r\n```powershell\r\n$root = (Get-Location).Path\r\n$env:KSF_EVAL_CLI_ROOT = Join-Path $root '.ksf-cli'\r\n@{\r\n    command = 'export'\r\n    inputPath = Join-Path $root 'PerfDog-sample.xlsx'\r\n    outputPath = Join-Path $root 'baseline-export.json'\r\n} | ConvertTo-Json | Set-Content (Join-Path $root 'baseline-input.json') -Encoding utf8\r\nKsfCLI graph run (Join-Path $root 'PerfDogTools/PerfDogTools.csx') --input (Join-Path $root 'baseline-input.json') --standalone --yes\r\n```\r\n\r\n确认原版成功产出 `baseline-export.json` 后，再在原图上加收尾，并为正式验收使用独立的输出文件。若原版失败，保留命令、退出码和原始日志。\r\n\r\n建图时保留单独的 `Finally` 收尾。交付实际企微发送（`WecomNodes.SendAsync`）的接线和配置入口，接线用真实宿主 API 做绑定校验。本轮实跑用同样的数据组装逻辑在本地落一份消息载荷，通过 `.When(msg => !string.IsNullOrWhiteSpace(msg.Webhook), ...)` 保持真实企微发送关闭。不要读取真实 webhook、访问真实群或把任何数据传出去。再跑一次会失败的导出，验证没有生成成功消息。不要写死样本数或子区域数。\r\n", "v2VerdictsPath": "q02a-verdicts.json", "deltaPassed": 2, "deltaScore": 2.3304, "v1": {"passed": 1, "passedInLimit": 1, "passAtK": [0.333333, 0.666667, 1.0], "passPowK": [0.333333, 0.0, 0.0], "passPowKIid": [0.333333, 0.111111, 0.037037], "reportedAvgMin": 19.34, "avgDurationMin": 19.23, "medianSteps": 178.0, "medianTools": 190.0, "reportedTokens": 240322, "tokens": {"input": 399926, "cacheRead": 80407040, "output": 240322}, "score": 0.440685, "scorePassAt1Part": 0.280436, "scorePassAt3Part": 0.160249, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 14.9533, "steps": 178, "toolCalls": 190, "toolErrors": 0, "topTools": {"pwsh": 117, "edit": 42, "read": 22, "write": 7, "skill": 1, "grep": 1}, "allTools": {"skill": 1, "pwsh": 117, "read": 22, "grep": 1, "write": 7, "edit": 42}, "tokens": {"input": 135835, "cacheRead": 20027136, "output": 75892, "totalContext": 20162971, "hasUsage": true}, "cacheHitRate": 0.9933, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.667704, "score": 0.440685}, {"trial": 2, "rawStatus": "failed", "passed": false, "review": "DSH 在 30 分钟后以退出码 1 结束，未交齐有效证据；运行时给出通用失败提示", "durationMin": 29.999, "steps": 340, "toolCalls": 355, "toolErrors": 5, "topTools": {"pwsh": 229, "edit": 60, "write": 34, "read": 26, "grep": 4, "skill": 1}, "allTools": {"skill": 1, "pwsh": 229, "read": 26, "write": 34, "job_output": 1, "edit": 60, "grep": 4}, "tokens": {"input": 172755, "cacheRead": 48686336, "output": 115102, "totalContext": 48859091, "hasUsage": true}, "cacheHitRate": 0.9965, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "outbound_violation", "passed": false, "review": "实际向企微生产域名发送了一次占位 key 请求，返回无效 key；题面要求全程本地", "durationMin": 12.7297, "steps": 151, "toolCalls": 154, "toolErrors": 1, "topTools": {"pwsh": 99, "read": 19, "write": 16, "edit": 16, "grep": 3, "skill": 1}, "allTools": {"skill": 1, "pwsh": 99, "read": 19, "grep": 3, "write": 16, "edit": 16}, "tokens": {"input": 91336, "cacheRead": 11693568, "output": 49328, "totalContext": 11784904, "hasUsage": true}, "cacheHitRate": 0.9922, "bucket": "outbound_violation", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 2.78, "avgDurationMin": 2.78, "medianSteps": 36.0, "medianTools": 44.0, "reportedTokens": 42900, "tokens": {"input": 142017, "cacheRead": 5133568, "output": 42900}, "score": 2.771083, "scorePassAt1Part": 1.926621, "scorePassAt3Part": 0.844461, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.141, "steps": 27, "toolCalls": 32, "toolErrors": 0, "topTools": {"read": 14, "pwsh": 12, "todo_write": 2, "write": 2, "edit": 1, "present": 1}, "allTools": {"read": 14, "pwsh": 12, "todo_write": 2, "write": 2, "edit": 1, "present": 1}, "tokens": {"input": 41301, "cacheRead": 1051136, "output": 10723, "totalContext": 1092437, "hasUsage": true}, "cacheHitRate": 0.9622, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.952422, "score": 0.937607}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.5293, "steps": 47, "toolCalls": 57, "toolErrors": 1, "topTools": {"pwsh": 31, "read": 17, "edit": 5, "write": 4}, "allTools": {"read": 17, "pwsh": 31, "write": 4, "edit": 5}, "tokens": {"input": 52087, "cacheRead": 2439552, "output": 19048, "totalContext": 2491639, "hasUsage": true}, "cacheHitRate": 0.9791, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.921571, "score": 0.907236}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.6606, "steps": 36, "toolCalls": 44, "toolErrors": 0, "topTools": {"pwsh": 22, "read": 12, "edit": 4, "write": 3, "todo_write": 2, "present": 1}, "allTools": {"read": 12, "pwsh": 22, "todo_write": 2, "write": 3, "edit": 4, "present": 1}, "tokens": {"input": 48629, "cacheRead": 1642880, "output": 13129, "totalContext": 1691509, "hasUsage": true}, "cacheHitRate": 0.9713, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.940876, "score": 0.92624}]}}, {"id": "04", "title": "给已有任务设定时再改时间", "weight": 1, "category": "基础建图与调度", "tier": "L1 基础", "aiNode": false, "mode": "配置运维", "isRetestedInV2": false, "prompt": "# 第四题｜给已有任务设定时，再改时间\r\n\r\n起点是一条已登记、手动运行成功的 Hello Pregel（保存在当前环境的 `KsfCLI` 任务表中，直接用 `KsfCLI graph tasks` 查询）。评测前记录原 taskId、触发器配置和手动运行 ID。任务绑定一个可编辑的输入文件。\r\n\r\n## 第一轮\r\n\r\n把这条任务设成每天北京时间 09:00 跑，平时也能手动跑。\r\n\r\n## 第二轮\r\n\r\n时间改一下，改成每天 09:30，其他照旧。\r\n\r\n## 验收\r\n\r\n逐轮读取宿主生效的任务配置。两次都须保留原 taskId、脚本入口和手动触发，定时开关为开，周期为每天，时区显式等效于北京时间，生效来源可追溯且无配置错误。两轮时间分别为 09:00 和 09:30。历史里的初始手动运行仍可查到。\r\n\r\n改出第二条任务、仅保存一份任务未读取的配置文件、第二轮把手动开关或时区改掉，均判失败。基础题验收配置生效。\r\n", "v2VerdictsPath": "q04-verdicts.json", "deltaPassed": 0, "deltaScore": 0.9445, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.37, "avgDurationMin": 1.25, "medianSteps": 21.0, "medianTools": 26.0, "reportedTokens": 11485, "tokens": {"input": 60746, "cacheRead": 990848, "output": 11485}, "score": 1.924959, "scorePassAt1Part": 1.224974, "scorePassAt3Part": 0.699985, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.0828, "steps": 17, "toolCalls": 21, "toolErrors": 0, "topTools": {"pwsh": 9, "read": 9, "skill": 1, "write": 1, "edit": 1}, "allTools": {"skill": 1, "pwsh": 9, "read": 9, "write": 1, "edit": 1}, "tokens": {"input": 18771, "cacheRead": 273664, "output": 3500, "totalContext": 292435, "hasUsage": true}, "cacheHitRate": 0.9358, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.975938, "score": 0.644119}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.4225, "steps": 23, "toolCalls": 26, "toolErrors": 0, "topTools": {"pwsh": 13, "read": 9, "skill": 1, "working_directory": 1, "write": 1, "edit": 1}, "allTools": {"skill": 1, "read": 9, "working_directory": 1, "pwsh": 13, "write": 1, "edit": 1}, "tokens": {"input": 22431, "cacheRead": 391552, "output": 4389, "totalContext": 413983, "hasUsage": true}, "cacheHitRate": 0.9458, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.968389, "score": 0.639137}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.2475, "steps": 21, "toolCalls": 26, "toolErrors": 0, "topTools": {"pwsh": 13, "read": 9, "skill": 1, "working_directory": 1, "write": 1, "edit": 1}, "allTools": {"skill": 1, "read": 9, "working_directory": 1, "pwsh": 13, "write": 1, "edit": 1}, "tokens": {"input": 19544, "cacheRead": 325632, "output": 3596, "totalContext": 345176, "hasUsage": true}, "cacheHitRate": 0.9434, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.972278, "score": 0.641703}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.28, "avgDurationMin": 1.28, "medianSteps": 20.0, "medianTools": 26.0, "reportedTokens": 18492, "tokens": {"input": 61052, "cacheRead": 1422720, "output": 18492}, "score": 2.869474, "scorePassAt1Part": 1.995029, "scorePassAt3Part": 0.874444, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.2085, "steps": 20, "toolCalls": 26, "toolErrors": 0, "topTools": {"pwsh": 12, "read": 10, "write": 2, "edit": 1, "present": 1}, "allTools": {"read": 10, "pwsh": 12, "write": 2, "edit": 1, "present": 1}, "tokens": {"input": 21606, "cacheRead": 465152, "output": 5879, "totalContext": 486758, "hasUsage": true}, "cacheHitRate": 0.9556, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.973144, "score": 0.958007}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.0413, "steps": 17, "toolCalls": 24, "toolErrors": 0, "topTools": {"read": 10, "pwsh": 10, "write": 2, "edit": 1, "present": 1}, "allTools": {"read": 10, "pwsh": 10, "write": 2, "edit": 1, "present": 1}, "tokens": {"input": 18847, "cacheRead": 400640, "output": 5766, "totalContext": 419487, "hasUsage": true}, "cacheHitRate": 0.9551, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.97686, "score": 0.961664}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.5835, "steps": 23, "toolCalls": 30, "toolErrors": 0, "topTools": {"pwsh": 17, "read": 9, "write": 2, "edit": 1, "present": 1}, "allTools": {"read": 9, "pwsh": 17, "write": 2, "edit": 1, "present": 1}, "tokens": {"input": 20599, "cacheRead": 556928, "output": 6847, "totalContext": 577527, "hasUsage": true}, "cacheHitRate": 0.9643, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.964811, "score": 0.949803}]}}, {"id": "07", "title": "构建机初始化的 PowerShell 7 排障", "weight": 1, "category": "代码排障与修复", "tier": "L1 基础", "aiNode": false, "mode": "排障修复", "isRetestedInV2": false, "prompt": "# 第 7 题　构建机初始化排障\r\n\r\n这份流程从 Official 的构建机初始化裁出，安装和配置都换成了模拟操作。虚拟构建机已具备 VC++ 运行库、Node.js 和 Git，脚本仍要为它初始化 PowerShell 7。当前从干净环境运行，流程会停在「安装 PowerShell 7」。\r\n\r\n1. 用本机 Ksf CLI 先复现故障，保留失败的 run ID 和原始输出。\r\n2. 在现有 CSX 上定位并修复根因。保留 PowerShell 7 的检测、安装、校验和验证，包和发布清单是固定输入。故障修好后，流程要继续完成开发工具检查和配置汇总。\r\n3. 从干净模拟环境再跑一次，核对模拟安装内容和 `sandbox/summary.json`，提交成功的运行记录、源码改动和根因说明。\r\n\r\n入口为 `BuildMachineSetup.csx`，默认输入为 `Input.json`。可用 `KsfCLI graph validate BuildMachineSetup.csx --input Input.json` 校验，再用 `KsfCLI graph run BuildMachineSetup.csx --input Input.json --standalone --yes` 实际运行。每次复现可用一份新解压的题包，生成的模拟环境都在题包目录下的 `sandbox/`。\r\n\r\n请使用新的独立目录，只查本题文件、本机通用 Pregel skill 和公开示例。仅使用随题的模拟数据。不变更实际软件、系统设置或其他任务。\r\n", "v2VerdictsPath": "q07-verdicts.json", "deltaPassed": 0, "deltaScore": 0.907, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.45, "avgDurationMin": 1.34, "medianSteps": 16.0, "medianTools": 22.0, "reportedTokens": 13169, "tokens": {"input": 40968, "cacheRead": 619264, "output": 13169}, "score": 1.920823, "scorePassAt1Part": 1.222342, "scorePassAt3Part": 0.698481, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.2776, "steps": 16, "toolCalls": 22, "toolErrors": 0, "topTools": {"pwsh": 15, "read": 4, "skill": 1, "edit": 1, "write": 1}, "allTools": {"skill": 1, "pwsh": 15, "read": 4, "edit": 1, "write": 1}, "tokens": {"input": 14472, "cacheRead": 204672, "output": 4431, "totalContext": 219144, "hasUsage": true}, "cacheHitRate": 0.934, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.971609, "score": 0.641262}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.5529, "steps": 20, "toolCalls": 23, "toolErrors": 0, "topTools": {"pwsh": 16, "read": 4, "skill": 1, "edit": 1, "write": 1}, "allTools": {"skill": 1, "pwsh": 16, "read": 4, "edit": 1, "write": 1}, "tokens": {"input": 15272, "cacheRead": 241536, "output": 4402, "totalContext": 256808, "hasUsage": true}, "cacheHitRate": 0.9405, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.965491, "score": 0.637224}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.2043, "steps": 16, "toolCalls": 20, "toolErrors": 0, "topTools": {"pwsh": 12, "read": 5, "skill": 1, "edit": 1, "write": 1}, "allTools": {"skill": 1, "pwsh": 12, "read": 5, "edit": 1, "write": 1}, "tokens": {"input": 11224, "cacheRead": 173056, "output": 4336, "totalContext": 184280, "hasUsage": true}, "cacheHitRate": 0.9391, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.973238, "score": 0.642337}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.91, "avgDurationMin": 1.91, "medianSteps": 26.0, "medianTools": 33.0, "reportedTokens": 25199, "tokens": {"input": 79873, "cacheRead": 2364160, "output": 25199}, "score": 2.827841, "scorePassAt1Part": 1.966083, "scorePassAt3Part": 0.861757, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.515, "steps": 23, "toolCalls": 29, "toolErrors": 0, "topTools": {"pwsh": 12, "read": 10, "todo_write": 2, "grep": 2, "edit": 1, "write": 1}, "allTools": {"read": 10, "pwsh": 12, "todo_write": 2, "grep": 2, "edit": 1, "write": 1, "present": 1}, "tokens": {"input": 23526, "cacheRead": 591488, "output": 6896, "totalContext": 615014, "hasUsage": true}, "cacheHitRate": 0.9617, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.966333, "score": 0.951301}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.0825, "steps": 26, "toolCalls": 33, "toolErrors": 0, "topTools": {"pwsh": 18, "read": 8, "todo_write": 2, "edit": 2, "grep": 1, "write": 1}, "allTools": {"read": 8, "pwsh": 18, "grep": 1, "todo_write": 2, "edit": 2, "write": 1, "present": 1}, "tokens": {"input": 31184, "cacheRead": 875904, "output": 9299, "totalContext": 907088, "hasUsage": true}, "cacheHitRate": 0.9656, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.953722, "score": 0.938887}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.1389, "steps": 34, "toolCalls": 39, "toolErrors": 0, "topTools": {"pwsh": 21, "read": 10, "edit": 5, "skill": 1, "write": 1, "present": 1}, "allTools": {"skill": 1, "pwsh": 21, "read": 10, "edit": 5, "write": 1, "present": 1}, "tokens": {"input": 25163, "cacheRead": 896768, "output": 9004, "totalContext": 921931, "hasUsage": true}, "cacheHitRate": 0.9727, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.952469, "score": 0.937653}]}}, {"id": "10", "title": "改坏的 PerfDogTools", "weight": 1, "category": "代码排障与修复", "tier": "L2 进阶", "aiNode": false, "mode": "排障修复", "isRetestedInV2": false, "prompt": "# 改坏的 PerfDogTools\r\n\r\n这份 PerfDogTools 从 Official 复制。用题内人造工作簿导出 JSON 时，CLI 表面成功，但主表有两个 FPS 采样值算错了。请先复现，再在原代码上修复并重跑。\r\n\r\n- 输入用 `inputs/synthetic.xlsx`。主表的四个采样时刻是 0、100、300、400 毫秒，首尾实测 FPS 分别为 20、60。缺测点按实际采样时刻做线性插值。导出的采样时刻、实测值、工作簿里的摘要、Lab 子区域和自定义指标应保留。\r\n- 用同一个 `PerfDogTools/PerfDogTools.csx` 和 `export` 操作，分别保存修复前后的 JSON、原始 CLI 日志和 run ID。说明为什么 CLI 成功却得到错值，以及改动的位置。可以直接调用 Python 解析器排查，最终验收以 Pregel 入口重跑为准。\r\n- 在新建的题目目录运行，输入和输出参数都传绝对路径。只在该目录写入文件。Python 需要 3.12+ 和 openpyxl 3.1.5。若缺依赖，可用该目录自己的虚拟环境准备。\r\n- 使用题内数据、本机工具和已安装的通用 Pregel skill。保持 XLSX 原样，避免查阅其他工作区、旧答卷和 Official 的同名实现。\r\n\r\n在题包根目录可用以下方式生成输入参数和运行。输出文件名按修复前后分别设置。\r\n\r\n```powershell\r\n$inputPath = (Resolve-Path .\\inputs\\synthetic.xlsx).Path\r\n$outputPath = Join-Path (Get-Location).Path 'export-before.json'\r\n@{command='export'; inputPath=$inputPath; outputPath=$outputPath} |\r\n    ConvertTo-Json | Set-Content -Encoding utf8 .\\RunInput.json\r\nKsfCLI graph run .\\PerfDogTools\\PerfDogTools.csx --input .\\RunInput.json --standalone --yes\r\n```\r\n", "v2VerdictsPath": "q10-verdicts.json", "deltaPassed": 0, "deltaScore": 0.9428, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 3.02, "avgDurationMin": 2.91, "medianSteps": 37.0, "medianTools": 40.0, "reportedTokens": 26787, "tokens": {"input": 79212, "cacheRead": 2433792, "output": 26787}, "score": 1.851837, "scorePassAt1Part": 1.178441, "scorePassAt3Part": 0.673395, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.4609, "steps": 29, "toolCalls": 31, "toolErrors": 0, "topTools": {"pwsh": 22, "read": 7, "skill": 1, "edit": 1}, "allTools": {"skill": 1, "pwsh": 22, "read": 7, "edit": 1}, "tokens": {"input": 24167, "cacheRead": 592384, "output": 6550, "totalContext": 616551, "hasUsage": true}, "cacheHitRate": 0.9608, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.945313, "score": 0.623907}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.7413, "steps": 37, "toolCalls": 40, "toolErrors": 1, "topTools": {"pwsh": 30, "read": 6, "edit": 2, "skill": 1, "write": 1}, "allTools": {"skill": 1, "pwsh": 30, "read": 6, "edit": 2, "write": 1}, "tokens": {"input": 26758, "cacheRead": 872064, "output": 10678, "totalContext": 898822, "hasUsage": true}, "cacheHitRate": 0.9702, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.939082, "score": 0.619794}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.5362, "steps": 44, "toolCalls": 46, "toolErrors": 0, "topTools": {"pwsh": 35, "read": 7, "skill": 1, "working_directory": 1, "edit": 1, "write": 1}, "allTools": {"skill": 1, "working_directory": 1, "pwsh": 35, "read": 7, "edit": 1, "write": 1}, "tokens": {"input": 28287, "cacheRead": 969344, "output": 9559, "totalContext": 997631, "hasUsage": true}, "cacheHitRate": 0.9716, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.921418, "score": 0.608136}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 2.42, "avgDurationMin": 2.42, "medianSteps": 31.0, "medianTools": 34.0, "reportedTokens": 30035, "tokens": {"input": 107913, "cacheRead": 3906432, "output": 30035}, "score": 2.794619, "scorePassAt1Part": 1.942985, "scorePassAt3Part": 0.851633, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.9394, "steps": 30, "toolCalls": 34, "toolErrors": 0, "topTools": {"pwsh": 19, "read": 8, "write": 3, "edit": 3, "present": 1}, "allTools": {"read": 8, "pwsh": 19, "write": 3, "edit": 3, "present": 1}, "tokens": {"input": 32190, "cacheRead": 979712, "output": 7054, "totalContext": 1011902, "hasUsage": true}, "cacheHitRate": 0.9682, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.956902, "score": 0.942017}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.9772, "steps": 31, "toolCalls": 34, "toolErrors": 0, "topTools": {"pwsh": 22, "read": 8, "skill": 1, "edit": 1, "write": 1, "present": 1}, "allTools": {"skill": 1, "pwsh": 22, "read": 8, "edit": 1, "write": 1, "present": 1}, "tokens": {"input": 37137, "cacheRead": 1122944, "output": 8949, "totalContext": 1160081, "hasUsage": true}, "cacheHitRate": 0.968, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.956062, "score": 0.94119}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.3384, "steps": 44, "toolCalls": 53, "toolErrors": 2, "topTools": {"pwsh": 27, "read": 14, "edit": 4, "todo_write": 2, "skill": 1, "create_goal": 1}, "allTools": {"skill": 1, "pwsh": 27, "read": 14, "create_goal": 1, "todo_write": 2, "edit": 4, "write": 1, "get_goal": 1, "update_goal": 1, "present": 1}, "tokens": {"input": 38586, "cacheRead": 1803776, "output": 14032, "totalContext": 1842362, "hasUsage": true}, "cacheHitRate": 0.9791, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.925813, "score": 0.911412}]}}, {"id": "12", "title": "个人周报预设与离线预览", "weight": 1, "category": "基础建图与调度", "tier": "L1 基础", "aiNode": false, "mode": "改造既有图", "isRetestedInV2": true, "prompt": "# 第 12 题　个人周报预设与离线预览\r\n\r\n题包是一套离线模拟环境。请把「我的周报（验收）」的个人预设保存下来，再用虚构数据验证它能生成符合要求的本地预览。\r\n\r\n- `Official/WeeklyReport/defaults.json` 是模拟的官方默认参数。新任务沿用它，仅覆盖 `report_prompt` 为「先列本周完成项，再列待确认的风险。每项只写一句。」，并保持归属人 `member_name` 与目标周 `week` 为空。保存后要能从任务记录读回有效参数。\r\n- `state/tasks.json` 是模拟任务表。新增一条个人任务，分配独立 ID，关闭定时，记录来源与个人参数。题包里的官方文件和已有任务记录都须原样保留。\r\n- 从 `fixtures/week-items.json` 生成 `preview.md`。先列完成项，再列待确认的风险。只用清单指定周的数据。同一 ID 的多条记录取最新状态；已解决风险、进行中项和其他周的记录不进入预览。每项写一句，并保留原记录 ID，便于核对。\r\n- 目标周只用于本次预览，个人预设里的 `week` 仍留空。生成预览只读模拟数据，不触发任务、不写运行历史。整个过程在题目目录内直接用普通本地脚本（`.ps1` / `.py` / `.mjs`）读写上述模拟 JSON 文件完成（`state/tasks.json` 为本题专用的离线模拟格式，**不要编写或运行 Pregel CSX 图，不要调用任何 `KsfCLI graph` 命令，严禁修改 `Official/WeeklyReport/defaults.json` 的任何字节**），无需实际康师傅任务、联网、调用模型或上传。\r\n- 交付可重复执行的本地脚本、保存后的模拟任务表、`preview.md`，以及从本地任务表读回的新任务 ID、来源和参数。脚本再跑一次时复用同一个个人任务 ID。\r\n", "v2VerdictsPath": "retest-12-18-1124/q12-verdicts.json", "deltaPassed": 0, "deltaScore": 0.9377, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.1, "avgDurationMin": 0.99, "medianSteps": 12.0, "medianTools": 15.0, "reportedTokens": 19517, "tokens": {"input": 31596, "cacheRead": 662784, "output": 19517}, "score": 1.936271, "scorePassAt1Part": 1.232173, "scorePassAt3Part": 0.704099, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 0.8037, "steps": 12, "toolCalls": 15, "toolErrors": 0, "topTools": {"pwsh": 7, "read": 5, "working_directory": 1, "skill": 1, "write": 1}, "allTools": {"working_directory": 1, "pwsh": 7, "read": 5, "skill": 1, "write": 1}, "tokens": {"input": 7073, "cacheRead": 108416, "output": 5295, "totalContext": 115489, "hasUsage": true}, "cacheHitRate": 0.9388, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.98214, "score": 0.648212}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.5518, "steps": 28, "toolCalls": 31, "toolErrors": 1, "topTools": {"read": 11, "pwsh": 9, "edit": 9, "skill": 1, "write": 1}, "allTools": {"pwsh": 9, "skill": 1, "read": 11, "write": 1, "edit": 9}, "tokens": {"input": 17652, "cacheRead": 478464, "output": 9588, "totalContext": 496116, "hasUsage": true}, "cacheHitRate": 0.9644, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.965516, "score": 0.63724}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 0.626, "steps": 9, "toolCalls": 10, "toolErrors": 0, "topTools": {"pwsh": 5, "read": 3, "skill": 1, "write": 1}, "allTools": {"pwsh": 5, "read": 3, "skill": 1, "write": 1}, "tokens": {"input": 6871, "cacheRead": 75904, "output": 4634, "totalContext": 82775, "hasUsage": true}, "cacheHitRate": 0.917, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.986089, "score": 0.650819}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 1.21, "avgDurationMin": 1.21, "medianSteps": 20.0, "medianTools": 23.0, "reportedTokens": 25556, "tokens": {"input": 34696, "cacheRead": 1169152, "output": 25556}, "score": 2.873922, "scorePassAt1Part": 1.998121, "scorePassAt3Part": 0.8758, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.3224, "steps": 20, "toolCalls": 23, "toolErrors": 0, "topTools": {"pwsh": 9, "read": 5, "edit": 3, "todo_write": 2, "write": 2, "grep": 1}, "allTools": {"pwsh": 9, "read": 5, "grep": 1, "todo_write": 2, "write": 2, "edit": 3, "present": 1}, "tokens": {"input": 12063, "cacheRead": 413056, "output": 9103, "totalContext": 425119, "hasUsage": true}, "cacheHitRate": 0.9716, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.970613, "score": 0.955515}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 0.7607, "steps": 13, "toolCalls": 16, "toolErrors": 0, "topTools": {"read": 6, "pwsh": 5, "edit": 2, "write": 1, "grep": 1, "present": 1}, "allTools": {"pwsh": 5, "read": 6, "write": 1, "grep": 1, "edit": 2, "present": 1}, "tokens": {"input": 9538, "cacheRead": 215936, "output": 5167, "totalContext": 225474, "hasUsage": true}, "cacheHitRate": 0.9577, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.983096, "score": 0.967803}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 1.5469, "steps": 25, "toolCalls": 26, "toolErrors": 2, "topTools": {"pwsh": 10, "edit": 7, "read": 5, "write": 2, "grep": 1, "present": 1}, "allTools": {"pwsh": 10, "read": 5, "write": 2, "edit": 7, "grep": 1, "present": 1}, "tokens": {"input": 13095, "cacheRead": 540160, "output": 11286, "totalContext": 553255, "hasUsage": true}, "cacheHitRate": 0.9763, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.965624, "score": 0.950604}]}}, {"id": "17", "title": "性能日报档位展开", "weight": 1, "category": "动态展开与分支", "tier": "L2 进阶", "aiNode": false, "mode": "新建图", "isRetestedInV2": false, "prompt": "# 性能日报档位展开\r\n\r\n性能日报在同一场景内逐档生成简报。请把这一段裁成可手动运行的康师傅 Pregel 自动化。输入是运行时指定的一个 JSON 清单。只处理 enabled 为 true 的档位，按清单顺序逐个运行同一张简报子图，每档都有稳定且可识别的身份。请用新版 Pregel 原生动态展开 进行展开。子图返回场景、档位和样本数。父图最后输出 summary.json，按顺序列出子图结果和总样本数。用同一个入口实际运行以下三组，展示展开数量、执行顺序和结果。空集合也要有空汇总。\r\n\r\n请原样保存以下输入：\r\nmixed.json: {\"scene\":\"station\",\"tiers\":[{\"tier\":\"epic\",\"enabled\":true,\"samples\":[14,17,20]},{\"tier\":\"high\",\"enabled\":false,\"samples\":[10,12]},{\"tier\":\"medium\",\"enabled\":true,\"samples\":[12]}]}\r\nsingle.json: {\"scene\":\"station\",\"tiers\":[{\"tier\":\"low\",\"enabled\":true,\"samples\":[12,13]}]}\r\nempty.json: {\"scene\":\"station\",\"tiers\":[]}\r\n\r\n\r\n交付入口 CSX、完整的 CLI 校验和实跑日志、Run ID 和各份独立产物。\r\n", "v2VerdictsPath": "q17-verdicts.json", "deltaPassed": 1, "deltaScore": 1.1685, "v1": {"passed": 2, "passedInLimit": 2, "passAtK": [0.666667, 1.0, 1.0], "passPowK": [0.666667, 0.333333, 0.0], "passPowKIid": [0.666667, 0.444444, 0.296296], "reportedAvgMin": 15.61, "avgDurationMin": 15.51, "medianSteps": 95.0, "medianTools": 103.0, "reportedTokens": 188966, "tokens": {"input": 370537, "cacheRead": 72182400, "output": 188966}, "score": 1.077522, "scorePassAt1Part": 0.685696, "scorePassAt3Part": 0.391826, "trials": [{"trial": 1, "rawStatus": "failed", "passed": false, "review": "未通过（failed）", "durationMin": 30.0023, "steps": 343, "toolCalls": 357, "toolErrors": 5, "topTools": {"pwsh": 251, "write": 43, "edit": 36, "read": 23, "grep": 2, "skill": 1}, "allTools": {"skill": 1, "glob": 1, "pwsh": 251, "read": 23, "grep": 2, "write": 43, "edit": 36}, "tokens": {"input": 220097, "cacheRead": 61436672, "output": 121036, "totalContext": 61656769, "hasUsage": true}, "cacheHitRate": 0.9964, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 8.3088, "steps": 88, "toolCalls": 101, "toolErrors": 1, "topTools": {"pwsh": 58, "write": 21, "read": 14, "edit": 4, "skill": 1, "glob": 1}, "allTools": {"skill": 1, "pwsh": 58, "read": 14, "glob": 1, "grep": 1, "write": 21, "edit": 4, "present": 1}, "tokens": {"input": 72879, "cacheRead": 5548416, "output": 35922, "totalContext": 5621295, "hasUsage": true}, "cacheHitRate": 0.987, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.81536, "score": 0.538138}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 8.2238, "steps": 95, "toolCalls": 103, "toolErrors": 0, "topTools": {"pwsh": 71, "read": 15, "write": 10, "edit": 5, "skill": 1, "grep": 1}, "allTools": {"skill": 1, "pwsh": 71, "read": 15, "grep": 1, "write": 10, "edit": 5}, "tokens": {"input": 77561, "cacheRead": 5197312, "output": 32008, "totalContext": 5274873, "hasUsage": true}, "cacheHitRate": 0.9853, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.817249, "score": 0.539384}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 10.78, "avgDurationMin": 10.78, "medianSteps": 101.0, "medianTools": 115.0, "reportedTokens": 112763, "tokens": {"input": 321214, "cacheRead": 33807744, "output": 112763}, "score": 2.245984, "scorePassAt1Part": 1.561541, "scorePassAt3Part": 0.684442, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。", "durationMin": 10.6162, "steps": 101, "toolCalls": 115, "toolErrors": 0, "topTools": {"pwsh": 63, "read": 19, "write": 15, "edit": 14, "grep": 2, "skill": 1}, "allTools": {"skill": 1, "read": 19, "pwsh": 63, "write": 15, "edit": 14, "grep": 2, "present": 1}, "tokens": {"input": 83461, "cacheRead": 7180800, "output": 34110, "totalContext": 7264261, "hasUsage": true}, "cacheHitRate": 0.9885, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.764084, "score": 0.752199}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。", "durationMin": 3.2524, "steps": 40, "toolCalls": 50, "toolErrors": 0, "topTools": {"pwsh": 22, "read": 10, "write": 7, "edit": 6, "todo_write": 3, "grep": 1}, "allTools": {"read": 10, "pwsh": 22, "grep": 1, "todo_write": 3, "write": 7, "edit": 6, "present": 1}, "tokens": {"input": 49181, "cacheRead": 1830528, "output": 14437, "totalContext": 1879709, "hasUsage": true}, "cacheHitRate": 0.9738, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.927724, "score": 0.913293}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。", "durationMin": 18.4651, "steps": 183, "toolCalls": 194, "toolErrors": 0, "topTools": {"pwsh": 121, "edit": 31, "read": 22, "write": 18, "todo_write": 1, "present": 1}, "allTools": {"read": 22, "pwsh": 121, "todo_write": 1, "write": 18, "edit": 31, "present": 1}, "tokens": {"input": 188572, "cacheRead": 24796416, "output": 64216, "totalContext": 24984988, "hasUsage": true}, "cacheHitRate": 0.9925, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.589664, "score": 0.580492}]}}, {"id": "17A", "title": "模拟多站点离线批次导入", "weight": 1, "category": "动态展开与分支", "tier": "L2 进阶", "aiNode": false, "mode": "改造既有图", "isRetestedInV2": false, "prompt": "# 模拟题二：多站点离线批次导入\r\n\r\n虚构的遥测系统每天收到一份离线清单。不同站点可以并行导入。同一站点内的批次修改同一份累计值，必须按清单顺序逐条处理。此次模拟仅写本地输出，请用 Pregel 编排。\r\n\r\n- 从运行时清单生成站点计划。同一站点的初始累计值为 0。外层从运行清单按站点并行展开，站点用名称作为稳定身份。\r\n- 每个站点调用同一张子图。子图按清单顺序串行展开本组启用条目，每条用 `站点/批次 ID` 作为身份。禁用条目不应展开。两层都保留可核对的子运行记录。\r\n- 每次运行给各站点创建独立的累计状态。每个批次子运行开始后读取本站当前值，用自己的 `delta` 当场决定接受或拒绝。若相加会小于 0，记为 `rejected` 并保留原值，后续批次照常执行。批次退出前须完成状态更新并记录自己的批次 ID、状态、原因、更新前后的值和起止时间。状态存储方式自选，可使用运行目录内每站独立的本地状态文件。\r\n- 父图只汇总批次子运行已产生的结果和各站的最终状态，写出 `summary.json`。输出包括日期、各站批次结果、每站最终值、所有站最终值的合计。无启用项的站点保留空结果，完全无站点也生成空汇总。\r\n- 每批可加入约 250 毫秒模拟等待。用同一入口运行以下两组，分别保留产物。混合清单须证明两个站的批次有实际时间重叠，同站下一批在上一批结束后才开始，并读到上一批留下的值。\r\n\r\n```json\r\n{\"date\":\"2042-07-09\",\"stations\":[{\"id\":\"north\",\"batches\":[{\"id\":\"n1\",\"enabled\":true,\"delta\":5},{\"id\":\"n2\",\"enabled\":true,\"delta\":-7},{\"id\":\"n3\",\"enabled\":false,\"delta\":99},{\"id\":\"n4\",\"enabled\":true,\"delta\":-2}]},{\"id\":\"south\",\"batches\":[{\"id\":\"s1\",\"enabled\":true,\"delta\":8},{\"id\":\"s2\",\"enabled\":true,\"delta\":-3}]},{\"id\":\"west\",\"batches\":[{\"id\":\"w1\",\"enabled\":false,\"delta\":20}]}]}\r\n```\r\n\r\n```json\r\n{\"date\":\"2042-07-10\",\"stations\":[]}\r\n```\r\n\r\n交付入口 CSX、子图源码、两份汇总、CLI 校验和运行输出。附上来自各批次子运行的记录，用来核对读到的值、写入或保留的值以及执行顺序，尤其是一次拒绝之后下一批读到的值。请在新的独立目录作答，只查本机的通用 Pregel skill 和公开示例。\r\n", "v2VerdictsPath": "q17a-verdicts.json", "deltaPassed": 0, "deltaScore": -0.0554, "v1": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 17.77, "avgDurationMin": 17.66, "medianSteps": 197.0, "medianTools": 208.0, "reportedTokens": 250471, "tokens": {"input": 420621, "cacheRead": 65450496, "output": 250471}, "score": 1.202914, "scorePassAt1Part": 0.765491, "scorePassAt3Part": 0.437423, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 16.3924, "steps": 197, "toolCalls": 208, "toolErrors": 1, "topTools": {"pwsh": 142, "edit": 26, "write": 25, "read": 13, "skill": 1, "present": 1}, "allTools": {"skill": 1, "pwsh": 142, "read": 13, "write": 25, "edit": 26, "present": 1}, "tokens": {"input": 107769, "cacheRead": 19954816, "output": 87179, "totalContext": 20062585, "hasUsage": true}, "cacheHitRate": 0.9946, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.635724, "score": 0.419578}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 22.53, "steps": 211, "toolCalls": 229, "toolErrors": 1, "topTools": {"pwsh": 135, "edit": 38, "read": 31, "write": 18, "grep": 4, "glob": 2}, "allTools": {"skill": 1, "pwsh": 135, "read": 31, "glob": 2, "grep": 4, "write": 18, "edit": 38}, "tokens": {"input": 183828, "cacheRead": 29709440, "output": 90702, "totalContext": 29893268, "hasUsage": true}, "cacheHitRate": 0.9939, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.499333, "score": 0.32956}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 14.0607, "steps": 154, "toolCalls": 167, "toolErrors": 2, "topTools": {"pwsh": 94, "edit": 29, "read": 23, "write": 17, "grep": 3, "skill": 1}, "allTools": {"skill": 1, "pwsh": 94, "read": 23, "grep": 3, "write": 17, "edit": 29}, "tokens": {"input": 129024, "cacheRead": 15786240, "output": 72590, "totalContext": 15915264, "hasUsage": true}, "cacheHitRate": 0.9919, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.68754, "score": 0.453776}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 27.52, "avgDurationMin": 27.52, "medianSteps": 307.0, "medianTools": 326.0, "reportedTokens": 456599, "tokens": {"input": 586646, "cacheRead": 164081024, "output": 456599}, "score": 1.147508, "scorePassAt1Part": 0.797816, "scorePassAt3Part": 0.349692, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 32.2649, "steps": 327, "toolCalls": 340, "toolErrors": 5, "topTools": {"pwsh": 212, "edit": 47, "read": 42, "write": 30, "todo_write": 4, "grep": 3}, "allTools": {"read": 42, "pwsh": 212, "todo_write": 4, "write": 30, "edit": 47, "grep": 3, "remember": 1, "present": 1}, "tokens": {"input": 204760, "cacheRead": 62387200, "output": 168649, "totalContext": 62591960, "hasUsage": true}, "cacheHitRate": 0.9967, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.283002, "score": 0.2786}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "两站真实重叠，同站串行，拒绝后读回前值，混合总计 8，空组总计 0。禁用 ID 仅留在计划字段，没有子运行。", "durationMin": 23.4778, "steps": 254, "toolCalls": 322, "toolErrors": 3, "topTools": {"pwsh": 161, "edit": 98, "read": 41, "write": 21, "present": 1}, "allTools": {"read": 41, "pwsh": 161, "write": 21, "edit": 98, "present": 1}, "tokens": {"input": 171804, "cacheRead": 42485504, "output": 140098, "totalContext": 42657308, "hasUsage": true}, "cacheHitRate": 0.996, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.478271, "score": 0.470831}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 26.8035, "steps": 307, "toolCalls": 326, "toolErrors": 3, "topTools": {"pwsh": 254, "edit": 35, "read": 19, "write": 13, "todo_write": 2, "present": 2}, "allTools": {"read": 19, "pwsh": 254, "web_search": 1, "todo_write": 2, "write": 13, "edit": 35, "present": 2}, "tokens": {"input": 210082, "cacheRead": 59208320, "output": 147852, "totalContext": 59418402, "hasUsage": true}, "cacheHitRate": 0.9965, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.404367, "score": 0.398077}]}}, {"id": "18", "title": "AI 节点的报告交接", "weight": 1, "category": "AI 节点与复合链路", "tier": "L3 复合 / AI", "aiNode": true, "mode": "新建图", "isRetestedInV2": true, "prompt": "# AI 节点专项 · 报告交接\r\n\r\n把两组冻结的模拟数据分别跑成报告。用同一个可手动执行的 Pregel 流程，每次运行使用自己的产物目录。\r\n\r\n1. 读取指定的数据文件，把原始记录交给 Pregel 的 AI 节点。让 AI 直接写一份 `report.md`，供人阅读。报告覆盖每条记录，写明编号、当前值、上限和判断。低于上限为「正常」，等于上限为「需关注」，高于上限为「超限」。报告版式由 AI 决定。\r\n2. 下游步骤从本次 AI 节点返回的产物路径打开报告，把正文原样归档到本次运行目录。AI 和下游之间交接的是 Markdown 报告及其路径。报告缺失或为空时，下游记录具体原因并在归档前停止。\r\n3. 用同一个入口分别跑第一组（`inputs/case-1/records.md`）和第二组（`inputs/case-2/records.md`），再验证一次**下游归档校验阶段检测到 `report.md` 缺失或为空**的情况（验证该负例时，上游输入记录仍正常提供，可通过可选输入开关在 AI 节点后模拟未产出或清空 `report.md`，使流程进入下游归档校验节点并在日志中明确记录 `report.md` 不存在或为空后报错停止，不能只是上游输入 `records.md` 不存在）。每次保留运行 ID 和 CLI 日志。两次成功运行还须保留 AI 节点的原始报告和下游归档，日志写明两份文件的路径。\r\n\r\n交付 CSX 入口、所需支持文件和运行证据。请在新的独立目录作答，只使用题包、已安装的通用 Pregel skill、公开示例和机器已配置的 AI 渠道。\r\n", "v2VerdictsPath": "retest-12-18-1124/q18-verdicts.json", "deltaPassed": 3, "deltaScore": 2.2239, "v1": {"passed": 0, "passedInLimit": 0, "passAtK": [0.0, 0.0, 0.0], "passPowK": [0.0, 0.0, 0.0], "passPowKIid": [0.0, 0.0, 0.0], "reportedAvgMin": 30.11, "avgDurationMin": 30.0, "medianSteps": 90.0, "medianTools": 106.0, "reportedTokens": 66010, "tokens": {"input": 319578, "cacheRead": 20366720, "output": 66010}, "score": 0.0, "scorePassAt1Part": 0.0, "scorePassAt3Part": 0.0, "trials": [{"trial": 1, "rawStatus": "environment_blocked", "passed": false, "review": "真实 AI 节点在 Windows 启动无头 DSH 时失败，原始证据显示其状态目录不在外层 Agent 的可写工作区内", "durationMin": 30.0014, "steps": 131, "toolCalls": 146, "toolErrors": 1, "topTools": {"pwsh": 102, "read": 29, "grep": 6, "write": 5, "edit": 2, "skill": 1}, "allTools": {"skill": 1, "pwsh": 102, "read": 29, "glob": 1, "grep": 6, "write": 5, "edit": 2}, "tokens": {"input": 153090, "cacheRead": 13235328, "output": 37419, "totalContext": 13388418, "hasUsage": true}, "cacheHitRate": 0.9886, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "failed", "passed": false, "review": "尝试在个人 .ksf/Graphs 下写答卷，被工作区权限拒绝，之后卡在权限申请", "durationMin": 30.0013, "steps": 20, "toolCalls": 30, "toolErrors": 1, "topTools": {"read": 16, "pwsh": 12, "skill": 1, "glob": 1}, "allTools": {"skill": 1, "pwsh": 12, "read": 16, "glob": 1}, "tokens": {"input": 49364, "cacheRead": 612224, "output": 3349, "totalContext": 661588, "hasUsage": true}, "cacheHitRate": 0.9254, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "environment_blocked", "passed": false, "review": "真实 AI 节点在 Windows 启动无头 DSH 时失败，原始证据显示其状态目录不在外层 Agent 的可写工作区内", "durationMin": 30.0014, "steps": 90, "toolCalls": 106, "toolErrors": 1, "topTools": {"pwsh": 49, "read": 30, "grep": 10, "edit": 7, "write": 6, "skill": 1}, "allTools": {"skill": 1, "working_directory": 1, "pwsh": 49, "read": 30, "glob": 1, "grep": 10, "write": 6, "edit": 7, "job_output": 1}, "tokens": {"input": 117124, "cacheRead": 6519168, "output": 25242, "totalContext": 6636292, "hasUsage": true}, "cacheHitRate": 0.9824, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 11.11, "avgDurationMin": 11.11, "medianSteps": 133.0, "medianTools": 148.0, "reportedTokens": 136179, "tokens": {"input": 327815, "cacheRead": 34623360, "output": 136179}, "score": 2.223932, "scorePassAt1Part": 1.54621, "scorePassAt3Part": 0.677722, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。", "durationMin": 11.7846, "steps": 133, "toolCalls": 148, "toolErrors": 1, "topTools": {"pwsh": 96, "read": 20, "write": 15, "edit": 13, "todo_write": 2, "grep": 1}, "allTools": {"read": 20, "pwsh": 96, "todo_write": 2, "write": 15, "edit": 13, "grep": 1, "present": 1}, "tokens": {"input": 122222, "cacheRead": 11153408, "output": 40279, "totalContext": 11275630, "hasUsage": true}, "cacheHitRate": 0.9892, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.73812, "score": 0.726638}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。", "durationMin": 8.409, "steps": 100, "toolCalls": 116, "toolErrors": 0, "topTools": {"pwsh": 52, "read": 23, "edit": 22, "write": 15, "grep": 3, "present": 1}, "allTools": {"read": 23, "pwsh": 52, "write": 15, "edit": 22, "grep": 3, "present": 1}, "tokens": {"input": 77712, "cacheRead": 7444864, "output": 41763, "totalContext": 7522576, "hasUsage": true}, "cacheHitRate": 0.9897, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.813133, "score": 0.800485}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。", "durationMin": 13.1481, "steps": 166, "toolCalls": 188, "toolErrors": 1, "topTools": {"pwsh": 114, "read": 36, "write": 21, "edit": 11, "todo_write": 3, "grep": 2}, "allTools": {"read": 36, "pwsh": 114, "grep": 2, "todo_write": 3, "write": 21, "edit": 11, "present": 1}, "tokens": {"input": 127881, "cacheRead": 16025088, "output": 54137, "totalContext": 16152969, "hasUsage": true}, "cacheHitRate": 0.9921, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.70782, "score": 0.696809}]}}, {"id": "18A", "title": "冻结数据的 AI 周报总结", "weight": 1, "category": "AI 节点与复合链路", "tier": "L3 复合 / AI", "aiNode": true, "mode": "新建图", "isRetestedInV2": false, "prompt": "# 题 A：只汇总冻结周报证据\r\n\r\n给定 `frozen-week.json`，其中已经完成取数、解析和冻结。写一个可手动执行的 Pregel 流程，用实际 AI 节点读取这份快照，生成本轮本地 `report.md`。以附件或等价的冻结上下文交给模型。请显式关闭所有工具、MCP 和 skill。\r\n\r\n按完成项、待确认风险、已知缺口三个小节组织内容，每项引用记录 ID。排除已解决风险。区分“来源没采集”和“没有发现记录”，别把上期数据写成本周结果。交付 Pregel 源码、实际 AI 会话标识、请求和本轮报告。无需登记或安排真实周报任务。\r\n", "v2VerdictsPath": "q18a-verdicts.json", "deltaPassed": 2, "deltaScore": 1.6831, "v1": {"passed": 0, "passedInLimit": 0, "passAtK": [0.0, 0.0, 0.0], "passPowK": [0.0, 0.0, 0.0], "passPowKIid": [0.0, 0.0, 0.0], "reportedAvgMin": 19.51, "avgDurationMin": 19.4, "medianSteps": 158.0, "medianTools": 169.0, "reportedTokens": 157704, "tokens": {"input": 401214, "cacheRead": 49468544, "output": 157704}, "score": 0.0, "scorePassAt1Part": 0.0, "scorePassAt3Part": 0.0, "trials": [{"trial": 1, "rawStatus": "environment_blocked", "passed": false, "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。", "durationMin": 17.4194, "steps": 206, "toolCalls": 220, "toolErrors": 2, "topTools": {"pwsh": 151, "read": 29, "edit": 26, "grep": 5, "write": 5, "working_directory": 2}, "allTools": {"skill": 1, "working_directory": 2, "pwsh": 151, "read": 29, "grep": 5, "write": 5, "edit": 26, "job_output": 1}, "tokens": {"input": 138423, "cacheRead": 22507904, "output": 69246, "totalContext": 22646327, "hasUsage": true}, "cacheHitRate": 0.9939, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "environment_blocked", "passed": false, "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。", "durationMin": 29.997, "steps": 139, "toolCalls": 146, "toolErrors": 2, "topTools": {"pwsh": 95, "read": 24, "write": 12, "edit": 7, "grep": 6, "skill": 1}, "allTools": {"skill": 1, "working_directory": 1, "pwsh": 95, "read": 24, "grep": 6, "write": 12, "edit": 7}, "tokens": {"input": 125083, "cacheRead": 11390720, "output": 48754, "totalContext": 11515803, "hasUsage": true}, "cacheHitRate": 0.9891, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "environment_blocked", "passed": false, "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。", "durationMin": 10.7911, "steps": 158, "toolCalls": 169, "toolErrors": 2, "topTools": {"pwsh": 119, "read": 23, "grep": 11, "write": 7, "edit": 6, "skill": 1}, "allTools": {"skill": 1, "pwsh": 119, "read": 23, "glob": 1, "grep": 11, "write": 7, "edit": 6, "exec_command": 1}, "tokens": {"input": 137708, "cacheRead": 15569920, "output": 39704, "totalContext": 15707628, "hasUsage": true}, "cacheHitRate": 0.9912, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 2, "passedInLimit": 2, "passAtK": [0.666667, 1.0, 1.0], "passPowK": [0.666667, 0.333333, 0.0], "passPowKIid": [0.666667, 0.444444, 0.296296], "reportedAvgMin": 6.06, "avgDurationMin": 6.06, "medianSteps": 64.0, "medianTools": 77.0, "reportedTokens": 87514, "tokens": {"input": 204654, "cacheRead": 14914304, "output": 87514}, "score": 1.683098, "scorePassAt1Part": 1.17019, "scorePassAt3Part": 0.512908, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "三组内容齐全，明确区分未采集与已采集无其他发现；冻结请求的 Tools、MCP 和 Skills 都是空数组。", "durationMin": 3.9756, "steps": 55, "toolCalls": 64, "toolErrors": 0, "topTools": {"read": 26, "pwsh": 17, "edit": 11, "write": 4, "job_output": 4, "grep": 1}, "allTools": {"read": 26, "pwsh": 17, "grep": 1, "write": 4, "edit": 11, "job_output": 4, "present": 1}, "tokens": {"input": 60933, "cacheRead": 2913280, "output": 17260, "totalContext": 2974213, "hasUsage": true}, "cacheHitRate": 0.9795, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.911653, "score": 0.897472}, {"trial": 2, "rawStatus": "failed", "passed": false, "review": "分类和冻结请求正确，但报告只写历史来源未采集，遗漏已采集范围内没有发现的说明。", "durationMin": 5.1183, "steps": 64, "toolCalls": 77, "toolErrors": 0, "topTools": {"pwsh": 33, "read": 20, "edit": 10, "write": 8, "job_output": 3, "grep": 2}, "allTools": {"read": 20, "pwsh": 33, "grep": 2, "write": 8, "edit": 10, "job_output": 3, "present": 1}, "tokens": {"input": 73629, "cacheRead": 4083456, "output": 32809, "totalContext": 4157085, "hasUsage": true}, "cacheHitRate": 0.9823, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "报告明确区分已有采集结果、未发现未知状态记录和历史源未采集；上期条目只作为排除说明，冻结请求关闭三类工具。", "durationMin": 9.0882, "steps": 122, "toolCalls": 138, "toolErrors": 0, "topTools": {"pwsh": 64, "edit": 22, "write": 21, "read": 19, "grep": 6, "glob": 2}, "allTools": {"read": 19, "working_directory": 1, "pwsh": 64, "grep": 6, "glob": 2, "write": 21, "edit": 22, "job_output": 2, "present": 1}, "tokens": {"input": 70092, "cacheRead": 7917568, "output": 37445, "totalContext": 7987660, "hasUsage": true}, "cacheHitRate": 0.9912, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.79804, "score": 0.785626}]}}, {"id": "18B", "title": "无头 DSH 注入两个模拟 MCP 与 skill", "weight": 1, "category": "AI 节点与复合链路", "tier": "L3 复合 / AI", "aiNode": true, "mode": "改造既有图", "isRetestedInV2": false, "prompt": "# 题 B：让无头 DSH 用 skill 和 MCP 完成周报\r\n\r\n写一个可手动执行的 Pregel 流程。Pregel AI 节点在运行时启动独立的无头 DSH。把 AI 节点的 Tools 显式设为空列表，给内层会话显式声明 MCP 服务器 `mock-week-items`、`mock-week-history` 和 skill `mock-weekly-flow`，由它针对目标周 2042-07-07 查询数据并生成本地 `report.md`。这两台模拟 MCP 都已注册，每台只有一项只读工具；skill 也已装好。\r\n\r\n用同一内层会话加载 skill、调用两个工具并完成周报。输入数据以本轮工具返回为准。由外层写 Pregel 接线，运行期取数和归纳由内层完成。交付 Pregel 源码、实际 AI 请求、内层会话标识、本轮报告及工具调用证据。只使用题目专用运行环境，不读实际项目数据、不上传或发布。\r\n", "v2VerdictsPath": "q18b-verdicts.json", "deltaPassed": 2, "deltaScore": 2.1247, "v1": {"passed": 1, "passedInLimit": 1, "passAtK": [0.333333, 0.666667, 1.0], "passPowK": [0.333333, 0.0, 0.0], "passPowKIid": [0.333333, 0.111111, 0.037037], "reportedAvgMin": 34.83, "avgDurationMin": 34.83, "medianSteps": 177.0, "medianTools": 193.0, "reportedTokens": 178259, "tokens": {"input": 601721, "cacheRead": 85337728, "output": 178259}, "score": 0.539857, "scorePassAt1Part": 0.343545, "scorePassAt3Part": 0.196311, "trials": [{"trial": 1, "rawStatus": "manual_stopped", "passed": false, "review": "外层会话达 48.15 分钟后手动停止，未完成全量交付", "durationMin": 48.1515, "steps": 177, "toolCalls": 193, "toolErrors": 3, "topTools": {"pwsh": 99, "read": 46, "edit": 24, "grep": 12, "write": 8, "job_output": 2}, "allTools": {"pwsh": 99, "read": 46, "skill": 1, "grep": 12, "write": 8, "edit": 24, "job_output": 2, "job_kill": 1}, "tokens": {"input": 195839, "cacheRead": 25003392, "output": 42806, "totalContext": 25199231, "hasUsage": true}, "cacheHitRate": 0.9922, "bucket": "manual_stopped", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "Trial 2 通过：成功注入模拟 MCP 与 skill 并完成输出", "durationMin": 8.1916, "steps": 118, "toolCalls": 139, "toolErrors": 0, "topTools": {"pwsh": 76, "read": 39, "grep": 8, "edit": 7, "todo_write": 3, "write": 3}, "allTools": {"skill": 1, "pwsh": 76, "read": 39, "glob": 1, "grep": 8, "todo_write": 3, "write": 3, "edit": 7, "present": 1}, "tokens": {"input": 142107, "cacheRead": 12249728, "output": 37788, "totalContext": 12391835, "hasUsage": true}, "cacheHitRate": 0.9885, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.817964, "score": 0.539857}, {"trial": 3, "rawStatus": "manual_stopped", "passed": false, "review": "外层会话达 48.15 分钟后手动停止，未完成全量交付", "durationMin": 48.1489, "steps": 255, "toolCalls": 286, "toolErrors": 4, "topTools": {"pwsh": 193, "read": 41, "edit": 40, "write": 5, "grep": 3, "job_output": 2}, "allTools": {"skill": 1, "pwsh": 193, "read": 41, "job_kill": 1, "write": 5, "edit": 40, "grep": 3, "job_output": 2}, "tokens": {"input": 263775, "cacheRead": 48084608, "output": 97665, "totalContext": 48348383, "hasUsage": true}, "cacheHitRate": 0.9945, "bucket": "manual_stopped", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 4.4, "avgDurationMin": 4.4, "medianSteps": 43.0, "medianTools": 49.0, "reportedTokens": 54815, "tokens": {"input": 156874, "cacheRead": 9002112, "output": 54815}, "score": 2.664521, "scorePassAt1Part": 1.852534, "scorePassAt3Part": 0.811987, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 7.6786, "steps": 98, "toolCalls": 112, "toolErrors": 1, "topTools": {"pwsh": 49, "edit": 28, "read": 25, "write": 6, "grep": 3, "present": 1}, "allTools": {"read": 25, "pwsh": 49, "grep": 3, "write": 6, "edit": 28, "present": 1}, "tokens": {"input": 81610, "cacheRead": 6041600, "output": 28988, "totalContext": 6123210, "hasUsage": true}, "cacheHitRate": 0.9867, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.829364, "score": 0.816463}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.207, "steps": 43, "toolCalls": 49, "toolErrors": 0, "topTools": {"pwsh": 31, "read": 6, "write": 4, "todo_write": 3, "edit": 3, "skill": 1}, "allTools": {"skill": 1, "pwsh": 31, "read": 6, "todo_write": 3, "write": 4, "edit": 3, "present": 1}, "tokens": {"input": 38856, "cacheRead": 1687808, "output": 16043, "totalContext": 1726664, "hasUsage": true}, "cacheHitRate": 0.9775, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.928733, "score": 0.914286}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 2.3163, "steps": 35, "toolCalls": 45, "toolErrors": 0, "topTools": {"pwsh": 23, "read": 16, "write": 3, "grep": 2, "present": 1}, "allTools": {"read": 16, "pwsh": 23, "grep": 2, "write": 3, "present": 1}, "tokens": {"input": 36408, "cacheRead": 1272704, "output": 9784, "totalContext": 1309112, "hasUsage": true}, "cacheHitRate": 0.9722, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.948527, "score": 0.933772}]}}, {"id": "19", "title": "周报固定分支并行", "weight": 1, "category": "动态展开与分支", "tier": "L2 进阶", "aiNode": false, "mode": "新建图", "isRetestedInV2": false, "prompt": "# 周报固定分支并行\r\n\r\n团队周报有两个独立采集来源，Git 和 P4。请把采集、汇总做成可手动运行的康师傅 Pregel 自动化。本题只读本地模拟数据。两条分支数量固定，各自读取自己的 JSON，模拟一次约 1 秒的采集等待，记录来源、条数和 UTC 起止时间。采集阶段要使用 Pregel 原生固定分支 Parallel。汇合后由单独的步骤输出 summary.json，包含两个来源的结果和总条数。用实际运行的时间记录说明分支有重叠，而且汇总在两条采集都结束之后启动。\r\n\r\n请原样保存以下输入：\r\ngit.json: [{\"id\":\"git-1\"},{\"id\":\"git-2\"},{\"id\":\"git-3\"}]\r\np4.json: [{\"id\":\"p4-1\"},{\"id\":\"p4-2\"}]\r\n\r\n\r\n交付入口 CSX、完整的 CLI 校验和实跑日志、Run ID 和各份独立产物。\r\n", "v2VerdictsPath": "q19-verdicts.json", "deltaPassed": 1, "deltaScore": 1.5707, "v1": {"passed": 2, "passedInLimit": 2, "passAtK": [0.666667, 1.0, 1.0], "passPowK": [0.666667, 0.333333, 0.0], "passPowKIid": [0.666667, 0.444444, 0.296296], "reportedAvgMin": 12.37, "avgDurationMin": 6.77, "medianSteps": 98.0, "medianTools": 111.0, "reportedTokens": 89038, "tokens": {"input": 215229, "cacheRead": 19140736, "output": 89038}, "score": 1.044712, "scorePassAt1Part": 0.664817, "scorePassAt3Part": 0.379895, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 11.725, "steps": 155, "toolCalls": 171, "toolErrors": 1, "topTools": {"pwsh": 92, "edit": 31, "read": 20, "write": 19, "grep": 6, "skill": 1}, "allTools": {"skill": 1, "pwsh": 92, "read": 20, "glob": 1, "grep": 6, "write": 19, "edit": 31, "present": 1}, "tokens": {"input": 99921, "cacheRead": 11814912, "output": 53041, "totalContext": 11914833, "hasUsage": true}, "cacheHitRate": 0.9916, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.739444, "score": 0.488033}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 7.0446, "steps": 98, "toolCalls": 111, "toolErrors": 1, "topTools": {"pwsh": 63, "read": 18, "edit": 16, "write": 8, "grep": 4, "skill": 1}, "allTools": {"skill": 1, "pwsh": 63, "read": 18, "grep": 4, "write": 8, "edit": 16, "present": 1}, "tokens": {"input": 84973, "cacheRead": 6705152, "output": 30987, "totalContext": 6790125, "hasUsage": true}, "cacheHitRate": 0.9875, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.843453, "score": 0.556679}, {"trial": 3, "rawStatus": "failed", "passed": false, "review": "运行中途停止/未正常收包（18.1 分钟，无退出码）", "durationMin": 1.5289, "steps": 26, "toolCalls": 33, "toolErrors": 0, "topTools": {"pwsh": 23, "read": 7, "grep": 2, "skill": 1}, "allTools": {"skill": 1, "pwsh": 23, "read": 7, "grep": 2}, "tokens": {"input": 30335, "cacheRead": 620672, "output": 5010, "totalContext": 651007, "hasUsage": true}, "cacheHitRate": 0.9534, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 5.15, "avgDurationMin": 5.15, "medianSteps": 51.0, "medianTools": 61.0, "reportedTokens": 76645, "tokens": {"input": 194987, "cacheRead": 11331712, "output": 76645}, "score": 2.615434, "scorePassAt1Part": 1.818406, "scorePassAt3Part": 0.797029, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 4.1209, "steps": 51, "toolCalls": 59, "toolErrors": 2, "topTools": {"pwsh": 28, "read": 16, "edit": 8, "write": 6, "present": 1}, "allTools": {"read": 16, "pwsh": 28, "write": 6, "edit": 8, "present": 1}, "tokens": {"input": 60717, "cacheRead": 2685824, "output": 23521, "totalContext": 2746541, "hasUsage": true}, "cacheHitRate": 0.9779, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.908424, "score": 0.894293}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 7.8225, "steps": 91, "toolCalls": 100, "toolErrors": 1, "topTools": {"pwsh": 57, "read": 16, "edit": 12, "write": 9, "todo_write": 4, "grep": 1}, "allTools": {"read": 16, "pwsh": 57, "grep": 1, "todo_write": 4, "write": 9, "edit": 12, "present": 1}, "tokens": {"input": 77482, "cacheRead": 6403712, "output": 36833, "totalContext": 6481194, "hasUsage": true}, "cacheHitRate": 0.988, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.826167, "score": 0.813315}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 3.5023, "steps": 49, "toolCalls": 61, "toolErrors": 1, "topTools": {"pwsh": 21, "read": 20, "edit": 10, "write": 7, "grep": 2, "present": 1}, "allTools": {"read": 20, "pwsh": 21, "grep": 2, "write": 7, "edit": 10, "present": 1}, "tokens": {"input": 56788, "cacheRead": 2242176, "output": 16291, "totalContext": 2298964, "hasUsage": true}, "cacheHitRate": 0.9753, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.922171, "score": 0.907826}]}}, {"id": "19A", "title": "模拟发布前双路检查", "weight": 1, "category": "动态展开与分支", "tier": "L2 进阶", "aiNode": false, "mode": "改造既有图", "isRetestedInV2": false, "prompt": "# 模拟题一：发布前双路检查\r\n\r\n给一个虚构的安装包做发布前检查。只能读取本题的本地 JSON，不能访问真实发布系统。请写可手动运行的 Pregel 自动化，用固定分支 `Parallel` 编排。\r\n\r\n- 包校验分支依次读包清单、检查包名与清单中的校验值，再返回 `pass` 或 `fail`。校验值只是本题的模拟字符串。\r\n- 审批分支依次读审批记录、比对待发布版本。渠道为 `internal` 时，整条审批分支在图上应显示为跳过；审批记录即使不存在也不能去读。渠道为 `public` 时，没有对应批准记录就返回 `fail`。\r\n- 公开渠道的两条分支都启用。在各自的读取节点内加入约 500 毫秒的模拟等待，记录读取节点实际开始和结束的时间。两次公开渠道运行里，两个读取节点的时间区间都必须有交集。用节点里的时间戳验收。\r\n- 汇总节点等所有启用分支结束后写 `decision.json`，包含版本、两条分支的结论和原因，以及最终决定 `allow` 或 `hold`。包校验通过且审批通过或按渠道跳过时允许发布，其余情况暂缓。检查结果为 `fail` 属于业务结果，仍须交付汇总。\r\n- 本次只写决定文件，不执行发布。三次用同一个编译后的图，分别保存决定文件和完整运行证据。\r\n\r\n以下三个 JSON 是运行数据，每组各保存为一个文件。缺少 `approvals` 表示审批记录不可用。\r\n\r\n```json\r\n{\"case\":\"public-ok\",\"channel\":\"public\",\"version\":\"1.4.0\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"abc9\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"abc9\"},\"approvals\":[{\"version\":\"1.4.0\",\"approved\":true}]}\r\n```\r\n\r\n```json\r\n{\"case\":\"internal-skip\",\"channel\":\"internal\",\"version\":\"1.4.1\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"def2\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"def2\"}}\r\n```\r\n\r\n```json\r\n{\"case\":\"public-hold\",\"channel\":\"public\",\"version\":\"1.4.2\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"xyz8\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"wrong\"},\"approvals\":[{\"version\":\"1.4.1\",\"approved\":true}]}\r\n```\r\n\r\n交付入口 CSX、三份决定文件、CLI 校验和运行输出。按运行 ID 列出两个读取节点的起止、重叠毫秒数、各分支完成时间和汇总开始时间。内部渠道用 CLI 步骤状态证明两个审批节点均被跳过，并核对没有审批读取记录。请在新的独立目录作答，只查本机的通用 Pregel skill 和公开示例。\r\n", "v2VerdictsPath": "q19a-verdicts.json", "deltaPassed": 2, "deltaScore": 1.66, "v1": {"passed": 1, "passedInLimit": 1, "passAtK": [0.333333, 0.666667, 1.0], "passPowK": [0.333333, 0.0, 0.0], "passPowKIid": [0.333333, 0.111111, 0.037037], "reportedAvgMin": 23.72, "avgDurationMin": 23.62, "medianSteps": 254.0, "medianTools": 268.0, "reportedTokens": 320771, "tokens": {"input": 462586, "cacheRead": 95271552, "output": 320771}, "score": 0.478394, "scorePassAt1Part": 0.304433, "scorePassAt3Part": 0.173962, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "通过全部验收", "durationMin": 12.3822, "steps": 138, "toolCalls": 147, "toolErrors": 0, "topTools": {"pwsh": 88, "read": 28, "edit": 21, "write": 5, "grep": 3, "skill": 1}, "allTools": {"skill": 1, "pwsh": 88, "read": 28, "glob": 1, "grep": 3, "write": 5, "edit": 21}, "tokens": {"input": 116737, "cacheRead": 12349184, "output": 60916, "totalContext": 12465921, "hasUsage": true}, "cacheHitRate": 0.9906, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.72484, "score": 0.478394}, {"trial": 2, "rawStatus": "failed", "passed": false, "review": "留有部分案例证据，Agent 达到 30 分钟启动时限后退出，未完成整份交付。", "durationMin": 30.0081, "steps": 254, "toolCalls": 268, "toolErrors": 1, "topTools": {"pwsh": 191, "read": 34, "write": 19, "edit": 18, "grep": 4, "skill": 1}, "allTools": {"skill": 1, "working_directory": 1, "pwsh": 191, "read": 34, "grep": 4, "write": 19, "edit": 18}, "tokens": {"input": 199045, "cacheRead": 43449216, "output": 107458, "totalContext": 43648261, "hasUsage": true}, "cacheHitRate": 0.9954, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "failed", "passed": false, "review": "公开双路有重叠，内部审批节点实际状态是 Succeeded，未满足图上整支 Skipped。", "durationMin": 28.4704, "steps": 257, "toolCalls": 276, "toolErrors": 0, "topTools": {"pwsh": 181, "edit": 30, "read": 27, "write": 19, "job_output": 16, "glob": 2}, "allTools": {"skill": 1, "pwsh": 181, "read": 27, "glob": 2, "write": 19, "edit": 30, "job_output": 16}, "tokens": {"input": 146804, "cacheRead": 39473152, "output": 152397, "totalContext": 39619956, "hasUsage": true}, "cacheHitRate": 0.9963, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 3, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 12.42, "avgDurationMin": 12.42, "medianSteps": 135.0, "medianTools": 142.0, "reportedTokens": 180329, "tokens": {"input": 432348, "cacheRead": 48470272, "output": 180329}, "score": 2.138441, "scorePassAt1Part": 1.486771, "scorePassAt3Part": 0.651669, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。", "durationMin": 12.1995, "steps": 135, "toolCalls": 142, "toolErrors": 4, "topTools": {"pwsh": 96, "edit": 18, "read": 17, "write": 6, "grep": 3, "todo_write": 1}, "allTools": {"read": 17, "pwsh": 96, "grep": 3, "todo_write": 1, "write": 6, "edit": 18, "present": 1}, "tokens": {"input": 131562, "cacheRead": 15687424, "output": 54685, "totalContext": 15818986, "hasUsage": true}, "cacheHitRate": 0.9917, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.7289, "score": 0.717562}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。", "durationMin": 9.1482, "steps": 105, "toolCalls": 120, "toolErrors": 1, "topTools": {"pwsh": 55, "edit": 32, "read": 19, "write": 9, "grep": 2, "todo_write": 2}, "allTools": {"read": 19, "pwsh": 55, "grep": 2, "todo_write": 2, "write": 9, "edit": 32, "present": 1}, "tokens": {"input": 165024, "cacheRead": 10150784, "output": 42638, "totalContext": 10315808, "hasUsage": true}, "cacheHitRate": 0.984, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.796707, "score": 0.784313}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。", "durationMin": 15.9019, "steps": 173, "toolCalls": 191, "toolErrors": 0, "topTools": {"pwsh": 109, "edit": 38, "read": 20, "write": 16, "grep": 4, "todo_write": 3}, "allTools": {"read": 20, "pwsh": 109, "grep": 4, "todo_write": 3, "write": 16, "edit": 38, "present": 1}, "tokens": {"input": 135762, "cacheRead": 22632064, "output": 83006, "totalContext": 22767826, "hasUsage": true}, "cacheHitRate": 0.994, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.646624, "score": 0.636566}]}}, {"id": "05", "title": "完整性能日报自动化", "weight": 3, "category": "AI 节点与复合链路", "tier": "L3 复合 / AI", "aiNode": true, "mode": "新建图", "isRetestedInV2": true, "prompt": "# 完整性能日报\n\n用提供的业务脚本、报告模板和冻结的 PerfDog 样本，从空白写一套每天出日报的 Pregel 工作流。交付可加载的入口 CSX、业务参数和两层编排，用 CLI 实际从头跑完。\r\n\r\n- 输入为报告日、场景和画质。用 2026-11-13、火车站与选矿厂，每个场景依次跑 Epic、High。从输入动态展开。不同场景并行，同场景画质按输入顺序串行，每个子运行保留稳定业务标识、独立目录和实际执行记录。\r\n- 每个场景画质组合按业务脚本从冻结样本取数和准备证据，使用宿主的 Pregel AI 节点实际分析，按业务约定校验、归档并回读。收齐各组合的回执后，再用宿主 AI 节点生成并归档当天总报告。缺数要记录跳过原因，失败保留真实结果。\r\n- 图里面的单份分析与当天汇总一律调用 ksf/deepseek-v4.1-flash，默认思考强度。题包配置已按这个口径设置，保持原样。只使用本地样本与本地报告存储，不接线上取数、上传或推送。\r\n- 交付入口、CLI 命令和退出码、运行 ID、各子运行的取数/分析/归档证据及当天汇总报告的绝对路径。保留实际运行日志和源码，不修改冻结样本及业务脚本的字段、校验、模板和工具协议。\r\n\r\n题包提供脱敏后的基础 FPS 数据。每个场景、画质组合有一份小样本。每组用一句话概括本轮帧率，最后按场景和档位汇总。\r\n", "v2VerdictsPath": "retest-05-r2-1124/q05-verdicts.json", "deltaPassed": 3, "deltaScore": 3.4103, "v1": {"passed": 0, "passedInLimit": 0, "passAtK": [0.0, 0.0, 0.0], "passPowK": [0.0, 0.0, 0.0], "passPowKIid": [0.0, 0.0, 0.0], "reportedAvgMin": 30.12, "avgDurationMin": 29.99, "medianSteps": 273.0, "medianTools": 293.0, "reportedTokens": 212253, "tokens": {"input": 737161, "cacheRead": 138538752, "output": 212253}, "score": 0.0, "scorePassAt1Part": 0.0, "scorePassAt3Part": 0.0, "trials": [{"trial": 1, "rawStatus": "environment_blocked", "passed": false, "review": "未完成日报主图，在排查 Windows 内层 DSH 状态目录权限时结束。", "durationMin": 29.9865, "steps": 273, "toolCalls": 293, "toolErrors": 1, "topTools": {"pwsh": 228, "read": 36, "write": 18, "grep": 9, "skill": 1, "edit": 1}, "allTools": {"skill": 1, "pwsh": 228, "read": 36, "grep": 9, "write": 18, "edit": 1}, "tokens": {"input": 225655, "cacheRead": 45297920, "output": 55262, "totalContext": 45523575, "hasUsage": true}, "cacheHitRate": 0.995, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 2, "rawStatus": "environment_blocked", "passed": false, "review": "未完成日报主图，在排查 Windows 内层 DSH 状态目录权限时结束。", "durationMin": 29.9863, "steps": 129, "toolCalls": 159, "toolErrors": 1, "topTools": {"pwsh": 101, "read": 47, "grep": 8, "skill": 1, "write": 1, "job_output": 1}, "allTools": {"skill": 1, "pwsh": 101, "read": 47, "grep": 8, "write": 1, "job_output": 1}, "tokens": {"input": 180485, "cacheRead": 15909632, "output": 24388, "totalContext": 16090117, "hasUsage": true}, "cacheHitRate": 0.9888, "bucket": "environment_blocked", "timedOut": false, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "failed", "passed": false, "review": "写出了日报图源码，运行在“准备汇总素材”处因路径为空失败，并未生成当天汇总。", "durationMin": 29.9868, "steps": 331, "toolCalls": 361, "toolErrors": 4, "topTools": {"pwsh": 247, "read": 54, "write": 31, "edit": 21, "grep": 6, "skill": 1}, "allTools": {"skill": 1, "pwsh": 247, "read": 54, "glob": 1, "grep": 6, "write": 31, "edit": 21}, "tokens": {"input": 331021, "cacheRead": 77331200, "output": 132603, "totalContext": 77662221, "hasUsage": true}, "cacheHitRate": 0.9957, "bucket": "failed", "timedOut": false, "timeFactor": 0.0, "score": 0.0}]}, "v2": {"passed": 3, "passedInLimit": 2, "passAtK": [1.0, 1.0, 1.0], "passPowK": [1.0, 1.0, 1.0], "passPowKIid": [1.0, 1.0, 1.0], "reportedAvgMin": 44.3, "avgDurationMin": 44.3, "medianSteps": 174.0, "medianTools": 205.0, "reportedTokens": 531521, "tokens": {"input": 1646560, "cacheRead": 452456704, "output": 531521}, "score": 3.41026, "scorePassAt1Part": 2.371017, "scorePassAt3Part": 1.039244, "trials": [{"trial": 1, "rawStatus": "passed", "passed": true, "review": "四组日报和当天汇总已归档并通过本地回读。", "durationMin": 15.2795, "steps": 146, "toolCalls": 172, "toolErrors": 0, "topTools": {"pwsh": 95, "edit": 33, "read": 32, "write": 9, "todo_write": 2, "present": 1}, "allTools": {"read": 32, "pwsh": 95, "todo_write": 2, "write": 9, "edit": 33, "present": 1}, "tokens": {"input": 222474, "cacheRead": 25811712, "output": 68362, "totalContext": 26034186, "hasUsage": true}, "cacheHitRate": 0.9915, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.660456, "score": 1.950545}, {"trial": 2, "rawStatus": "passed", "passed": true, "review": "四组日报和当天汇总已归档并通过本地回读。", "durationMin": 94.8657, "steps": 855, "toolCalls": 875, "toolErrors": 0, "topTools": {"pwsh": 652, "write": 89, "job_output": 57, "read": 43, "edit": 20, "grep": 12}, "allTools": {"read": 43, "pwsh": 652, "grep": 12, "todo_write": 1, "write": 89, "edit": 20, "job_output": 57, "present": 1}, "tokens": {"input": 1213602, "cacheRead": 393003392, "output": 353415, "totalContext": 394216994, "hasUsage": true}, "cacheHitRate": 0.9969, "bucket": "passed_timeout", "timedOut": true, "timeFactor": 0.0, "score": 0.0}, {"trial": 3, "rawStatus": "passed", "passed": true, "review": "四组日报和当天汇总已归档并通过本地回读。", "durationMin": 22.7583, "steps": 174, "toolCalls": 205, "toolErrors": 0, "topTools": {"pwsh": 113, "read": 46, "edit": 34, "write": 9, "grep": 2, "present": 1}, "allTools": {"read": 46, "pwsh": 113, "grep": 2, "write": 9, "edit": 34, "present": 1}, "tokens": {"input": 210484, "cacheRead": 33641600, "output": 109744, "totalContext": 33852084, "hasUsage": true}, "cacheHitRate": 0.9938, "bucket": "passed_in_limit", "timedOut": false, "timeFactor": 0.49426, "score": 1.459715}]}}], "llmAnalysis": null};
+window.EVAL_BENCHMARK_DATA = {
+  "schemaVersion": 2,
+  "benchmark": {
+    "model": "deepseek-v4.1-flash",
+    "reasoningEffort": "default",
+    "machine": "WIN-BENCH-01",
+    "questionCount": 15,
+    "trialsPerQuestion": 3,
+    "totalTrialsPerVersion": 45,
+    "timeLimitMinutes": 45,
+    "maxPossibleScore": 90,
+    "v1FrozenMedianMin": 11.8
+  },
+  "versions": {
+    "v1": {
+      "passedTrials": 27,
+      "inLimitPassedTrials": 27,
+      "totalTrials": 45,
+      "coveredQuestions": 12,
+      "coveredInLimitQuestions": 12,
+      "all3StableQuestions": 6,
+      "all3InLimitQuestions": 6,
+      "passAtK": [
+        0.6,
+        0.733333,
+        0.8
+      ],
+      "passPowK": [
+        0.6,
+        0.466667,
+        0.4
+      ],
+      "passAtKInLimit": [
+        0.6,
+        0.733333,
+        0.8
+      ],
+      "passPowKInLimit": [
+        0.6,
+        0.466667,
+        0.4
+      ],
+      "greenCoefficient": 0.66,
+      "scoreBeforeFalseGreenReview": 41.75444,
+      "zeroPointPasses": 0,
+      "statusBreakdown": {
+        "passed_in_limit": {
+          "count": 27,
+          "trials": [
+            "Q01-T1",
+            "Q01-T2",
+            "Q01-T3",
+            "Q02-T2",
+            "Q02-T3",
+            "Q02A-T1",
+            "Q04-T1",
+            "Q04-T2",
+            "Q04-T3",
+            "Q07-T1",
+            "Q07-T2",
+            "Q07-T3",
+            "Q10-T1",
+            "Q10-T2",
+            "Q10-T3",
+            "Q12-T1",
+            "Q12-T2",
+            "Q12-T3",
+            "Q17-T2",
+            "Q17-T3",
+            "Q17A-T1",
+            "Q17A-T2",
+            "Q17A-T3",
+            "Q18B-T2",
+            "Q19-T1",
+            "Q19-T2",
+            "Q19A-T1"
+          ]
+        },
+        "passed_timeout": {
+          "count": 0,
+          "trials": []
+        },
+        "failed": {
+          "count": 8,
+          "trials": [
+            "Q02-T1",
+            "Q02A-T2",
+            "Q17-T1",
+            "Q18-T2",
+            "Q19-T3",
+            "Q19A-T2",
+            "Q19A-T3",
+            "Q05-T3"
+          ]
+        },
+        "environment_blocked": {
+          "count": 7,
+          "trials": [
+            "Q18-T1",
+            "Q18-T3",
+            "Q18A-T1",
+            "Q18A-T2",
+            "Q18A-T3",
+            "Q05-T1",
+            "Q05-T2"
+          ]
+        },
+        "manual_stopped": {
+          "count": 2,
+          "trials": [
+            "Q18B-T1",
+            "Q18B-T3"
+          ]
+        },
+        "outbound_violation": {
+          "count": 1,
+          "trials": [
+            "Q02A-T3"
+          ]
+        }
+      },
+      "durationSession": {
+        "p25": 2.46,
+        "p50": 10.34,
+        "p75": 29.99,
+        "p90": 30.0,
+        "mean": 14.26,
+        "max": 48.15,
+        "totalHours": 10.7
+      },
+      "durationReportedAvgMean": 15.05,
+      "process": {
+        "medianSteps": 98.0,
+        "meanSteps": 118.5,
+        "totalSteps": 5333,
+        "medianToolCalls": 111.0,
+        "meanToolCalls": 129.6,
+        "totalToolCalls": 5831,
+        "totalToolErrors": 43,
+        "toolErrorRate": 0.0074,
+        "topTools": [
+          {
+            "name": "pwsh",
+            "count": 3744
+          },
+          {
+            "name": "read",
+            "count": 884
+          },
+          {
+            "name": "edit",
+            "count": 551
+          },
+          {
+            "name": "write",
+            "count": 413
+          },
+          {
+            "name": "grep",
+            "count": 130
+          },
+          {
+            "name": "skill",
+            "count": 45
+          },
+          {
+            "name": "job_output",
+            "count": 24
+          },
+          {
+            "name": "glob",
+            "count": 16
+          }
+        ]
+      },
+      "tokens": {
+        "totalOutput": 1880559,
+        "medianOutput": 30987,
+        "meanOutput": 41790,
+        "totalInput": 4470750,
+        "totalCacheRead": 647255296,
+        "cacheHitRate": 0.9931,
+        "outputTokensPerPass": 69650,
+        "outputTokensPerPoint": 123091
+      },
+      "capScore": 49.0,
+      "spdScore": 30.886103
+    },
+    "v2": {
+      "passedTrials": 44,
+      "inLimitPassedTrials": 43,
+      "totalTrials": 45,
+      "coveredQuestions": 15,
+      "coveredInLimitQuestions": 15,
+      "all3StableQuestions": 14,
+      "all3InLimitQuestions": 13,
+      "passAtK": [
+        0.977778,
+        1.0,
+        1.0
+      ],
+      "passPowK": [
+        0.977778,
+        0.955556,
+        0.933333
+      ],
+      "passAtKInLimit": [
+        0.955556,
+        1.0,
+        1.0
+      ],
+      "passPowKInLimit": [
+        0.955556,
+        0.911111,
+        0.866667
+      ],
+      "greenCoefficient": 0.984444,
+      "scoreBeforeFalseGreenReview": 75.384506,
+      "zeroPointPasses": 0,
+      "statusBreakdown": {
+        "passed_in_limit": {
+          "count": 43,
+          "trials": [
+            "Q01-T1",
+            "Q01-T2",
+            "Q01-T3",
+            "Q02-T1",
+            "Q02-T2",
+            "Q02-T3",
+            "Q02A-T1",
+            "Q02A-T2",
+            "Q02A-T3",
+            "Q04-T1",
+            "Q04-T2",
+            "Q04-T3",
+            "Q07-T1",
+            "Q07-T2",
+            "Q07-T3",
+            "Q10-T1",
+            "Q10-T2",
+            "Q10-T3",
+            "Q12-T1",
+            "Q12-T2",
+            "Q12-T3",
+            "Q17-T1",
+            "Q17-T2",
+            "Q17-T3",
+            "Q17A-T1",
+            "Q17A-T2",
+            "Q17A-T3",
+            "Q18-T1",
+            "Q18-T2",
+            "Q18-T3",
+            "Q18A-T1",
+            "Q18A-T3",
+            "Q18B-T1",
+            "Q18B-T2",
+            "Q18B-T3",
+            "Q19-T1",
+            "Q19-T2",
+            "Q19-T3",
+            "Q19A-T1",
+            "Q19A-T2",
+            "Q19A-T3",
+            "Q05-T1",
+            "Q05-T3"
+          ]
+        },
+        "passed_timeout": {
+          "count": 1,
+          "trials": [
+            "Q05-T2"
+          ]
+        },
+        "failed": {
+          "count": 1,
+          "trials": [
+            "Q18A-T2"
+          ]
+        },
+        "environment_blocked": {
+          "count": 0,
+          "trials": []
+        },
+        "manual_stopped": {
+          "count": 0,
+          "trials": []
+        },
+        "outbound_violation": {
+          "count": 0,
+          "trials": []
+        }
+      },
+      "durationSession": {
+        "p25": 2.06,
+        "p50": 3.34,
+        "p75": 10.62,
+        "p90": 21.04,
+        "mean": 9.02,
+        "max": 94.87,
+        "totalHours": 6.77
+      },
+      "durationReportedAvgMean": 9.02,
+      "process": {
+        "medianSteps": 44.0,
+        "meanSteps": 97.3,
+        "totalSteps": 4378,
+        "medianToolCalls": 53.0,
+        "meanToolCalls": 109.0,
+        "totalToolCalls": 4904,
+        "totalToolErrors": 28,
+        "toolErrorRate": 0.0057,
+        "topTools": [
+          {
+            "name": "pwsh",
+            "count": 2888
+          },
+          {
+            "name": "read",
+            "count": 775
+          },
+          {
+            "name": "edit",
+            "count": 600
+          },
+          {
+            "name": "write",
+            "count": 410
+          },
+          {
+            "name": "job_output",
+            "count": 66
+          },
+          {
+            "name": "grep",
+            "count": 60
+          },
+          {
+            "name": "todo_write",
+            "count": 46
+          },
+          {
+            "name": "present",
+            "count": 45
+          }
+        ]
+      },
+      "tokens": {
+        "totalOutput": 1835509,
+        "medianOutput": 16043,
+        "meanOutput": 40789,
+        "totalInput": 4511052,
+        "totalCacheRead": 787975168,
+        "cacheHitRate": 0.9943,
+        "outputTokensPerPass": 41716,
+        "outputTokensPerPoint": 48419
+      },
+      "capScore": 87.9,
+      "spdScore": 56.611266
+    }
+  },
+  "dimensions": {
+    "category": [
+      {
+        "key": "基础建图与调度",
+        "label": "基础建图与调度",
+        "questionCount": 3,
+        "questionIds": [
+          "01",
+          "04",
+          "12"
+        ],
+        "v1": {
+          "passedTrials": 9,
+          "totalTrials": 9,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 8.65,
+          "medianDurationMin": 1.42,
+          "meanDurationMin": 2.36,
+          "medianSteps": 23.0,
+          "medianToolCalls": 26.0,
+          "totalOutputTokens": 89727
+        },
+        "v2": {
+          "passedTrials": 9,
+          "totalTrials": 9,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 8.895,
+          "medianDurationMin": 1.55,
+          "meanDurationMin": 1.57,
+          "medianSteps": 23.0,
+          "medianToolCalls": 26.0,
+          "totalOutputTokens": 75375
+        }
+      },
+      {
+        "key": "文件解析与集成",
+        "label": "文件解析与集成",
+        "questionCount": 2,
+        "questionIds": [
+          "02",
+          "02A"
+        ],
+        "v1": {
+          "passedTrials": 3,
+          "totalTrials": 6,
+          "passAt1": 0.5,
+          "passAt3": 1.0,
+          "passPow2": 0.1667,
+          "passPow3": 0.0,
+          "passAt1InLimit": 0.5,
+          "passPow3InLimit": 0.0,
+          "totalScore": 6.224,
+          "medianDurationMin": 11.53,
+          "meanDurationMin": 12.4,
+          "medianSteps": 130.5,
+          "medianToolCalls": 135.5,
+          "totalOutputTokens": 287404
+        },
+        "v2": {
+          "passedTrials": 6,
+          "totalTrials": 6,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 11.592,
+          "medianDurationMin": 2.16,
+          "meanDurationMin": 2.29,
+          "medianSteps": 29.5,
+          "medianToolCalls": 34.5,
+          "totalOutputTokens": 68535
+        }
+      },
+      {
+        "key": "代码排障与修复",
+        "label": "代码排障与修复",
+        "questionCount": 2,
+        "questionIds": [
+          "07",
+          "10"
+        ],
+        "v1": {
+          "passedTrials": 6,
+          "totalTrials": 6,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 8.642,
+          "medianDurationMin": 2.01,
+          "meanDurationMin": 2.13,
+          "medianSteps": 24.5,
+          "medianToolCalls": 27.0,
+          "totalOutputTokens": 39956
+        },
+        "v2": {
+          "passedTrials": 6,
+          "totalTrials": 6,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 8.706,
+          "medianDurationMin": 2.03,
+          "meanDurationMin": 2.17,
+          "medianSteps": 30.5,
+          "medianToolCalls": 34.0,
+          "totalOutputTokens": 55234
+        }
+      },
+      {
+        "key": "动态展开与分支",
+        "label": "动态展开与分支",
+        "questionCount": 4,
+        "questionIds": [
+          "17",
+          "17A",
+          "19",
+          "19A"
+        ],
+        "v1": {
+          "passedTrials": 8,
+          "totalTrials": 12,
+          "passAt1": 0.6667,
+          "passAt3": 1.0,
+          "passPow2": 0.4167,
+          "passPow3": 0.25,
+          "passAt1InLimit": 0.6667,
+          "passPow3InLimit": 0.25,
+          "totalScore": 14.313,
+          "medianDurationMin": 13.22,
+          "meanDurationMin": 15.89,
+          "medianSteps": 154.5,
+          "medianToolCalls": 169.0,
+          "totalOutputTokens": 849246
+        },
+        "v2": {
+          "passedTrials": 12,
+          "totalTrials": 12,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 18.882,
+          "medianDurationMin": 11.41,
+          "meanDurationMin": 13.96,
+          "medianSteps": 120.0,
+          "medianToolCalls": 131.0,
+          "totalOutputTokens": 826336
+        }
+      },
+      {
+        "key": "AI 节点与复合链路",
+        "label": "AI 节点与复合链路",
+        "questionCount": 4,
+        "questionIds": [
+          "18",
+          "18A",
+          "18B",
+          "05"
+        ],
+        "v1": {
+          "passedTrials": 1,
+          "totalTrials": 12,
+          "passAt1": 0.0833,
+          "passAt3": 0.25,
+          "passPow2": 0.0,
+          "passPow3": 0.0,
+          "passAt1InLimit": 0.0833,
+          "passPow3InLimit": 0.0,
+          "totalScore": 3.925,
+          "medianDurationMin": 29.99,
+          "meanDurationMin": 28.56,
+          "medianSteps": 148.5,
+          "medianToolCalls": 164.0,
+          "totalOutputTokens": 614226
+        },
+        "v2": {
+          "passedTrials": 11,
+          "totalTrials": 12,
+          "passAt1": 0.9167,
+          "passAt3": 1.0,
+          "passPow2": 0.8333,
+          "passPow3": 0.75,
+          "passAt1InLimit": 0.8333,
+          "passPow3InLimit": 0.5,
+          "totalScore": 27.308,
+          "medianDurationMin": 8.75,
+          "meanDurationMin": 16.47,
+          "medianSteps": 111.0,
+          "medianToolCalls": 127.0,
+          "totalOutputTokens": 810029
+        }
+      }
+    ],
+    "tier": [
+      {
+        "key": "L1 基础",
+        "label": "L1 基础",
+        "questionCount": 4,
+        "questionIds": [
+          "01",
+          "04",
+          "07",
+          "12"
+        ],
+        "v1": {
+          "passedTrials": 12,
+          "totalTrials": 12,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 11.647,
+          "medianDurationMin": 1.35,
+          "meanDurationMin": 2.1,
+          "medianSteps": 20.5,
+          "medianToolCalls": 24.5,
+          "totalOutputTokens": 102896
+        },
+        "v2": {
+          "passedTrials": 12,
+          "totalTrials": 12,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 11.838,
+          "medianDurationMin": 1.57,
+          "meanDurationMin": 1.65,
+          "medianSteps": 23.0,
+          "medianToolCalls": 29.5,
+          "totalOutputTokens": 100574
+        }
+      },
+      {
+        "key": "L2 进阶",
+        "label": "L2 进阶",
+        "questionCount": 7,
+        "questionIds": [
+          "02",
+          "02A",
+          "10",
+          "17",
+          "17A",
+          "19",
+          "19A"
+        ],
+        "v1": {
+          "passedTrials": 14,
+          "totalTrials": 21,
+          "passAt1": 0.6667,
+          "passAt3": 1.0,
+          "passPow2": 0.4286,
+          "passPow3": 0.2857,
+          "passAt1InLimit": 0.6667,
+          "passPow3InLimit": 0.2857,
+          "totalScore": 26.182,
+          "medianDurationMin": 11.72,
+          "meanDurationMin": 13.04,
+          "medianSteps": 138.0,
+          "medianToolCalls": 147.0,
+          "totalOutputTokens": 1163437
+        },
+        "v2": {
+          "passedTrials": 21,
+          "totalTrials": 21,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 36.238,
+          "medianDurationMin": 3.53,
+          "meanDurationMin": 8.98,
+          "medianSteps": 49.0,
+          "medianToolCalls": 59.0,
+          "totalOutputTokens": 924906
+        }
+      },
+      {
+        "key": "L3 复合 / AI",
+        "label": "L3 复合 / AI",
+        "questionCount": 4,
+        "questionIds": [
+          "18",
+          "18A",
+          "18B",
+          "05"
+        ],
+        "v1": {
+          "passedTrials": 1,
+          "totalTrials": 12,
+          "passAt1": 0.0833,
+          "passAt3": 0.25,
+          "passPow2": 0.0,
+          "passPow3": 0.0,
+          "passAt1InLimit": 0.0833,
+          "passPow3InLimit": 0.0,
+          "totalScore": 3.925,
+          "medianDurationMin": 29.99,
+          "meanDurationMin": 28.56,
+          "medianSteps": 148.5,
+          "medianToolCalls": 164.0,
+          "totalOutputTokens": 614226
+        },
+        "v2": {
+          "passedTrials": 11,
+          "totalTrials": 12,
+          "passAt1": 0.9167,
+          "passAt3": 1.0,
+          "passPow2": 0.8333,
+          "passPow3": 0.75,
+          "passAt1InLimit": 0.8333,
+          "passPow3InLimit": 0.5,
+          "totalScore": 27.308,
+          "medianDurationMin": 8.75,
+          "meanDurationMin": 16.47,
+          "medianSteps": 111.0,
+          "medianToolCalls": 127.0,
+          "totalOutputTokens": 810029
+        }
+      }
+    ],
+    "aiNode": [
+      {
+        "key": "False",
+        "label": "常规 Pregel / 工具编排",
+        "questionCount": 11,
+        "questionIds": [
+          "01",
+          "02",
+          "02A",
+          "04",
+          "07",
+          "10",
+          "12",
+          "17",
+          "17A",
+          "19",
+          "19A"
+        ],
+        "v1": {
+          "passedTrials": 26,
+          "totalTrials": 33,
+          "passAt1": 0.7879,
+          "passAt3": 1.0,
+          "passPow2": 0.6364,
+          "passPow3": 0.5455,
+          "passAt1InLimit": 0.7879,
+          "passPow3InLimit": 0.5455,
+          "totalScore": 37.829,
+          "medianDurationMin": 5.19,
+          "meanDurationMin": 9.06,
+          "medianSteps": 58.0,
+          "medianToolCalls": 75.0,
+          "totalOutputTokens": 1266333
+        },
+        "v2": {
+          "passedTrials": 33,
+          "totalTrials": 33,
+          "passAt1": 1.0,
+          "passAt3": 1.0,
+          "passPow2": 1.0,
+          "passPow3": 1.0,
+          "passAt1InLimit": 1.0,
+          "passPow3InLimit": 1.0,
+          "totalScore": 48.076,
+          "medianDurationMin": 2.29,
+          "meanDurationMin": 6.32,
+          "medianSteps": 32.0,
+          "medianToolCalls": 39.0,
+          "totalOutputTokens": 1025480
+        }
+      },
+      {
+        "key": "True",
+        "label": "含 AI 节点 / DSH 嵌套",
+        "questionCount": 4,
+        "questionIds": [
+          "18",
+          "18A",
+          "18B",
+          "05"
+        ],
+        "v1": {
+          "passedTrials": 1,
+          "totalTrials": 12,
+          "passAt1": 0.0833,
+          "passAt3": 0.25,
+          "passPow2": 0.0,
+          "passPow3": 0.0,
+          "passAt1InLimit": 0.0833,
+          "passPow3InLimit": 0.0,
+          "totalScore": 3.925,
+          "medianDurationMin": 29.99,
+          "meanDurationMin": 28.56,
+          "medianSteps": 148.5,
+          "medianToolCalls": 164.0,
+          "totalOutputTokens": 614226
+        },
+        "v2": {
+          "passedTrials": 11,
+          "totalTrials": 12,
+          "passAt1": 0.9167,
+          "passAt3": 1.0,
+          "passPow2": 0.8333,
+          "passPow3": 0.75,
+          "passAt1InLimit": 0.8333,
+          "passPow3InLimit": 0.5,
+          "totalScore": 27.308,
+          "medianDurationMin": 8.75,
+          "meanDurationMin": 16.47,
+          "medianSteps": 111.0,
+          "medianToolCalls": 127.0,
+          "totalOutputTokens": 810029
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "01",
+      "title": "Hello Pregel",
+      "weight": 1,
+      "category": "基础建图与调度",
+      "tier": "L1 基础",
+      "aiNode": false,
+      "mode": "新建图",
+      "isRetestedInV2": false,
+      "prompt": "# Hello Pregel\r\n\r\n写一个可手动运行的 Pregel 自动化。它要读取可覆盖的问候参数，默认输出 `Hello, Pregel!`。用同一图实际运行默认输入和自选的一条不同问候，验证日志和图输出各自来自该次输入。交付入口 CSX、输入文件、CLI 校验及完整运行日志，并给出两次运行 ID。\r\n",
+      "v2VerdictsPath": "q01-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": 0.2493,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 4.94,
+        "avgDurationMin": 4.83,
+        "medianSteps": 57.0,
+        "medianTools": 75.0,
+        "reportedTokens": 58725,
+        "tokens": {
+          "input": 142902,
+          "cacheRead": 6241664,
+          "output": 58725
+        },
+        "score": 2.652497,
+        "scorePassAt1Part": 1.856748,
+        "scorePassAt3Part": 0.795749,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.7164,
+            "steps": 38,
+            "toolCalls": 47,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 20,
+              "read": 10,
+              "write": 7,
+              "edit": 6,
+              "skill": 1,
+              "working_directory": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "read": 10,
+              "pwsh": 20,
+              "glob": 1,
+              "grep": 1,
+              "write": 7,
+              "edit": 6
+            },
+            "tokens": {
+              "input": 41477,
+              "cacheRead": 1252224,
+              "output": 14554,
+              "totalContext": 1293701,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9679,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.783055,
+            "score": 0.913222
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 5.771,
+            "steps": 66,
+            "toolCalls": 76,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 40,
+              "read": 17,
+              "edit": 8,
+              "write": 7,
+              "grep": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "read": 17,
+              "pwsh": 40,
+              "grep": 3,
+              "write": 7,
+              "edit": 8
+            },
+            "tokens": {
+              "input": 56161,
+              "cacheRead": 2820352,
+              "output": 22774,
+              "totalContext": 2876513,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9805,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.651944,
+            "score": 0.860777
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 4.9902,
+            "steps": 57,
+            "toolCalls": 75,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 36,
+              "read": 17,
+              "write": 12,
+              "edit": 4,
+              "grep": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "read": 17,
+              "pwsh": 36,
+              "glob": 1,
+              "grep": 3,
+              "write": 12,
+              "edit": 4
+            },
+            "tokens": {
+              "input": 45264,
+              "cacheRead": 2169088,
+              "output": 21397,
+              "totalContext": 2214352,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9796,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.696245,
+            "score": 0.878498
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.131244
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 2.21,
+        "avgDurationMin": 2.21,
+        "medianSteps": 24.0,
+        "medianTools": 34.0,
+        "reportedTokens": 31327,
+        "tokens": {
+          "input": 117885,
+          "cacheRead": 2841088,
+          "output": 31327
+        },
+        "score": 2.901831,
+        "scorePassAt1Part": 2.031282,
+        "scorePassAt3Part": 0.870549,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "PASS",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.2912,
+            "steps": 31,
+            "toolCalls": 39,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 20,
+              "read": 10,
+              "write": 5,
+              "todo_write": 3,
+              "present": 1
+            },
+            "allTools": {
+              "read": 10,
+              "pwsh": 20,
+              "todo_write": 3,
+              "write": 5,
+              "present": 1
+            },
+            "tokens": {
+              "input": 37623,
+              "cacheRead": 1122432,
+              "output": 10984,
+              "totalContext": 1160055,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9676,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.910001,
+            "score": 0.964
+          },
+          {
+            "trial": 2,
+            "rawStatus": "PASS",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.2963,
+            "steps": 23,
+            "toolCalls": 34,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 14,
+              "read": 11,
+              "write": 5,
+              "skill": 1,
+              "grep": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "read": 11,
+              "pwsh": 14,
+              "grep": 1,
+              "write": 5,
+              "edit": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 45741,
+              "cacheRead": 964352,
+              "output": 11693,
+              "totalContext": 1010093,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9547,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.909473,
+            "score": 0.963789
+          },
+          {
+            "trial": 3,
+            "rawStatus": "PASS",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.0552,
+            "steps": 24,
+            "toolCalls": 34,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 17,
+              "read": 8,
+              "write": 5,
+              "edit": 2,
+              "grep": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 8,
+              "pwsh": 17,
+              "grep": 1,
+              "write": 5,
+              "edit": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 34521,
+              "cacheRead": 754304,
+              "output": 8650,
+              "totalContext": 788825,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9562,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.935104,
+            "score": 0.974042
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.754578
+      }
+    },
+    {
+      "id": "02",
+      "title": "PerfDog XLSX 转 JSON",
+      "weight": 2,
+      "category": "文件解析与集成",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "参数接入",
+      "isRetestedInV2": true,
+      "prompt": "# PerfDog XLSX 转 JSON\r\n\r\n用给定的 PerfDogTools 和本机康师傅 CLI，把 `PerfDog-source.xlsx` 导出为完整 JSON。工作簿是脱敏后的基础数据，包含主表与两个子区域。按题目目录内的 Python 虚拟环境准备依赖，记录使用的解释器和依赖处理过程。\r\n\r\n用同一 Pregel 入口实际运行 `export`，保留生成的 JSON、运行日志和 Run ID。附上原始工作簿和输出文件的 SHA-256，并给出输出的最上层字段、主表采样数及子区域数。\r\n",
+      "v2VerdictsPath": "q02r-verdicts.json",
+      "deltaPassed": 1,
+      "deltaScore": 2.0879,
+      "v1": {
+        "passed": 2,
+        "passedInLimit": 2,
+        "passAtK": [
+          0.666667,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          0.666667,
+          0.333333,
+          0.0
+        ],
+        "passPowKIid": [
+          0.666667,
+          0.444444,
+          0.296296
+        ],
+        "reportedAvgMin": 10.48,
+        "avgDurationMin": 5.57,
+        "medianSteps": 58.0,
+        "medianTools": 60.0,
+        "reportedTokens": 47082,
+        "tokens": {
+          "input": 186753,
+          "cacheRead": 10142976,
+          "output": 47082
+        },
+        "score": 3.826598,
+        "scorePassAt1Part": 2.329234,
+        "scorePassAt3Part": 1.497365,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "运行中途停止/未正常收包（15.7 分钟，无退出码）",
+            "durationMin": 1.175,
+            "steps": 20,
+            "toolCalls": 27,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 18,
+              "read": 7,
+              "working_directory": 1,
+              "skill": 1
+            },
+            "allTools": {
+              "working_directory": 1,
+              "pwsh": 18,
+              "skill": 1,
+              "read": 7
+            },
+            "tokens": {
+              "input": 26599,
+              "cacheRead": 394496,
+              "output": 2987,
+              "totalContext": 421095,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9368,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 5.1909,
+            "steps": 58,
+            "toolCalls": 60,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 47,
+              "read": 9,
+              "write": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 47,
+              "read": 9,
+              "write": 3
+            },
+            "tokens": {
+              "input": 63711,
+              "cacheRead": 2450304,
+              "output": 16960,
+              "totalContext": 2514015,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9747,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.684293,
+            "score": 2.009549
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 10.3402,
+            "steps": 110,
+            "toolCalls": 117,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 91,
+              "read": 11,
+              "write": 11,
+              "skill": 1,
+              "job_kill": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "pwsh": 91,
+              "skill": 1,
+              "read": 11,
+              "job_kill": 1,
+              "write": 11,
+              "edit": 1,
+              "grep": 1
+            },
+            "tokens": {
+              "input": 96443,
+              "cacheRead": 7298176,
+              "output": 27135,
+              "totalContext": 7394619,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.987,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.475054,
+            "score": 1.817049
+          }
+        ],
+        "capScore": 4.6,
+        "spdScore": 2.666497
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.8,
+        "avgDurationMin": 1.8,
+        "medianSteps": 23.0,
+        "medianTools": 26.0,
+        "reportedTokens": 25635,
+        "tokens": {
+          "input": 96518,
+          "cacheRead": 2450816,
+          "output": 25635
+        },
+        "score": 5.914543,
+        "scorePassAt1Part": 4.14018,
+        "scorePassAt3Part": 1.774363,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.5173,
+            "steps": 22,
+            "toolCalls": 25,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 14,
+              "read": 8,
+              "write": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 8,
+              "pwsh": 14,
+              "write": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 27788,
+              "cacheRead": 618240,
+              "output": 6891,
+              "totalContext": 646028,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.957,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.997842,
+            "score": 1.998274
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.7135,
+            "steps": 23,
+            "toolCalls": 26,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 16,
+              "read": 7,
+              "write": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 7,
+              "pwsh": 16,
+              "write": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 34874,
+              "cacheRead": 718720,
+              "output": 7982,
+              "totalContext": 753594,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9537,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.974006,
+            "score": 1.979205
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.1831,
+            "steps": 32,
+            "toolCalls": 37,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 22,
+              "read": 12,
+              "write": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 12,
+              "pwsh": 22,
+              "write": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 33856,
+              "cacheRead": 1113856,
+              "output": 10762,
+              "totalContext": 1147712,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9705,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.92133,
+            "score": 1.937064
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 5.786357
+      }
+    },
+    {
+      "id": "02A",
+      "title": "PerfDog 导出后的企微收尾",
+      "weight": 2,
+      "category": "文件解析与集成",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "改造既有图",
+      "isRetestedInV2": false,
+      "prompt": "# PerfDog 导出后的企微通知变体\r\n\r\n给已有 PerfDog 导出流程加收尾。成功导出后，使用本轮 JSON 生成一条用于企微的消息，包含本轮运行 ID、导出结果、主表采样数和子区域数。失败时保留失败原因。用给定的人造工作簿验证，请保留 `export.json`、消息载荷、运行 ID 和原始日志。\r\n\r\n先在包含 `PerfDogTools/`、`Shared/` 和 `PerfDog-sample.xlsx` 的题目目录运行原版导出。用已安装的 Ksf CLI 和可导入 openpyxl 3.1.5 的 Python 3.12+ 环境。以下命令在同一个 PowerShell 工具调用中执行：\r\n\r\n```powershell\r\n$root = (Get-Location).Path\r\n$env:KSF_EVAL_CLI_ROOT = Join-Path $root '.ksf-cli'\r\n@{\r\n    command = 'export'\r\n    inputPath = Join-Path $root 'PerfDog-sample.xlsx'\r\n    outputPath = Join-Path $root 'baseline-export.json'\r\n} | ConvertTo-Json | Set-Content (Join-Path $root 'baseline-input.json') -Encoding utf8\r\nKsfCLI graph run (Join-Path $root 'PerfDogTools/PerfDogTools.csx') --input (Join-Path $root 'baseline-input.json') --standalone --yes\r\n```\r\n\r\n确认原版成功产出 `baseline-export.json` 后，再在原图上加收尾，并为正式验收使用独立的输出文件。若原版失败，保留命令、退出码和原始日志。\r\n\r\n建图时保留单独的 `Finally` 收尾。交付实际企微发送（`WecomNodes.SendAsync`）的接线和配置入口，接线用真实宿主 API 做绑定校验。本轮实跑用同样的数据组装逻辑在本地落一份消息载荷，通过 `.When(msg => !string.IsNullOrWhiteSpace(msg.Webhook), ...)` 保持真实企微发送关闭。不要读取真实 webhook、访问真实群或把任何数据传出去。再跑一次会失败的导出，验证没有生成成功消息。不要写死样本数或子区域数。\r\n",
+      "v2VerdictsPath": "q02a-verdicts.json",
+      "deltaPassed": 2,
+      "deltaScore": 3.2801,
+      "v1": {
+        "passed": 1,
+        "passedInLimit": 1,
+        "passAtK": [
+          0.333333,
+          0.666667,
+          1.0
+        ],
+        "passPowK": [
+          0.333333,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.333333,
+          0.111111,
+          0.037037
+        ],
+        "reportedAvgMin": 19.34,
+        "avgDurationMin": 19.23,
+        "medianSteps": 178.0,
+        "medianTools": 190.0,
+        "reportedTokens": 240322,
+        "tokens": {
+          "input": 399926,
+          "cacheRead": 80407040,
+          "output": 240322
+        },
+        "score": 2.397316,
+        "scorePassAt1Part": 1.048826,
+        "scorePassAt3Part": 1.34849,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 14.9533,
+            "steps": 178,
+            "toolCalls": 190,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 117,
+              "edit": 42,
+              "read": 22,
+              "write": 7,
+              "skill": 1,
+              "grep": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 117,
+              "read": 22,
+              "grep": 1,
+              "write": 7,
+              "edit": 42
+            },
+            "tokens": {
+              "input": 135835,
+              "cacheRead": 20027136,
+              "output": 75892,
+              "totalContext": 20162971,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9933,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.372903,
+            "score": 2.397316
+          },
+          {
+            "trial": 2,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "DSH 在 30 分钟后以退出码 1 结束，未交齐有效证据；运行时给出通用失败提示",
+            "durationMin": 29.999,
+            "steps": 340,
+            "toolCalls": 355,
+            "toolErrors": 5,
+            "topTools": {
+              "pwsh": 229,
+              "edit": 60,
+              "write": 34,
+              "read": 26,
+              "grep": 4,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 229,
+              "read": 26,
+              "write": 34,
+              "job_output": 1,
+              "edit": 60,
+              "grep": 4
+            },
+            "tokens": {
+              "input": 172755,
+              "cacheRead": 48686336,
+              "output": 115102,
+              "totalContext": 48859091,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9965,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "outbound_violation",
+            "passed": false,
+            "review": "实际向企微生产域名发送了一次占位 key 请求，返回无效 key；题面要求全程本地",
+            "durationMin": 12.7297,
+            "steps": 151,
+            "toolCalls": 154,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 99,
+              "read": 19,
+              "write": 16,
+              "edit": 16,
+              "grep": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 99,
+              "read": 19,
+              "grep": 3,
+              "write": 16,
+              "edit": 16
+            },
+            "tokens": {
+              "input": 91336,
+              "cacheRead": 11693568,
+              "output": 49328,
+              "totalContext": 11784904,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9922,
+            "bucket": "outbound_violation",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 3.2,
+        "spdScore": 1.19329
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 2.78,
+        "avgDurationMin": 2.78,
+        "medianSteps": 36.0,
+        "medianTools": 44.0,
+        "reportedTokens": 42900,
+        "tokens": {
+          "input": 142017,
+          "cacheRead": 5133568,
+          "output": 42900
+        },
+        "score": 5.677429,
+        "scorePassAt1Part": 3.974201,
+        "scorePassAt3Part": 1.703229,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.141,
+            "steps": 27,
+            "toolCalls": 32,
+            "toolErrors": 0,
+            "topTools": {
+              "read": 14,
+              "pwsh": 12,
+              "todo_write": 2,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 14,
+              "pwsh": 12,
+              "todo_write": 2,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 41301,
+              "cacheRead": 1051136,
+              "output": 10723,
+              "totalContext": 1092437,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9622,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.925819,
+            "score": 1.940655
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.5293,
+            "steps": 47,
+            "toolCalls": 57,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 31,
+              "read": 17,
+              "edit": 5,
+              "write": 4
+            },
+            "allTools": {
+              "read": 17,
+              "pwsh": 31,
+              "write": 4,
+              "edit": 5
+            },
+            "tokens": {
+              "input": 52087,
+              "cacheRead": 2439552,
+              "output": 19048,
+              "totalContext": 2491639,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9791,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.797663,
+            "score": 1.83813
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.6606,
+            "steps": 36,
+            "toolCalls": 44,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 22,
+              "read": 12,
+              "edit": 4,
+              "write": 3,
+              "todo_write": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 12,
+              "pwsh": 22,
+              "todo_write": 2,
+              "write": 3,
+              "edit": 4,
+              "present": 1
+            },
+            "tokens": {
+              "input": 48629,
+              "cacheRead": 1642880,
+              "output": 13129,
+              "totalContext": 1691509,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9713,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.873305,
+            "score": 1.898644
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 5.193574
+      }
+    },
+    {
+      "id": "04",
+      "title": "给已有任务设定时再改时间",
+      "weight": 1,
+      "category": "基础建图与调度",
+      "tier": "L1 基础",
+      "aiNode": false,
+      "mode": "配置运维",
+      "isRetestedInV2": false,
+      "prompt": "# 第四题｜给已有任务设定时，再改时间\r\n\r\n起点是一条已登记、手动运行成功的 Hello Pregel（保存在当前环境的 `KsfCLI` 任务表中，直接用 `KsfCLI graph tasks` 查询）。评测前记录原 taskId、触发器配置和手动运行 ID。任务绑定一个可编辑的输入文件。\r\n\r\n## 第一轮\r\n\r\n把这条任务设成每天北京时间 09:00 跑，平时也能手动跑。\r\n\r\n## 第二轮\r\n\r\n时间改一下，改成每天 09:30，其他照旧。\r\n\r\n## 验收\r\n\r\n逐轮读取宿主生效的任务配置。两次都须保留原 taskId、脚本入口和手动触发，定时开关为开，周期为每天，时区显式等效于北京时间，生效来源可追溯且无配置错误。两轮时间分别为 09:00 和 09:30。历史里的初始手动运行仍可查到。\r\n\r\n改出第二条任务、仅保存一份任务未读取的配置文件、第二轮把手动开关或时区改掉，均判失败。基础题验收配置生效。\r\n",
+      "v2VerdictsPath": "q04-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": -0.0041,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.37,
+        "avgDurationMin": 1.25,
+        "medianSteps": 21.0,
+        "medianTools": 26.0,
+        "reportedTokens": 11485,
+        "tokens": {
+          "input": 60746,
+          "cacheRead": 990848,
+          "output": 11485
+        },
+        "score": 3.0,
+        "scorePassAt1Part": 2.1,
+        "scorePassAt3Part": 0.9,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.0828,
+            "steps": 17,
+            "toolCalls": 21,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 9,
+              "read": 9,
+              "skill": 1,
+              "write": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 9,
+              "read": 9,
+              "write": 1,
+              "edit": 1
+            },
+            "tokens": {
+              "input": 18771,
+              "cacheRead": 273664,
+              "output": 3500,
+              "totalContext": 292435,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9358,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.4225,
+            "steps": 23,
+            "toolCalls": 26,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 13,
+              "read": 9,
+              "skill": 1,
+              "working_directory": 1,
+              "write": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "read": 9,
+              "working_directory": 1,
+              "pwsh": 13,
+              "write": 1,
+              "edit": 1
+            },
+            "tokens": {
+              "input": 22431,
+              "cacheRead": 391552,
+              "output": 4389,
+              "totalContext": 413983,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9458,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.2475,
+            "steps": 21,
+            "toolCalls": 26,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 13,
+              "read": 9,
+              "skill": 1,
+              "working_directory": 1,
+              "write": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "read": 9,
+              "working_directory": 1,
+              "pwsh": 13,
+              "write": 1,
+              "edit": 1
+            },
+            "tokens": {
+              "input": 19544,
+              "cacheRead": 325632,
+              "output": 3596,
+              "totalContext": 345176,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9434,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 3.0
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.28,
+        "avgDurationMin": 1.28,
+        "medianSteps": 20.0,
+        "medianTools": 26.0,
+        "reportedTokens": 18492,
+        "tokens": {
+          "input": 61052,
+          "cacheRead": 1422720,
+          "output": 18492
+        },
+        "score": 2.995868,
+        "scorePassAt1Part": 2.097108,
+        "scorePassAt3Part": 0.89876,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.2085,
+            "steps": 20,
+            "toolCalls": 26,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 12,
+              "read": 10,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 10,
+              "pwsh": 12,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 21606,
+              "cacheRead": 465152,
+              "output": 5879,
+              "totalContext": 486758,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9556,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.0413,
+            "steps": 17,
+            "toolCalls": 24,
+            "toolErrors": 0,
+            "topTools": {
+              "read": 10,
+              "pwsh": 10,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 10,
+              "pwsh": 10,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 18847,
+              "cacheRead": 400640,
+              "output": 5766,
+              "totalContext": 419487,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9551,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.5835,
+            "steps": 23,
+            "toolCalls": 30,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 17,
+              "read": 9,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 9,
+              "pwsh": 17,
+              "write": 2,
+              "edit": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 20599,
+              "cacheRead": 556928,
+              "output": 6847,
+              "totalContext": 577527,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9643,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.98967,
+            "score": 0.995868
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.98967
+      }
+    },
+    {
+      "id": "07",
+      "title": "构建机初始化的 PowerShell 7 排障",
+      "weight": 1,
+      "category": "代码排障与修复",
+      "tier": "L1 基础",
+      "aiNode": false,
+      "mode": "排障修复",
+      "isRetestedInV2": false,
+      "prompt": "# 第 7 题　构建机初始化排障\r\n\r\n这份流程从 Official 的构建机初始化裁出，安装和配置都换成了模拟操作。虚拟构建机已具备 VC++ 运行库、Node.js 和 Git，脚本仍要为它初始化 PowerShell 7。当前从干净环境运行，流程会停在「安装 PowerShell 7」。\r\n\r\n1. 用本机 Ksf CLI 先复现故障，保留失败的 run ID 和原始输出。\r\n2. 在现有 CSX 上定位并修复根因。保留 PowerShell 7 的检测、安装、校验和验证，包和发布清单是固定输入。故障修好后，流程要继续完成开发工具检查和配置汇总。\r\n3. 从干净模拟环境再跑一次，核对模拟安装内容和 `sandbox/summary.json`，提交成功的运行记录、源码改动和根因说明。\r\n\r\n入口为 `BuildMachineSetup.csx`，默认输入为 `Input.json`。可用 `KsfCLI graph validate BuildMachineSetup.csx --input Input.json` 校验，再用 `KsfCLI graph run BuildMachineSetup.csx --input Input.json --standalone --yes` 实际运行。每次复现可用一份新解压的题包，生成的模拟环境都在题包目录下的 `sandbox/`。\r\n\r\n请使用新的独立目录，只查本题文件、本机通用 Pregel skill 和公开示例。仅使用随题的模拟数据。不变更实际软件、系统设置或其他任务。\r\n",
+      "v2VerdictsPath": "q07-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": -0.0549,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.45,
+        "avgDurationMin": 1.34,
+        "medianSteps": 16.0,
+        "medianTools": 22.0,
+        "reportedTokens": 13169,
+        "tokens": {
+          "input": 40968,
+          "cacheRead": 619264,
+          "output": 13169
+        },
+        "score": 2.997372,
+        "scorePassAt1Part": 2.098161,
+        "scorePassAt3Part": 0.899212,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.2776,
+            "steps": 16,
+            "toolCalls": 22,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 15,
+              "read": 4,
+              "skill": 1,
+              "edit": 1,
+              "write": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 15,
+              "read": 4,
+              "edit": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 14472,
+              "cacheRead": 204672,
+              "output": 4431,
+              "totalContext": 219144,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.934,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.5529,
+            "steps": 20,
+            "toolCalls": 23,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 16,
+              "read": 4,
+              "skill": 1,
+              "edit": 1,
+              "write": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 16,
+              "read": 4,
+              "edit": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 15272,
+              "cacheRead": 241536,
+              "output": 4402,
+              "totalContext": 256808,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9405,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.993431,
+            "score": 0.997372
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.2043,
+            "steps": 16,
+            "toolCalls": 20,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 12,
+              "read": 5,
+              "skill": 1,
+              "edit": 1,
+              "write": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 12,
+              "read": 5,
+              "edit": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 11224,
+              "cacheRead": 173056,
+              "output": 4336,
+              "totalContext": 184280,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9391,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.993431
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.91,
+        "avgDurationMin": 1.91,
+        "medianSteps": 26.0,
+        "medianTools": 33.0,
+        "reportedTokens": 25199,
+        "tokens": {
+          "input": 79873,
+          "cacheRead": 2364160,
+          "output": 25199
+        },
+        "score": 2.942521,
+        "scorePassAt1Part": 2.059764,
+        "scorePassAt3Part": 0.882756,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.515,
+            "steps": 23,
+            "toolCalls": 29,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 12,
+              "read": 10,
+              "todo_write": 2,
+              "grep": 2,
+              "edit": 1,
+              "write": 1
+            },
+            "allTools": {
+              "read": 10,
+              "pwsh": 12,
+              "todo_write": 2,
+              "grep": 2,
+              "edit": 1,
+              "write": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 23526,
+              "cacheRead": 591488,
+              "output": 6896,
+              "totalContext": 615014,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9617,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.998129,
+            "score": 0.999251
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.0825,
+            "steps": 26,
+            "toolCalls": 33,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 18,
+              "read": 8,
+              "todo_write": 2,
+              "edit": 2,
+              "grep": 1,
+              "write": 1
+            },
+            "allTools": {
+              "read": 8,
+              "pwsh": 18,
+              "grep": 1,
+              "todo_write": 2,
+              "edit": 2,
+              "write": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 31184,
+              "cacheRead": 875904,
+              "output": 9299,
+              "totalContext": 907088,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9656,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.932129,
+            "score": 0.972852
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.1389,
+            "steps": 34,
+            "toolCalls": 39,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 21,
+              "read": 10,
+              "edit": 5,
+              "skill": 1,
+              "write": 1,
+              "present": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 21,
+              "read": 10,
+              "edit": 5,
+              "write": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 25163,
+              "cacheRead": 896768,
+              "output": 9004,
+              "totalContext": 921931,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9727,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.926044,
+            "score": 0.970418
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.856302
+      }
+    },
+    {
+      "id": "10",
+      "title": "改坏的 PerfDogTools",
+      "weight": 2,
+      "category": "代码排障与修复",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "排障修复",
+      "isRetestedInV2": false,
+      "prompt": "# 改坏的 PerfDogTools\r\n\r\n这份 PerfDogTools 从 Official 复制。用题内人造工作簿导出 JSON 时，CLI 表面成功，但主表有两个 FPS 采样值算错了。请先复现，再在原代码上修复并重跑。\r\n\r\n- 输入用 `inputs/synthetic.xlsx`。主表的四个采样时刻是 0、100、300、400 毫秒，首尾实测 FPS 分别为 20、60。缺测点按实际采样时刻做线性插值。导出的采样时刻、实测值、工作簿里的摘要、Lab 子区域和自定义指标应保留。\r\n- 用同一个 `PerfDogTools/PerfDogTools.csx` 和 `export` 操作，分别保存修复前后的 JSON、原始 CLI 日志和 run ID。说明为什么 CLI 成功却得到错值，以及改动的位置。可以直接调用 Python 解析器排查，最终验收以 Pregel 入口重跑为准。\r\n- 在新建的题目目录运行，输入和输出参数都传绝对路径。只在该目录写入文件。Python 需要 3.12+ 和 openpyxl 3.1.5。若缺依赖，可用该目录自己的虚拟环境准备。\r\n- 使用题内数据、本机工具和已安装的通用 Pregel skill。保持 XLSX 原样，避免查阅其他工作区、旧答卷和 Official 的同名实现。\r\n\r\n在题包根目录可用以下方式生成输入参数和运行。输出文件名按修复前后分别设置。\r\n\r\n```powershell\r\n$inputPath = (Resolve-Path .\\inputs\\synthetic.xlsx).Path\r\n$outputPath = Join-Path (Get-Location).Path 'export-before.json'\r\n@{command='export'; inputPath=$inputPath; outputPath=$outputPath} |\r\n    ConvertTo-Json | Set-Content -Encoding utf8 .\\RunInput.json\r\nKsfCLI graph run .\\PerfDogTools\\PerfDogTools.csx --input .\\RunInput.json --standalone --yes\r\n```\r\n",
+      "v2VerdictsPath": "q10-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": 0.1194,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 3.02,
+        "avgDurationMin": 2.91,
+        "medianSteps": 37.0,
+        "medianTools": 40.0,
+        "reportedTokens": 26787,
+        "tokens": {
+          "input": 79212,
+          "cacheRead": 2433792,
+          "output": 26787
+        },
+        "score": 5.644449,
+        "scorePassAt1Part": 3.951114,
+        "scorePassAt3Part": 1.693335,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.4609,
+            "steps": 29,
+            "toolCalls": 31,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 22,
+              "read": 7,
+              "skill": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 22,
+              "read": 7,
+              "edit": 1
+            },
+            "tokens": {
+              "input": 24167,
+              "cacheRead": 592384,
+              "output": 6550,
+              "totalContext": 616551,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9608,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.892767,
+            "score": 1.914214
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.7413,
+            "steps": 37,
+            "toolCalls": 40,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 30,
+              "read": 6,
+              "edit": 2,
+              "skill": 1,
+              "write": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 30,
+              "read": 6,
+              "edit": 2,
+              "write": 1
+            },
+            "tokens": {
+              "input": 26758,
+              "cacheRead": 872064,
+              "output": 10678,
+              "totalContext": 898822,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9702,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.865679,
+            "score": 1.892543
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.5362,
+            "steps": 44,
+            "toolCalls": 46,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 35,
+              "read": 7,
+              "skill": 1,
+              "working_directory": 1,
+              "edit": 1,
+              "write": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "pwsh": 35,
+              "read": 7,
+              "edit": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 28287,
+              "cacheRead": 969344,
+              "output": 9559,
+              "totalContext": 997631,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9716,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.797114,
+            "score": 1.837692
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 5.111122
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 2.42,
+        "avgDurationMin": 2.42,
+        "medianSteps": 31.0,
+        "medianTools": 34.0,
+        "reportedTokens": 30035,
+        "tokens": {
+          "input": 107913,
+          "cacheRead": 3906432,
+          "output": 30035
+        },
+        "score": 5.763826,
+        "scorePassAt1Part": 4.034678,
+        "scorePassAt3Part": 1.729148,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.9394,
+            "steps": 30,
+            "toolCalls": 34,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 19,
+              "read": 8,
+              "write": 3,
+              "edit": 3,
+              "present": 1
+            },
+            "allTools": {
+              "read": 8,
+              "pwsh": 19,
+              "write": 3,
+              "edit": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 32190,
+              "cacheRead": 979712,
+              "output": 7054,
+              "totalContext": 1011902,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9682,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.947935,
+            "score": 1.958348
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.9772,
+            "steps": 31,
+            "toolCalls": 34,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 22,
+              "read": 8,
+              "skill": 1,
+              "edit": 1,
+              "write": 1,
+              "present": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 22,
+              "read": 8,
+              "edit": 1,
+              "write": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 37137,
+              "cacheRead": 1122944,
+              "output": 8949,
+              "totalContext": 1160081,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.968,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.943708,
+            "score": 1.954966
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.3384,
+            "steps": 44,
+            "toolCalls": 53,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 27,
+              "read": 14,
+              "edit": 4,
+              "todo_write": 2,
+              "skill": 1,
+              "create_goal": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 27,
+              "read": 14,
+              "create_goal": 1,
+              "todo_write": 2,
+              "edit": 4,
+              "write": 1,
+              "get_goal": 1,
+              "update_goal": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 38586,
+              "cacheRead": 1803776,
+              "output": 14032,
+              "totalContext": 1842362,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9791,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.81314,
+            "score": 1.850512
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 5.409566
+      }
+    },
+    {
+      "id": "12",
+      "title": "个人周报预设与离线预览",
+      "weight": 1,
+      "category": "基础建图与调度",
+      "tier": "L1 基础",
+      "aiNode": false,
+      "mode": "改造既有图",
+      "isRetestedInV2": true,
+      "prompt": "# 第 12 题　个人周报预设与离线预览\r\n\r\n题包是一套离线模拟环境。请把「我的周报（验收）」的个人预设保存下来，再用虚构数据验证它能生成符合要求的本地预览。\r\n\r\n- `Official/WeeklyReport/defaults.json` 是模拟的官方默认参数。新任务沿用它，仅覆盖 `report_prompt` 为「先列本周完成项，再列待确认的风险。每项只写一句。」，并保持归属人 `member_name` 与目标周 `week` 为空。保存后要能从任务记录读回有效参数。\r\n- `state/tasks.json` 是模拟任务表。新增一条个人任务，分配独立 ID，关闭定时，记录来源与个人参数。题包里的官方文件和已有任务记录都须原样保留。\r\n- 从 `fixtures/week-items.json` 生成 `preview.md`。先列完成项，再列待确认的风险。只用清单指定周的数据。同一 ID 的多条记录取最新状态；已解决风险、进行中项和其他周的记录不进入预览。每项写一句，并保留原记录 ID，便于核对。\r\n- 目标周只用于本次预览，个人预设里的 `week` 仍留空。生成预览只读模拟数据，不触发任务、不写运行历史。整个过程在题目目录内直接用普通本地脚本（`.ps1` / `.py` / `.mjs`）读写上述模拟 JSON 文件完成（`state/tasks.json` 为本题专用的离线模拟格式，**不要编写或运行 Pregel CSX 图，不要调用任何 `KsfCLI graph` 命令，严禁修改 `Official/WeeklyReport/defaults.json` 的任何字节**），无需实际康师傅任务、联网、调用模型或上传。\r\n- 交付可重复执行的本地脚本、保存后的模拟任务表、`preview.md`，以及从本地任务表读回的新任务 ID、来源和参数。脚本再跑一次时复用同一个个人任务 ID。\r\n",
+      "v2VerdictsPath": "retest-12-18-1124/q12-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": 0.0002,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.1,
+        "avgDurationMin": 0.99,
+        "medianSteps": 12.0,
+        "medianTools": 15.0,
+        "reportedTokens": 19517,
+        "tokens": {
+          "input": 31596,
+          "cacheRead": 662784,
+          "output": 19517
+        },
+        "score": 2.997427,
+        "scorePassAt1Part": 2.098199,
+        "scorePassAt3Part": 0.899228,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 0.8037,
+            "steps": 12,
+            "toolCalls": 15,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 7,
+              "read": 5,
+              "working_directory": 1,
+              "skill": 1,
+              "write": 1
+            },
+            "allTools": {
+              "working_directory": 1,
+              "pwsh": 7,
+              "read": 5,
+              "skill": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 7073,
+              "cacheRead": 108416,
+              "output": 5295,
+              "totalContext": 115489,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9388,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.5518,
+            "steps": 28,
+            "toolCalls": 31,
+            "toolErrors": 1,
+            "topTools": {
+              "read": 11,
+              "pwsh": 9,
+              "edit": 9,
+              "skill": 1,
+              "write": 1
+            },
+            "allTools": {
+              "pwsh": 9,
+              "skill": 1,
+              "read": 11,
+              "write": 1,
+              "edit": 9
+            },
+            "tokens": {
+              "input": 17652,
+              "cacheRead": 478464,
+              "output": 9588,
+              "totalContext": 496116,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9644,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.993567,
+            "score": 0.997427
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 0.626,
+            "steps": 9,
+            "toolCalls": 10,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 5,
+              "read": 3,
+              "skill": 1,
+              "write": 1
+            },
+            "allTools": {
+              "pwsh": 5,
+              "read": 3,
+              "skill": 1,
+              "write": 1
+            },
+            "tokens": {
+              "input": 6871,
+              "cacheRead": 75904,
+              "output": 4634,
+              "totalContext": 82775,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.917,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.993567
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 1.21,
+        "avgDurationMin": 1.21,
+        "medianSteps": 20.0,
+        "medianTools": 23.0,
+        "reportedTokens": 25556,
+        "tokens": {
+          "input": 34696,
+          "cacheRead": 1169152,
+          "output": 25556
+        },
+        "score": 2.997669,
+        "scorePassAt1Part": 2.098368,
+        "scorePassAt3Part": 0.899301,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.3224,
+            "steps": 20,
+            "toolCalls": 23,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 9,
+              "read": 5,
+              "edit": 3,
+              "todo_write": 2,
+              "write": 2,
+              "grep": 1
+            },
+            "allTools": {
+              "pwsh": 9,
+              "read": 5,
+              "grep": 1,
+              "todo_write": 2,
+              "write": 2,
+              "edit": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 12063,
+              "cacheRead": 413056,
+              "output": 9103,
+              "totalContext": 425119,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9716,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 0.7607,
+            "steps": 13,
+            "toolCalls": 16,
+            "toolErrors": 0,
+            "topTools": {
+              "read": 6,
+              "pwsh": 5,
+              "edit": 2,
+              "write": 1,
+              "grep": 1,
+              "present": 1
+            },
+            "allTools": {
+              "pwsh": 5,
+              "read": 6,
+              "write": 1,
+              "grep": 1,
+              "edit": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 9538,
+              "cacheRead": 215936,
+              "output": 5167,
+              "totalContext": 225474,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9577,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 1.0,
+            "score": 1.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 1.5469,
+            "steps": 25,
+            "toolCalls": 26,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 10,
+              "edit": 7,
+              "read": 5,
+              "write": 2,
+              "grep": 1,
+              "present": 1
+            },
+            "allTools": {
+              "pwsh": 10,
+              "read": 5,
+              "write": 2,
+              "edit": 7,
+              "grep": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 13095,
+              "cacheRead": 540160,
+              "output": 11286,
+              "totalContext": 553255,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9763,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.994172,
+            "score": 0.997669
+          }
+        ],
+        "capScore": 3.0,
+        "spdScore": 2.994172
+      }
+    },
+    {
+      "id": "17",
+      "title": "性能日报档位展开",
+      "weight": 2,
+      "category": "动态展开与分支",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "新建图",
+      "isRetestedInV2": false,
+      "prompt": "# 性能日报档位展开\r\n\r\n性能日报在同一场景内逐档生成简报。请把这一段裁成可手动运行的康师傅 Pregel 自动化。输入是运行时指定的一个 JSON 清单。只处理 enabled 为 true 的档位，按清单顺序逐个运行同一张简报子图，每档都有稳定且可识别的身份。请用新版 Pregel 原生动态展开 进行展开。子图返回场景、档位和样本数。父图最后输出 summary.json，按顺序列出子图结果和总样本数。用同一个入口实际运行以下三组，展示展开数量、执行顺序和结果。空集合也要有空汇总。\r\n\r\n请原样保存以下输入：\r\nmixed.json: {\"scene\":\"station\",\"tiers\":[{\"tier\":\"epic\",\"enabled\":true,\"samples\":[14,17,20]},{\"tier\":\"high\",\"enabled\":false,\"samples\":[10,12]},{\"tier\":\"medium\",\"enabled\":true,\"samples\":[12]}]}\r\nsingle.json: {\"scene\":\"station\",\"tiers\":[{\"tier\":\"low\",\"enabled\":true,\"samples\":[12,13]}]}\r\nempty.json: {\"scene\":\"station\",\"tiers\":[]}\r\n\r\n\r\n交付入口 CSX、完整的 CLI 校验和实跑日志、Run ID 和各份独立产物。\r\n",
+      "v2VerdictsPath": "q17-verdicts.json",
+      "deltaPassed": 1,
+      "deltaScore": 1.1181,
+      "v1": {
+        "passed": 2,
+        "passedInLimit": 2,
+        "passAtK": [
+          0.666667,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          0.666667,
+          0.333333,
+          0.0
+        ],
+        "passPowKIid": [
+          0.666667,
+          0.444444,
+          0.296296
+        ],
+        "reportedAvgMin": 15.61,
+        "avgDurationMin": 15.51,
+        "medianSteps": 95.0,
+        "medianTools": 103.0,
+        "reportedTokens": 188966,
+        "tokens": {
+          "input": 370537,
+          "cacheRead": 72182400,
+          "output": 188966
+        },
+        "score": 3.756873,
+        "scorePassAt1Part": 2.286792,
+        "scorePassAt3Part": 1.470081,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "未通过（failed）",
+            "durationMin": 30.0023,
+            "steps": 343,
+            "toolCalls": 357,
+            "toolErrors": 5,
+            "topTools": {
+              "pwsh": 251,
+              "write": 43,
+              "edit": 36,
+              "read": 23,
+              "grep": 2,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "glob": 1,
+              "pwsh": 251,
+              "read": 23,
+              "grep": 2,
+              "write": 43,
+              "edit": 36
+            },
+            "tokens": {
+              "input": 220097,
+              "cacheRead": 61436672,
+              "output": 121036,
+              "totalContext": 61656769,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9964,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 8.3088,
+            "steps": 88,
+            "toolCalls": 101,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 58,
+              "write": 21,
+              "read": 14,
+              "edit": 4,
+              "skill": 1,
+              "glob": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 58,
+              "read": 14,
+              "glob": 1,
+              "grep": 1,
+              "write": 21,
+              "edit": 4,
+              "present": 1
+            },
+            "tokens": {
+              "input": 72879,
+              "cacheRead": 5548416,
+              "output": 35922,
+              "totalContext": 5621295,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.987,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.540219,
+            "score": 1.877002
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 8.2238,
+            "steps": 95,
+            "toolCalls": 103,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 71,
+              "read": 15,
+              "write": 10,
+              "edit": 5,
+              "skill": 1,
+              "grep": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 71,
+              "read": 15,
+              "grep": 1,
+              "write": 10,
+              "edit": 5
+            },
+            "tokens": {
+              "input": 77561,
+              "cacheRead": 5197312,
+              "output": 32008,
+              "totalContext": 5274873,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9853,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.543338,
+            "score": 1.879871
+          }
+        ],
+        "capScore": 4.6,
+        "spdScore": 2.492182
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 10.78,
+        "avgDurationMin": 10.78,
+        "medianSteps": 101.0,
+        "medianTools": 115.0,
+        "reportedTokens": 112763,
+        "tokens": {
+          "input": 321214,
+          "cacheRead": 33807744,
+          "output": 112763
+        },
+        "score": 4.874961,
+        "scorePassAt1Part": 3.412472,
+        "scorePassAt3Part": 1.462488,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。",
+            "durationMin": 10.6162,
+            "steps": 101,
+            "toolCalls": 115,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 63,
+              "read": 19,
+              "write": 15,
+              "edit": 14,
+              "grep": 2,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "read": 19,
+              "pwsh": 63,
+              "write": 15,
+              "edit": 14,
+              "grep": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 83461,
+              "cacheRead": 7180800,
+              "output": 34110,
+              "totalContext": 7264261,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9885,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.467393,
+            "score": 1.573915
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。",
+            "durationMin": 3.2524,
+            "steps": 40,
+            "toolCalls": 50,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 22,
+              "read": 10,
+              "write": 7,
+              "edit": 6,
+              "todo_write": 3,
+              "grep": 1
+            },
+            "allTools": {
+              "read": 10,
+              "pwsh": 22,
+              "grep": 1,
+              "todo_write": 3,
+              "write": 7,
+              "edit": 6,
+              "present": 1
+            },
+            "tokens": {
+              "input": 49181,
+              "cacheRead": 1830528,
+              "output": 14437,
+              "totalContext": 1879709,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9738,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.820311,
+            "score": 1.856249
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "核对三组 CLI 验证、独立运行与输出；Map 使用 Sequential，混合按 epic→medium，单项 low，空组输出空汇总。用交付的运行日志与状态记录补足旧验证器仅查固定归档路径的缺口。",
+            "durationMin": 18.4651,
+            "steps": 183,
+            "toolCalls": 194,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 121,
+              "edit": 31,
+              "read": 22,
+              "write": 18,
+              "todo_write": 1,
+              "present": 1
+            },
+            "allTools": {
+              "read": 22,
+              "pwsh": 121,
+              "todo_write": 1,
+              "write": 18,
+              "edit": 31,
+              "present": 1
+            },
+            "tokens": {
+              "input": 188572,
+              "cacheRead": 24796416,
+              "output": 64216,
+              "totalContext": 24984988,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9925,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.305996,
+            "score": 1.444797
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 3.1874
+      }
+    },
+    {
+      "id": "17A",
+      "title": "模拟多站点离线批次导入",
+      "weight": 2,
+      "category": "动态展开与分支",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "改造既有图",
+      "isRetestedInV2": false,
+      "prompt": "# 模拟题二：多站点离线批次导入\r\n\r\n虚构的遥测系统每天收到一份离线清单。不同站点可以并行导入。同一站点内的批次修改同一份累计值，必须按清单顺序逐条处理。此次模拟仅写本地输出，请用 Pregel 编排。\r\n\r\n- 从运行时清单生成站点计划。同一站点的初始累计值为 0。外层从运行清单按站点并行展开，站点用名称作为稳定身份。\r\n- 每个站点调用同一张子图。子图按清单顺序串行展开本组启用条目，每条用 `站点/批次 ID` 作为身份。禁用条目不应展开。两层都保留可核对的子运行记录。\r\n- 每次运行给各站点创建独立的累计状态。每个批次子运行开始后读取本站当前值，用自己的 `delta` 当场决定接受或拒绝。若相加会小于 0，记为 `rejected` 并保留原值，后续批次照常执行。批次退出前须完成状态更新并记录自己的批次 ID、状态、原因、更新前后的值和起止时间。状态存储方式自选，可使用运行目录内每站独立的本地状态文件。\r\n- 父图只汇总批次子运行已产生的结果和各站的最终状态，写出 `summary.json`。输出包括日期、各站批次结果、每站最终值、所有站最终值的合计。无启用项的站点保留空结果，完全无站点也生成空汇总。\r\n- 每批可加入约 250 毫秒模拟等待。用同一入口运行以下两组，分别保留产物。混合清单须证明两个站的批次有实际时间重叠，同站下一批在上一批结束后才开始，并读到上一批留下的值。\r\n\r\n```json\r\n{\"date\":\"2042-07-09\",\"stations\":[{\"id\":\"north\",\"batches\":[{\"id\":\"n1\",\"enabled\":true,\"delta\":5},{\"id\":\"n2\",\"enabled\":true,\"delta\":-7},{\"id\":\"n3\",\"enabled\":false,\"delta\":99},{\"id\":\"n4\",\"enabled\":true,\"delta\":-2}]},{\"id\":\"south\",\"batches\":[{\"id\":\"s1\",\"enabled\":true,\"delta\":8},{\"id\":\"s2\",\"enabled\":true,\"delta\":-3}]},{\"id\":\"west\",\"batches\":[{\"id\":\"w1\",\"enabled\":false,\"delta\":20}]}]}\r\n```\r\n\r\n```json\r\n{\"date\":\"2042-07-10\",\"stations\":[]}\r\n```\r\n\r\n交付入口 CSX、子图源码、两份汇总、CLI 校验和运行输出。附上来自各批次子运行的记录，用来核对读到的值、写入或保留的值以及执行顺序，尤其是一次拒绝之后下一批读到的值。请在新的独立目录作答，只查本机的通用 Pregel skill 和公开示例。\r\n",
+      "v2VerdictsPath": "q17a-verdicts.json",
+      "deltaPassed": 0,
+      "deltaScore": -0.3056,
+      "v1": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 17.77,
+        "avgDurationMin": 17.66,
+        "medianSteps": 197.0,
+        "medianTools": 208.0,
+        "reportedTokens": 250471,
+        "tokens": {
+          "input": 420621,
+          "cacheRead": 65450496,
+          "output": 250471
+        },
+        "score": 4.386872,
+        "scorePassAt1Part": 3.070811,
+        "scorePassAt3Part": 1.316062,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 16.3924,
+            "steps": 197,
+            "toolCalls": 208,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 142,
+              "edit": 26,
+              "write": 25,
+              "read": 13,
+              "skill": 1,
+              "present": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 142,
+              "read": 13,
+              "write": 25,
+              "edit": 26,
+              "present": 1
+            },
+            "tokens": {
+              "input": 107769,
+              "cacheRead": 19954816,
+              "output": 87179,
+              "totalContext": 20062585,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9946,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.349461,
+            "score": 1.479569
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 22.53,
+            "steps": 211,
+            "toolCalls": 229,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 135,
+              "edit": 38,
+              "read": 31,
+              "write": 18,
+              "grep": 4,
+              "glob": 2
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 135,
+              "read": 31,
+              "glob": 2,
+              "grep": 4,
+              "write": 18,
+              "edit": 38
+            },
+            "tokens": {
+              "input": 183828,
+              "cacheRead": 29709440,
+              "output": 90702,
+              "totalContext": 29893268,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9939,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.245038,
+            "score": 1.39603
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 14.0607,
+            "steps": 154,
+            "toolCalls": 167,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 94,
+              "edit": 29,
+              "read": 23,
+              "write": 17,
+              "grep": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 94,
+              "read": 23,
+              "grep": 3,
+              "write": 17,
+              "edit": 29
+            },
+            "tokens": {
+              "input": 129024,
+              "cacheRead": 15786240,
+              "output": 72590,
+              "totalContext": 15915264,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9919,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.389092,
+            "score": 1.511273
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 1.967181
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 27.52,
+        "avgDurationMin": 27.52,
+        "medianSteps": 307.0,
+        "medianTools": 326.0,
+        "reportedTokens": 456599,
+        "tokens": {
+          "input": 586646,
+          "cacheRead": 164081024,
+          "output": 456599
+        },
+        "score": 4.081291,
+        "scorePassAt1Part": 2.856904,
+        "scorePassAt3Part": 1.224387,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 32.2649,
+            "steps": 327,
+            "toolCalls": 340,
+            "toolErrors": 5,
+            "topTools": {
+              "pwsh": 212,
+              "edit": 47,
+              "read": 42,
+              "write": 30,
+              "todo_write": 4,
+              "grep": 3
+            },
+            "allTools": {
+              "read": 42,
+              "pwsh": 212,
+              "todo_write": 4,
+              "write": 30,
+              "edit": 47,
+              "grep": 3,
+              "remember": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 204760,
+              "cacheRead": 62387200,
+              "output": 168649,
+              "totalContext": 62591960,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9967,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.164847,
+            "score": 1.331878
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "两站真实重叠，同站串行，拒绝后读回前值，混合总计 8，空组总计 0。禁用 ID 仅留在计划字段，没有子运行。",
+            "durationMin": 23.4778,
+            "steps": 254,
+            "toolCalls": 322,
+            "toolErrors": 3,
+            "topTools": {
+              "pwsh": 161,
+              "edit": 98,
+              "read": 41,
+              "write": 21,
+              "present": 1
+            },
+            "allTools": {
+              "read": 41,
+              "pwsh": 161,
+              "write": 21,
+              "edit": 98,
+              "present": 1
+            },
+            "tokens": {
+              "input": 171804,
+              "cacheRead": 42485504,
+              "output": 140098,
+              "totalContext": 42657308,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.996,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.234161,
+            "score": 1.387329
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 26.8035,
+            "steps": 307,
+            "toolCalls": 326,
+            "toolErrors": 3,
+            "topTools": {
+              "pwsh": 254,
+              "edit": 35,
+              "read": 19,
+              "write": 13,
+              "todo_write": 2,
+              "present": 2
+            },
+            "allTools": {
+              "read": 19,
+              "pwsh": 254,
+              "web_search": 1,
+              "todo_write": 2,
+              "write": 13,
+              "edit": 35,
+              "present": 2
+            },
+            "tokens": {
+              "input": 210082,
+              "cacheRead": 59208320,
+              "output": 147852,
+              "totalContext": 59418402,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9965,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.202606,
+            "score": 1.362084
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 1.203228
+      }
+    },
+    {
+      "id": "18",
+      "title": "AI 节点的报告交接",
+      "weight": 3,
+      "category": "AI 节点与复合链路",
+      "tier": "L3 复合 / AI",
+      "aiNode": true,
+      "mode": "新建图",
+      "isRetestedInV2": true,
+      "prompt": "# AI 节点专项 · 报告交接\r\n\r\n把两组冻结的模拟数据分别跑成报告。用同一个可手动执行的 Pregel 流程，每次运行使用自己的产物目录。\r\n\r\n1. 读取指定的数据文件，把原始记录交给 Pregel 的 AI 节点。让 AI 直接写一份 `report.md`，供人阅读。报告覆盖每条记录，写明编号、当前值、上限和判断。低于上限为「正常」，等于上限为「需关注」，高于上限为「超限」。报告版式由 AI 决定。\r\n2. 下游步骤从本次 AI 节点返回的产物路径打开报告，把正文原样归档到本次运行目录。AI 和下游之间交接的是 Markdown 报告及其路径。报告缺失或为空时，下游记录具体原因并在归档前停止。\r\n3. 用同一个入口分别跑第一组（`inputs/case-1/records.md`）和第二组（`inputs/case-2/records.md`），再验证一次**下游归档校验阶段检测到 `report.md` 缺失或为空**的情况（验证该负例时，上游输入记录仍正常提供，可通过可选输入开关在 AI 节点后模拟未产出或清空 `report.md`，使流程进入下游归档校验节点并在日志中明确记录 `report.md` 不存在或为空后报错停止，不能只是上游输入 `records.md` 不存在）。每次保留运行 ID 和 CLI 日志。两次成功运行还须保留 AI 节点的原始报告和下游归档，日志写明两份文件的路径。\r\n\r\n交付 CSX 入口、所需支持文件和运行证据。请在新的独立目录作答，只使用题包、已安装的通用 Pregel skill、公开示例和机器已配置的 AI 渠道。\r\n",
+      "v2VerdictsPath": "retest-12-18-1124/q18-verdicts.json",
+      "deltaPassed": 3,
+      "deltaScore": 7.0575,
+      "v1": {
+        "passed": 0,
+        "passedInLimit": 0,
+        "passAtK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reportedAvgMin": 30.11,
+        "avgDurationMin": 30.0,
+        "medianSteps": 90.0,
+        "medianTools": 106.0,
+        "reportedTokens": 66010,
+        "tokens": {
+          "input": 319578,
+          "cacheRead": 20366720,
+          "output": 66010
+        },
+        "score": 0.0,
+        "scorePassAt1Part": 0.0,
+        "scorePassAt3Part": 0.0,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "真实 AI 节点在 Windows 启动无头 DSH 时失败，原始证据显示其状态目录不在外层 Agent 的可写工作区内",
+            "durationMin": 30.0014,
+            "steps": 131,
+            "toolCalls": 146,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 102,
+              "read": 29,
+              "grep": 6,
+              "write": 5,
+              "edit": 2,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 102,
+              "read": 29,
+              "glob": 1,
+              "grep": 6,
+              "write": 5,
+              "edit": 2
+            },
+            "tokens": {
+              "input": 153090,
+              "cacheRead": 13235328,
+              "output": 37419,
+              "totalContext": 13388418,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9886,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "尝试在个人 .ksf/Graphs 下写答卷，被工作区权限拒绝，之后卡在权限申请",
+            "durationMin": 30.0013,
+            "steps": 20,
+            "toolCalls": 30,
+            "toolErrors": 1,
+            "topTools": {
+              "read": 16,
+              "pwsh": 12,
+              "skill": 1,
+              "glob": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 12,
+              "read": 16,
+              "glob": 1
+            },
+            "tokens": {
+              "input": 49364,
+              "cacheRead": 612224,
+              "output": 3349,
+              "totalContext": 661588,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9254,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "真实 AI 节点在 Windows 启动无头 DSH 时失败，原始证据显示其状态目录不在外层 Agent 的可写工作区内",
+            "durationMin": 30.0014,
+            "steps": 90,
+            "toolCalls": 106,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 49,
+              "read": 30,
+              "grep": 10,
+              "edit": 7,
+              "write": 6,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "pwsh": 49,
+              "read": 30,
+              "glob": 1,
+              "grep": 10,
+              "write": 6,
+              "edit": 7,
+              "job_output": 1
+            },
+            "tokens": {
+              "input": 117124,
+              "cacheRead": 6519168,
+              "output": 25242,
+              "totalContext": 6636292,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9824,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 0.0,
+        "spdScore": 0.0
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 11.11,
+        "avgDurationMin": 11.11,
+        "medianSteps": 133.0,
+        "medianTools": 148.0,
+        "reportedTokens": 136179,
+        "tokens": {
+          "input": 327815,
+          "cacheRead": 34623360,
+          "output": 136179
+        },
+        "score": 7.057535,
+        "scorePassAt1Part": 4.940275,
+        "scorePassAt3Part": 2.117261,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。",
+            "durationMin": 11.7846,
+            "steps": 133,
+            "toolCalls": 148,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 96,
+              "read": 20,
+              "write": 15,
+              "edit": 13,
+              "todo_write": 2,
+              "grep": 1
+            },
+            "allTools": {
+              "read": 20,
+              "pwsh": 96,
+              "todo_write": 2,
+              "write": 15,
+              "edit": 13,
+              "grep": 1,
+              "present": 1
+            },
+            "tokens": {
+              "input": 122222,
+              "cacheRead": 11153408,
+              "output": 40279,
+              "totalContext": 11275630,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9892,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.437527,
+            "score": 2.325032
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。",
+            "durationMin": 8.409,
+            "steps": 100,
+            "toolCalls": 116,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 52,
+              "read": 23,
+              "edit": 22,
+              "write": 15,
+              "grep": 3,
+              "present": 1
+            },
+            "allTools": {
+              "read": 23,
+              "pwsh": 52,
+              "write": 15,
+              "edit": 22,
+              "grep": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 77712,
+              "cacheRead": 7444864,
+              "output": 41763,
+              "totalContext": 7522576,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9897,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.536589,
+            "score": 2.443906
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "上游记录可读；缺失与空文件负例均到达下游归档校验并停止。两份正例报告字段与判定正确，原件和归档一致。",
+            "durationMin": 13.1481,
+            "steps": 166,
+            "toolCalls": 188,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 114,
+              "read": 36,
+              "write": 21,
+              "edit": 11,
+              "todo_write": 3,
+              "grep": 2
+            },
+            "allTools": {
+              "read": 36,
+              "pwsh": 114,
+              "grep": 2,
+              "todo_write": 3,
+              "write": 21,
+              "edit": 11,
+              "present": 1
+            },
+            "tokens": {
+              "input": 127881,
+              "cacheRead": 16025088,
+              "output": 54137,
+              "totalContext": 16152969,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9921,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.407164,
+            "score": 2.288597
+          }
+        ],
+        "capScore": 9.0,
+        "spdScore": 4.143838
+      }
+    },
+    {
+      "id": "18A",
+      "title": "冻结数据的 AI 周报总结",
+      "weight": 3,
+      "category": "AI 节点与复合链路",
+      "tier": "L3 复合 / AI",
+      "aiNode": true,
+      "mode": "新建图",
+      "isRetestedInV2": false,
+      "prompt": "# 题 A：只汇总冻结周报证据\r\n\r\n给定 `frozen-week.json`，其中已经完成取数、解析和冻结。写一个可手动执行的 Pregel 流程，用实际 AI 节点读取这份快照，生成本轮本地 `report.md`。以附件或等价的冻结上下文交给模型。请显式关闭所有工具、MCP 和 skill。\r\n\r\n按完成项、待确认风险、已知缺口三个小节组织内容，每项引用记录 ID。排除已解决风险。区分“来源没采集”和“没有发现记录”，别把上期数据写成本周结果。交付 Pregel 源码、实际 AI 会话标识、请求和本轮报告。无需登记或安排真实周报任务。\r\n",
+      "v2VerdictsPath": "q18a-verdicts.json",
+      "deltaPassed": 2,
+      "deltaScore": 5.9021,
+      "v1": {
+        "passed": 0,
+        "passedInLimit": 0,
+        "passAtK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reportedAvgMin": 19.51,
+        "avgDurationMin": 19.4,
+        "medianSteps": 158.0,
+        "medianTools": 169.0,
+        "reportedTokens": 157704,
+        "tokens": {
+          "input": 401214,
+          "cacheRead": 49468544,
+          "output": 157704
+        },
+        "score": 0.0,
+        "scorePassAt1Part": 0.0,
+        "scorePassAt3Part": 0.0,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。",
+            "durationMin": 17.4194,
+            "steps": 206,
+            "toolCalls": 220,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 151,
+              "read": 29,
+              "edit": 26,
+              "grep": 5,
+              "write": 5,
+              "working_directory": 2
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 2,
+              "pwsh": 151,
+              "read": 29,
+              "grep": 5,
+              "write": 5,
+              "edit": 26,
+              "job_output": 1
+            },
+            "tokens": {
+              "input": 138423,
+              "cacheRead": 22507904,
+              "output": 69246,
+              "totalContext": 22646327,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9939,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。",
+            "durationMin": 29.997,
+            "steps": 139,
+            "toolCalls": 146,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 95,
+              "read": 24,
+              "write": 12,
+              "edit": 7,
+              "grep": 6,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "pwsh": 95,
+              "read": 24,
+              "grep": 6,
+              "write": 12,
+              "edit": 7
+            },
+            "tokens": {
+              "input": 125083,
+              "cacheRead": 11390720,
+              "output": 48754,
+              "totalContext": 11515803,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9891,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "内层 DSH 未能在现有 Windows 评测沙箱启动，没有真实 AI 会话或 report.md。",
+            "durationMin": 10.7911,
+            "steps": 158,
+            "toolCalls": 169,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 119,
+              "read": 23,
+              "grep": 11,
+              "write": 7,
+              "edit": 6,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 119,
+              "read": 23,
+              "glob": 1,
+              "grep": 11,
+              "write": 7,
+              "edit": 6,
+              "exec_command": 1
+            },
+            "tokens": {
+              "input": 137708,
+              "cacheRead": 15569920,
+              "output": 39704,
+              "totalContext": 15707628,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9912,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 0.0,
+        "spdScore": 0.0
+      },
+      "v2": {
+        "passed": 2,
+        "passedInLimit": 2,
+        "passAtK": [
+          0.666667,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          0.666667,
+          0.333333,
+          0.0
+        ],
+        "passPowKIid": [
+          0.666667,
+          0.444444,
+          0.296296
+        ],
+        "reportedAvgMin": 6.06,
+        "avgDurationMin": 6.06,
+        "medianSteps": 64.0,
+        "medianTools": 77.0,
+        "reportedTokens": 87514,
+        "tokens": {
+          "input": 204654,
+          "cacheRead": 14914304,
+          "output": 87514
+        },
+        "score": 5.902106,
+        "scorePassAt1Part": 3.592586,
+        "scorePassAt3Part": 2.30952,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "三组内容齐全，明确区分未采集与已采集无其他发现；冻结请求的 Tools、MCP 和 Skills 都是空数组。",
+            "durationMin": 3.9756,
+            "steps": 55,
+            "toolCalls": 64,
+            "toolErrors": 0,
+            "topTools": {
+              "read": 26,
+              "pwsh": 17,
+              "edit": 11,
+              "write": 4,
+              "job_output": 4,
+              "grep": 1
+            },
+            "allTools": {
+              "read": 26,
+              "pwsh": 17,
+              "grep": 1,
+              "write": 4,
+              "edit": 11,
+              "job_output": 4,
+              "present": 1
+            },
+            "tokens": {
+              "input": 60933,
+              "cacheRead": 2913280,
+              "output": 17260,
+              "totalContext": 2974213,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9795,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.763679,
+            "score": 3.123878
+          },
+          {
+            "trial": 2,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "分类和冻结请求正确，但报告只写历史来源未采集，遗漏已采集范围内没有发现的说明。",
+            "durationMin": 5.1183,
+            "steps": 64,
+            "toolCalls": 77,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 33,
+              "read": 20,
+              "edit": 10,
+              "write": 8,
+              "job_output": 3,
+              "grep": 2
+            },
+            "allTools": {
+              "read": 20,
+              "pwsh": 33,
+              "grep": 2,
+              "write": 8,
+              "edit": 10,
+              "job_output": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 73629,
+              "cacheRead": 4083456,
+              "output": 32809,
+              "totalContext": 4157085,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9823,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "报告明确区分已有采集结果、未发现未知状态记录和历史源未采集；上期条目只作为排除说明，冻结请求关闭三类工具。",
+            "durationMin": 9.0882,
+            "steps": 122,
+            "toolCalls": 138,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 64,
+              "edit": 22,
+              "write": 21,
+              "read": 19,
+              "grep": 6,
+              "glob": 2
+            },
+            "allTools": {
+              "read": 19,
+              "working_directory": 1,
+              "pwsh": 64,
+              "grep": 6,
+              "glob": 2,
+              "write": 21,
+              "edit": 22,
+              "job_output": 2,
+              "present": 1
+            },
+            "tokens": {
+              "input": 70092,
+              "cacheRead": 7917568,
+              "output": 37445,
+              "totalContext": 7987660,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9912,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.513209,
+            "score": 2.778228
+          }
+        ],
+        "capScore": 6.9,
+        "spdScore": 4.405264
+      }
+    },
+    {
+      "id": "18B",
+      "title": "无头 DSH 注入两个模拟 MCP 与 skill",
+      "weight": 3,
+      "category": "AI 节点与复合链路",
+      "tier": "L3 复合 / AI",
+      "aiNode": true,
+      "mode": "改造既有图",
+      "isRetestedInV2": false,
+      "prompt": "# 题 B：让无头 DSH 用 skill 和 MCP 完成周报\r\n\r\n写一个可手动执行的 Pregel 流程。Pregel AI 节点在运行时启动独立的无头 DSH。把 AI 节点的 Tools 显式设为空列表，给内层会话显式声明 MCP 服务器 `mock-week-items`、`mock-week-history` 和 skill `mock-weekly-flow`，由它针对目标周 2042-07-07 查询数据并生成本地 `report.md`。这两台模拟 MCP 都已注册，每台只有一项只读工具；skill 也已装好。\r\n\r\n用同一内层会话加载 skill、调用两个工具并完成周报。输入数据以本轮工具返回为准。由外层写 Pregel 接线，运行期取数和归纳由内层完成。交付 Pregel 源码、实际 AI 请求、内层会话标识、本轮报告及工具调用证据。只使用题目专用运行环境，不读实际项目数据、不上传或发布。\r\n",
+      "v2VerdictsPath": "q18b-verdicts.json",
+      "deltaPassed": 2,
+      "deltaScore": 4.2295,
+      "v1": {
+        "passed": 1,
+        "passedInLimit": 1,
+        "passAtK": [
+          0.333333,
+          0.666667,
+          1.0
+        ],
+        "passPowK": [
+          0.333333,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.333333,
+          0.111111,
+          0.037037
+        ],
+        "reportedAvgMin": 34.83,
+        "avgDurationMin": 34.83,
+        "medianSteps": 177.0,
+        "medianTools": 193.0,
+        "reportedTokens": 178259,
+        "tokens": {
+          "input": 601721,
+          "cacheRead": 85337728,
+          "output": 178259
+        },
+        "score": 3.925495,
+        "scorePassAt1Part": 1.717404,
+        "scorePassAt3Part": 2.208091,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "manual_stopped",
+            "passed": false,
+            "review": "外层会话达 48.15 分钟后手动停止，未完成全量交付",
+            "durationMin": 48.1515,
+            "steps": 177,
+            "toolCalls": 193,
+            "toolErrors": 3,
+            "topTools": {
+              "pwsh": 99,
+              "read": 46,
+              "edit": 24,
+              "grep": 12,
+              "write": 8,
+              "job_output": 2
+            },
+            "allTools": {
+              "pwsh": 99,
+              "read": 46,
+              "skill": 1,
+              "grep": 12,
+              "write": 8,
+              "edit": 24,
+              "job_output": 2,
+              "job_kill": 1
+            },
+            "tokens": {
+              "input": 195839,
+              "cacheRead": 25003392,
+              "output": 42806,
+              "totalContext": 25199231,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9922,
+            "bucket": "manual_stopped",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "Trial 2 通过：成功注入模拟 MCP 与 skill 并完成输出",
+            "durationMin": 8.1916,
+            "steps": 118,
+            "toolCalls": 139,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 76,
+              "read": 39,
+              "grep": 8,
+              "edit": 7,
+              "todo_write": 3,
+              "write": 3
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 76,
+              "read": 39,
+              "glob": 1,
+              "grep": 8,
+              "todo_write": 3,
+              "write": 3,
+              "edit": 7,
+              "present": 1
+            },
+            "tokens": {
+              "input": 142107,
+              "cacheRead": 12249728,
+              "output": 37788,
+              "totalContext": 12391835,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9885,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.544529,
+            "score": 3.925495
+          },
+          {
+            "trial": 3,
+            "rawStatus": "manual_stopped",
+            "passed": false,
+            "review": "外层会话达 48.15 分钟后手动停止，未完成全量交付",
+            "durationMin": 48.1489,
+            "steps": 255,
+            "toolCalls": 286,
+            "toolErrors": 4,
+            "topTools": {
+              "pwsh": 193,
+              "read": 41,
+              "edit": 40,
+              "write": 5,
+              "grep": 3,
+              "job_output": 2
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 193,
+              "read": 41,
+              "job_kill": 1,
+              "write": 5,
+              "edit": 40,
+              "grep": 3,
+              "job_output": 2
+            },
+            "tokens": {
+              "input": 263775,
+              "cacheRead": 48084608,
+              "output": 97665,
+              "totalContext": 48348383,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9945,
+            "bucket": "manual_stopped",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 4.8,
+        "spdScore": 2.613738
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 4.4,
+        "avgDurationMin": 4.4,
+        "medianSteps": 43.0,
+        "medianTools": 49.0,
+        "reportedTokens": 54815,
+        "tokens": {
+          "input": 156874,
+          "cacheRead": 9002112,
+          "output": 54815
+        },
+        "score": 8.154946,
+        "scorePassAt1Part": 5.708462,
+        "scorePassAt3Part": 2.446484,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 7.6786,
+            "steps": 98,
+            "toolCalls": 112,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 49,
+              "edit": 28,
+              "read": 25,
+              "write": 6,
+              "grep": 3,
+              "present": 1
+            },
+            "allTools": {
+              "read": 25,
+              "pwsh": 49,
+              "grep": 3,
+              "write": 6,
+              "edit": 28,
+              "present": 1
+            },
+            "tokens": {
+              "input": 81610,
+              "cacheRead": 6041600,
+              "output": 28988,
+              "totalContext": 6123210,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9867,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.564231,
+            "score": 2.477077
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.207,
+            "steps": 43,
+            "toolCalls": 49,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 31,
+              "read": 6,
+              "write": 4,
+              "todo_write": 3,
+              "edit": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 31,
+              "read": 6,
+              "todo_write": 3,
+              "write": 4,
+              "edit": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 38856,
+              "cacheRead": 1687808,
+              "output": 16043,
+              "totalContext": 1726664,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9775,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.824148,
+            "score": 2.788977
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 2.3163,
+            "steps": 35,
+            "toolCalls": 45,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 23,
+              "read": 16,
+              "write": 3,
+              "grep": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 16,
+              "pwsh": 23,
+              "grep": 2,
+              "write": 3,
+              "present": 1
+            },
+            "tokens": {
+              "input": 36408,
+              "cacheRead": 1272704,
+              "output": 9784,
+              "totalContext": 1309112,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9722,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.90741,
+            "score": 2.888892
+          }
+        ],
+        "capScore": 9.0,
+        "spdScore": 6.887365
+      }
+    },
+    {
+      "id": "19",
+      "title": "周报固定分支并行",
+      "weight": 2,
+      "category": "动态展开与分支",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "新建图",
+      "isRetestedInV2": false,
+      "prompt": "# 周报固定分支并行\r\n\r\n团队周报有两个独立采集来源，Git 和 P4。请把采集、汇总做成可手动运行的康师傅 Pregel 自动化。本题只读本地模拟数据。两条分支数量固定，各自读取自己的 JSON，模拟一次约 1 秒的采集等待，记录来源、条数和 UTC 起止时间。采集阶段要使用 Pregel 原生固定分支 Parallel。汇合后由单独的步骤输出 summary.json，包含两个来源的结果和总条数。用实际运行的时间记录说明分支有重叠，而且汇总在两条采集都结束之后启动。\r\n\r\n请原样保存以下输入：\r\ngit.json: [{\"id\":\"git-1\"},{\"id\":\"git-2\"},{\"id\":\"git-3\"}]\r\np4.json: [{\"id\":\"p4-1\"},{\"id\":\"p4-2\"}]\r\n\r\n\r\n交付入口 CSX、完整的 CLI 校验和实跑日志、Run ID 和各份独立产物。\r\n",
+      "v2VerdictsPath": "q19-verdicts.json",
+      "deltaPassed": 1,
+      "deltaScore": 1.5821,
+      "v1": {
+        "passed": 2,
+        "passedInLimit": 2,
+        "passAtK": [
+          0.666667,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          0.666667,
+          0.333333,
+          0.0
+        ],
+        "passPowKIid": [
+          0.666667,
+          0.444444,
+          0.296296
+        ],
+        "reportedAvgMin": 12.37,
+        "avgDurationMin": 6.77,
+        "medianSteps": 98.0,
+        "medianTools": 111.0,
+        "reportedTokens": 89038,
+        "tokens": {
+          "input": 215229,
+          "cacheRead": 19140736,
+          "output": 89038
+        },
+        "score": 3.707231,
+        "scorePassAt1Part": 2.256575,
+        "scorePassAt3Part": 1.450656,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 11.725,
+            "steps": 155,
+            "toolCalls": 171,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 92,
+              "edit": 31,
+              "read": 20,
+              "write": 19,
+              "grep": 6,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 92,
+              "read": 20,
+              "glob": 1,
+              "grep": 6,
+              "write": 19,
+              "edit": 31,
+              "present": 1
+            },
+            "tokens": {
+              "input": 99921,
+              "cacheRead": 11814912,
+              "output": 53041,
+              "totalContext": 11914833,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9916,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.438957,
+            "score": 1.783841
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 7.0446,
+            "steps": 98,
+            "toolCalls": 111,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 63,
+              "read": 18,
+              "edit": 16,
+              "write": 8,
+              "grep": 4,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 63,
+              "read": 18,
+              "grep": 4,
+              "write": 8,
+              "edit": 16,
+              "present": 1
+            },
+            "tokens": {
+              "input": 84973,
+              "cacheRead": 6705152,
+              "output": 30987,
+              "totalContext": 6790125,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9875,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.590641,
+            "score": 1.92339
+          },
+          {
+            "trial": 3,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "运行中途停止/未正常收包（18.1 分钟，无退出码）",
+            "durationMin": 1.5289,
+            "steps": 26,
+            "toolCalls": 33,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 23,
+              "read": 7,
+              "grep": 2,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 23,
+              "read": 7,
+              "grep": 2
+            },
+            "tokens": {
+              "input": 30335,
+              "cacheRead": 620672,
+              "output": 5010,
+              "totalContext": 651007,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9534,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 4.6,
+        "spdScore": 2.368077
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 5.15,
+        "avgDurationMin": 5.15,
+        "medianSteps": 51.0,
+        "medianTools": 61.0,
+        "reportedTokens": 76645,
+        "tokens": {
+          "input": 194987,
+          "cacheRead": 11331712,
+          "output": 76645
+        },
+        "score": 5.289287,
+        "scorePassAt1Part": 3.702501,
+        "scorePassAt3Part": 1.586786,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 4.1209,
+            "steps": 51,
+            "toolCalls": 59,
+            "toolErrors": 2,
+            "topTools": {
+              "pwsh": 28,
+              "read": 16,
+              "edit": 8,
+              "write": 6,
+              "present": 1
+            },
+            "allTools": {
+              "read": 16,
+              "pwsh": 28,
+              "write": 6,
+              "edit": 8,
+              "present": 1
+            },
+            "tokens": {
+              "input": 60717,
+              "cacheRead": 2685824,
+              "output": 23521,
+              "totalContext": 2746541,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9779,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.753232,
+            "score": 1.802585
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 7.8225,
+            "steps": 91,
+            "toolCalls": 100,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 57,
+              "read": 16,
+              "edit": 12,
+              "write": 9,
+              "todo_write": 4,
+              "grep": 1
+            },
+            "allTools": {
+              "read": 16,
+              "pwsh": 57,
+              "grep": 1,
+              "todo_write": 4,
+              "write": 9,
+              "edit": 12,
+              "present": 1
+            },
+            "tokens": {
+              "input": 77482,
+              "cacheRead": 6403712,
+              "output": 36833,
+              "totalContext": 6481194,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.988,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.558562,
+            "score": 1.646849
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 3.5023,
+            "steps": 49,
+            "toolCalls": 61,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 21,
+              "read": 20,
+              "edit": 10,
+              "write": 7,
+              "grep": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 20,
+              "pwsh": 21,
+              "grep": 2,
+              "write": 7,
+              "edit": 10,
+              "present": 1
+            },
+            "tokens": {
+              "input": 56788,
+              "cacheRead": 2242176,
+              "output": 16291,
+              "totalContext": 2298964,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9753,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.799816,
+            "score": 1.839853
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 4.223219
+      }
+    },
+    {
+      "id": "19A",
+      "title": "模拟发布前双路检查",
+      "weight": 2,
+      "category": "动态展开与分支",
+      "tier": "L2 进阶",
+      "aiNode": false,
+      "mode": "改造既有图",
+      "isRetestedInV2": false,
+      "prompt": "# 模拟题一：发布前双路检查\r\n\r\n给一个虚构的安装包做发布前检查。只能读取本题的本地 JSON，不能访问真实发布系统。请写可手动运行的 Pregel 自动化，用固定分支 `Parallel` 编排。\r\n\r\n- 包校验分支依次读包清单、检查包名与清单中的校验值，再返回 `pass` 或 `fail`。校验值只是本题的模拟字符串。\r\n- 审批分支依次读审批记录、比对待发布版本。渠道为 `internal` 时，整条审批分支在图上应显示为跳过；审批记录即使不存在也不能去读。渠道为 `public` 时，没有对应批准记录就返回 `fail`。\r\n- 公开渠道的两条分支都启用。在各自的读取节点内加入约 500 毫秒的模拟等待，记录读取节点实际开始和结束的时间。两次公开渠道运行里，两个读取节点的时间区间都必须有交集。用节点里的时间戳验收。\r\n- 汇总节点等所有启用分支结束后写 `decision.json`，包含版本、两条分支的结论和原因，以及最终决定 `allow` 或 `hold`。包校验通过且审批通过或按渠道跳过时允许发布，其余情况暂缓。检查结果为 `fail` 属于业务结果，仍须交付汇总。\r\n- 本次只写决定文件，不执行发布。三次用同一个编译后的图，分别保存决定文件和完整运行证据。\r\n\r\n以下三个 JSON 是运行数据，每组各保存为一个文件。缺少 `approvals` 表示审批记录不可用。\r\n\r\n```json\r\n{\"case\":\"public-ok\",\"channel\":\"public\",\"version\":\"1.4.0\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"abc9\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"abc9\"},\"approvals\":[{\"version\":\"1.4.0\",\"approved\":true}]}\r\n```\r\n\r\n```json\r\n{\"case\":\"internal-skip\",\"channel\":\"internal\",\"version\":\"1.4.1\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"def2\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"def2\"}}\r\n```\r\n\r\n```json\r\n{\"case\":\"public-hold\",\"channel\":\"public\",\"version\":\"1.4.2\",\"expectedPackage\":\"orbiter.zip\",\"expectedChecksum\":\"xyz8\",\"package\":{\"name\":\"orbiter.zip\",\"checksum\":\"wrong\"},\"approvals\":[{\"version\":\"1.4.1\",\"approved\":true}]}\r\n```\r\n\r\n交付入口 CSX、三份决定文件、CLI 校验和运行输出。按运行 ID 列出两个读取节点的起止、重叠毫秒数、各分支完成时间和汇总开始时间。内部渠道用 CLI 步骤状态证明两个审批节点均被跳过，并核对没有审批读取记录。请在新的独立目录作答，只查本机的通用 Pregel skill 和公开示例。\r\n",
+      "v2VerdictsPath": "q19a-verdicts.json",
+      "deltaPassed": 2,
+      "deltaScore": 2.1746,
+      "v1": {
+        "passed": 1,
+        "passedInLimit": 1,
+        "passAtK": [
+          0.333333,
+          0.666667,
+          1.0
+        ],
+        "passPowK": [
+          0.333333,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.333333,
+          0.111111,
+          0.037037
+        ],
+        "reportedAvgMin": 23.72,
+        "avgDurationMin": 23.62,
+        "medianSteps": 254.0,
+        "medianTools": 268.0,
+        "reportedTokens": 320771,
+        "tokens": {
+          "input": 462586,
+          "cacheRead": 95271552,
+          "output": 320771
+        },
+        "score": 2.46231,
+        "scorePassAt1Part": 1.07726,
+        "scorePassAt3Part": 1.385049,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "通过全部验收",
+            "durationMin": 12.3822,
+            "steps": 138,
+            "toolCalls": 147,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 88,
+              "read": 28,
+              "edit": 21,
+              "write": 5,
+              "grep": 3,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 88,
+              "read": 28,
+              "glob": 1,
+              "grep": 3,
+              "write": 5,
+              "edit": 21
+            },
+            "tokens": {
+              "input": 116737,
+              "cacheRead": 12349184,
+              "output": 60916,
+              "totalContext": 12465921,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9906,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.423679,
+            "score": 2.46231
+          },
+          {
+            "trial": 2,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "留有部分案例证据，Agent 达到 30 分钟启动时限后退出，未完成整份交付。",
+            "durationMin": 30.0081,
+            "steps": 254,
+            "toolCalls": 268,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 191,
+              "read": 34,
+              "write": 19,
+              "edit": 18,
+              "grep": 4,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "working_directory": 1,
+              "pwsh": 191,
+              "read": 34,
+              "grep": 4,
+              "write": 19,
+              "edit": 18
+            },
+            "tokens": {
+              "input": 199045,
+              "cacheRead": 43449216,
+              "output": 107458,
+              "totalContext": 43648261,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9954,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "公开双路有重叠，内部审批节点实际状态是 Succeeded，未满足图上整支 Skipped。",
+            "durationMin": 28.4704,
+            "steps": 257,
+            "toolCalls": 276,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 181,
+              "edit": 30,
+              "read": 27,
+              "write": 19,
+              "job_output": 16,
+              "glob": 2
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 181,
+              "read": 27,
+              "glob": 2,
+              "write": 19,
+              "edit": 30,
+              "job_output": 16
+            },
+            "tokens": {
+              "input": 146804,
+              "cacheRead": 39473152,
+              "output": 152397,
+              "totalContext": 39619956,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9963,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 3.2,
+        "spdScore": 1.355774
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 3,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 12.42,
+        "avgDurationMin": 12.42,
+        "medianSteps": 135.0,
+        "medianTools": 142.0,
+        "reportedTokens": 180329,
+        "tokens": {
+          "input": 432348,
+          "cacheRead": 48470272,
+          "output": 180329
+        },
+        "score": 4.636938,
+        "scorePassAt1Part": 3.245857,
+        "scorePassAt3Part": 1.391081,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。",
+            "durationMin": 12.1995,
+            "steps": 135,
+            "toolCalls": 142,
+            "toolErrors": 4,
+            "topTools": {
+              "pwsh": 96,
+              "edit": 18,
+              "read": 17,
+              "write": 6,
+              "grep": 3,
+              "todo_write": 1
+            },
+            "allTools": {
+              "read": 17,
+              "pwsh": 96,
+              "grep": 3,
+              "todo_write": 1,
+              "write": 6,
+              "edit": 18,
+              "present": 1
+            },
+            "tokens": {
+              "input": 131562,
+              "cacheRead": 15687424,
+              "output": 54685,
+              "totalContext": 15818986,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9917,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.427819,
+            "score": 1.542255
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。",
+            "durationMin": 9.1482,
+            "steps": 105,
+            "toolCalls": 120,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 55,
+              "edit": 32,
+              "read": 19,
+              "write": 9,
+              "grep": 2,
+              "todo_write": 2
+            },
+            "allTools": {
+              "read": 19,
+              "pwsh": 55,
+              "grep": 2,
+              "todo_write": 2,
+              "write": 9,
+              "edit": 32,
+              "present": 1
+            },
+            "tokens": {
+              "input": 165024,
+              "cacheRead": 10150784,
+              "output": 42638,
+              "totalContext": 10315808,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.984,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.511241,
+            "score": 1.608993
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "三组决定 allow/allow/hold；两次公开运行读取重叠，内部两个审批节点 Skipped 且无读取痕迹；汇总在已启用分支后开始。",
+            "durationMin": 15.9019,
+            "steps": 173,
+            "toolCalls": 191,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 109,
+              "edit": 38,
+              "read": 20,
+              "write": 16,
+              "grep": 4,
+              "todo_write": 3
+            },
+            "allTools": {
+              "read": 20,
+              "pwsh": 109,
+              "grep": 4,
+              "todo_write": 3,
+              "write": 16,
+              "edit": 38,
+              "present": 1
+            },
+            "tokens": {
+              "input": 135762,
+              "cacheRead": 22632064,
+              "output": 83006,
+              "totalContext": 22767826,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.994,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.357113,
+            "score": 1.48569
+          }
+        ],
+        "capScore": 6.0,
+        "spdScore": 2.592345
+      }
+    },
+    {
+      "id": "05",
+      "title": "完整性能日报自动化",
+      "weight": 3,
+      "category": "AI 节点与复合链路",
+      "tier": "L3 复合 / AI",
+      "aiNode": true,
+      "mode": "新建图",
+      "isRetestedInV2": true,
+      "prompt": "# 完整性能日报\n\n用提供的业务脚本、报告模板和冻结的 PerfDog 样本，从空白写一套每天出日报的 Pregel 工作流。交付可加载的入口 CSX、业务参数和两层编排，用 CLI 实际从头跑完。\r\n\r\n- 输入为报告日、场景和画质。用 2026-11-13、火车站与选矿厂，每个场景依次跑 Epic、High。从输入动态展开。不同场景并行，同场景画质按输入顺序串行，每个子运行保留稳定业务标识、独立目录和实际执行记录。\r\n- 每个场景画质组合按业务脚本从冻结样本取数和准备证据，使用宿主的 Pregel AI 节点实际分析，按业务约定校验、归档并回读。收齐各组合的回执后，再用宿主 AI 节点生成并归档当天总报告。缺数要记录跳过原因，失败保留真实结果。\r\n- 图里面的单份分析与当天汇总一律调用 ksf/deepseek-v4.1-flash，默认思考强度。题包配置已按这个口径设置，保持原样。只使用本地样本与本地报告存储，不接线上取数、上传或推送。\r\n- 交付入口、CLI 命令和退出码、运行 ID、各子运行的取数/分析/归档证据及当天汇总报告的绝对路径。保留实际运行日志和源码，不修改冻结样本及业务脚本的字段、校验、模板和工具协议。\r\n\r\n题包提供脱敏后的基础 FPS 数据。每个场景、画质组合有一份小样本。每组用一句话概括本轮帧率，最后按场景和档位汇总。\r\n",
+      "v2VerdictsPath": "retest-05-r2-1124/q05-verdicts.json",
+      "deltaPassed": 3,
+      "deltaScore": 6.1938,
+      "v1": {
+        "passed": 0,
+        "passedInLimit": 0,
+        "passAtK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowK": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passPowKIid": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reportedAvgMin": 30.12,
+        "avgDurationMin": 29.99,
+        "medianSteps": 273.0,
+        "medianTools": 293.0,
+        "reportedTokens": 212253,
+        "tokens": {
+          "input": 737161,
+          "cacheRead": 138538752,
+          "output": 212253
+        },
+        "score": 0.0,
+        "scorePassAt1Part": 0.0,
+        "scorePassAt3Part": 0.0,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "未完成日报主图，在排查 Windows 内层 DSH 状态目录权限时结束。",
+            "durationMin": 29.9865,
+            "steps": 273,
+            "toolCalls": 293,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 228,
+              "read": 36,
+              "write": 18,
+              "grep": 9,
+              "skill": 1,
+              "edit": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 228,
+              "read": 36,
+              "grep": 9,
+              "write": 18,
+              "edit": 1
+            },
+            "tokens": {
+              "input": 225655,
+              "cacheRead": 45297920,
+              "output": 55262,
+              "totalContext": 45523575,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.995,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 2,
+            "rawStatus": "environment_blocked",
+            "passed": false,
+            "review": "未完成日报主图，在排查 Windows 内层 DSH 状态目录权限时结束。",
+            "durationMin": 29.9863,
+            "steps": 129,
+            "toolCalls": 159,
+            "toolErrors": 1,
+            "topTools": {
+              "pwsh": 101,
+              "read": 47,
+              "grep": 8,
+              "skill": 1,
+              "write": 1,
+              "job_output": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 101,
+              "read": 47,
+              "grep": 8,
+              "write": 1,
+              "job_output": 1
+            },
+            "tokens": {
+              "input": 180485,
+              "cacheRead": 15909632,
+              "output": 24388,
+              "totalContext": 16090117,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9888,
+            "bucket": "environment_blocked",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          },
+          {
+            "trial": 3,
+            "rawStatus": "failed",
+            "passed": false,
+            "review": "写出了日报图源码，运行在“准备汇总素材”处因路径为空失败，并未生成当天汇总。",
+            "durationMin": 29.9868,
+            "steps": 331,
+            "toolCalls": 361,
+            "toolErrors": 4,
+            "topTools": {
+              "pwsh": 247,
+              "read": 54,
+              "write": 31,
+              "edit": 21,
+              "grep": 6,
+              "skill": 1
+            },
+            "allTools": {
+              "skill": 1,
+              "pwsh": 247,
+              "read": 54,
+              "glob": 1,
+              "grep": 6,
+              "write": 31,
+              "edit": 21
+            },
+            "tokens": {
+              "input": 331021,
+              "cacheRead": 77331200,
+              "output": 132603,
+              "totalContext": 77662221,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9957,
+            "bucket": "failed",
+            "timedOut": false,
+            "timeFactor": 0.0,
+            "score": 0.0
+          }
+        ],
+        "capScore": 0.0,
+        "spdScore": 0.0
+      },
+      "v2": {
+        "passed": 3,
+        "passedInLimit": 2,
+        "passAtK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowK": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "passPowKIid": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "reportedAvgMin": 44.3,
+        "avgDurationMin": 44.3,
+        "medianSteps": 174.0,
+        "medianTools": 205.0,
+        "reportedTokens": 531521,
+        "tokens": {
+          "input": 1646560,
+          "cacheRead": 452456704,
+          "output": 531521
+        },
+        "score": 6.193755,
+        "scorePassAt1Part": 4.335629,
+        "scorePassAt3Part": 1.858127,
+        "trials": [
+          {
+            "trial": 1,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "四组日报和当天汇总已归档并通过本地回读。",
+            "durationMin": 15.2795,
+            "steps": 146,
+            "toolCalls": 172,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 95,
+              "edit": 33,
+              "read": 32,
+              "write": 9,
+              "todo_write": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 32,
+              "pwsh": 95,
+              "todo_write": 2,
+              "write": 9,
+              "edit": 33,
+              "present": 1
+            },
+            "tokens": {
+              "input": 222474,
+              "cacheRead": 25811712,
+              "output": 68362,
+              "totalContext": 26034186,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9915,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.367318,
+            "score": 2.240781
+          },
+          {
+            "trial": 2,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "四组日报和当天汇总已归档并通过本地回读。",
+            "durationMin": 94.8657,
+            "steps": 855,
+            "toolCalls": 875,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 652,
+              "write": 89,
+              "job_output": 57,
+              "read": 43,
+              "edit": 20,
+              "grep": 12
+            },
+            "allTools": {
+              "read": 43,
+              "pwsh": 652,
+              "grep": 12,
+              "todo_write": 1,
+              "write": 89,
+              "edit": 20,
+              "job_output": 57,
+              "present": 1
+            },
+            "tokens": {
+              "input": 1213602,
+              "cacheRead": 393003392,
+              "output": 353415,
+              "totalContext": 394216994,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9969,
+            "bucket": "passed_timeout",
+            "timedOut": true,
+            "timeFactor": 0.051818,
+            "score": 1.862182
+          },
+          {
+            "trial": 3,
+            "rawStatus": "passed",
+            "passed": true,
+            "review": "四组日报和当天汇总已归档并通过本地回读。",
+            "durationMin": 22.7583,
+            "steps": 174,
+            "toolCalls": 205,
+            "toolErrors": 0,
+            "topTools": {
+              "pwsh": 113,
+              "read": 46,
+              "edit": 34,
+              "write": 9,
+              "grep": 2,
+              "present": 1
+            },
+            "allTools": {
+              "read": 46,
+              "pwsh": 113,
+              "grep": 2,
+              "write": 9,
+              "edit": 34,
+              "present": 1
+            },
+            "tokens": {
+              "input": 210484,
+              "cacheRead": 33641600,
+              "output": 109744,
+              "totalContext": 33852084,
+              "hasUsage": true
+            },
+            "cacheHitRate": 0.9938,
+            "bucket": "passed_in_limit",
+            "timedOut": false,
+            "timeFactor": 0.242327,
+            "score": 2.090792
+          }
+        ],
+        "capScore": 9.0,
+        "spdScore": 1.984389
+      }
+    }
+  ],
+  "llmAnalysis": null,
+  "models": [
+    {
+      "id": "ds-v1",
+      "name": "DeepSeek-V4.1-Flash (V1 Baseline)",
+      "short": "DeepSeek-V4.1-Flash V1",
+      "badge": "Baseline",
+      "color": "var(--v1)",
+      "passedTrials": 27,
+      "totalTrials": 45,
+      "passAt1": 0.6,
+      "passAt3": 0.8,
+      "passPow3": 0.4,
+      "capScore": 49.0,
+      "spdScore": 30.89,
+      "totalScore": 41.75,
+      "p50DurationMin": 10.34,
+      "totalOutputTokens": 1880559,
+      "outputTokensPerPass": 69650
+    },
+    {
+      "id": "hy4-v2",
+      "name": "HY4",
+      "short": "HY4",
+      "badge": "V2",
+      "color": "var(--blue)",
+      "passedTrials": 45,
+      "totalTrials": 45,
+      "passAt1": 1.0,
+      "passAt3": 1.0,
+      "passPow3": 1.0,
+      "capScore": 90.0,
+      "spdScore": 32.27,
+      "totalScore": 66.91,
+      "p50DurationMin": 13.31,
+      "totalOutputTokens": 3055420,
+      "outputTokensPerPass": 67898
+    },
+    {
+      "id": "gpt-6-luna-v2",
+      "name": "GPT-6 Luna",
+      "short": "GPT-6 Luna",
+      "badge": "V2",
+      "color": "#06b6d4",
+      "passedTrials": 45,
+      "totalTrials": 45,
+      "passAt1": 1.0,
+      "passAt3": 1.0,
+      "passPow3": 1.0,
+      "capScore": 90.0,
+      "spdScore": 38.84,
+      "totalScore": 69.54,
+      "p50DurationMin": 10.0,
+      "totalOutputTokens": 1651229,
+      "outputTokensPerPass": 36694
+    },
+    {
+      "id": "ds-v2",
+      "name": "DeepSeek-V4.1-Flash",
+      "short": "DeepSeek-V4.1-Flash",
+      "badge": "V2",
+      "color": "var(--v2)",
+      "passedTrials": 44,
+      "totalTrials": 45,
+      "passAt1": 0.9778,
+      "passAt3": 1.0,
+      "passPow3": 0.9333,
+      "capScore": 87.9,
+      "spdScore": 56.61,
+      "totalScore": 75.38,
+      "p50DurationMin": 3.34,
+      "totalOutputTokens": 1835509,
+      "outputTokensPerPass": 41716
+    },
+    {
+      "id": "glm-53-v2",
+      "name": "GLM-5.3",
+      "short": "GLM-5.3",
+      "badge": "V2",
+      "color": "var(--amber)",
+      "passedTrials": 44,
+      "totalTrials": 45,
+      "passAt1": 0.9778,
+      "passAt3": 1.0,
+      "passPow3": 0.9333,
+      "capScore": 87.9,
+      "spdScore": 70.47,
+      "totalScore": 80.93,
+      "p50DurationMin": 2.47,
+      "totalOutputTokens": 465596,
+      "outputTokensPerPass": 10582
+    },
+    {
+      "id": "glm-53-flash-v2",
+      "name": "GLM-5.3-Flash",
+      "short": "GLM-5.3-Flash",
+      "badge": "V2",
+      "color": "var(--purple)",
+      "passedTrials": 45,
+      "totalTrials": 45,
+      "passAt1": 1.0,
+      "passAt3": 1.0,
+      "passPow3": 1.0,
+      "capScore": 90.0,
+      "spdScore": 71.18,
+      "totalScore": 82.47,
+      "p50DurationMin": 2.36,
+      "totalOutputTokens": 399405,
+      "outputTokensPerPass": 8876
+    },
+    {
+      "id": "hy4-flash-v2",
+      "name": "HY4-Flash",
+      "short": "HY4-Flash",
+      "badge": "V2",
+      "color": "#38bdf8",
+      "passedTrials": 45,
+      "totalTrials": 45,
+      "passAt1": 1.0,
+      "passAt3": 1.0,
+      "passPow3": 1.0,
+      "capScore": 90.0,
+      "spdScore": 62.01,
+      "totalScore": 78.8,
+      "p50DurationMin": 4.27,
+      "totalOutputTokens": 860813,
+      "outputTokensPerPass": 19129
+    },
+    {
+      "id": "gemini-4-hydrogen-low-v2",
+      "name": "Gemini 4 Hydrogen Low",
+      "short": "Hydrogen Low",
+      "badge": "V2",
+      "color": "#f472b6",
+      "passedTrials": 45,
+      "totalTrials": 45,
+      "passAt1": 1.0,
+      "passAt3": 1.0,
+      "passPow3": 1.0,
+      "capScore": 90.0,
+      "spdScore": 86.29,
+      "totalScore": 88.52,
+      "p50DurationMin": 1.19,
+      "totalOutputTokens": 257994,
+      "outputTokensPerPass": 5733
+    },
+    {
+      "id": "claude-haiku-55-v2",
+      "name": "Claude Haiku 5.5",
+      "short": "Haiku 5.5",
+      "badge": "V2",
+      "color": "#ec4899",
+      "passedTrials": 41,
+      "totalTrials": 45,
+      "passAt1": 0.9111,
+      "passAt3": 1.0,
+      "passPow3": 0.8,
+      "capScore": 80.0,
+      "spdScore": 69.53,
+      "totalScore": 75.81,
+      "p50DurationMin": 2.2,
+      "totalOutputTokens": 1097164,
+      "outputTokensPerPass": 26760
+    }
+  ]
+};

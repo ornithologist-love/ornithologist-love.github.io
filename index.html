@@ -342,14 +342,22 @@
     --purple: #a78bfa; --slate: #92928c;
   }
   #evalView section { padding: 0; }
+  #evalView [hidden] { display: none !important; }
   #evalView .num { font-variant-numeric: tabular-nums; }
   #evalView .eval-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
   #evalView .eval-head h1 { margin: 10px 0 6px; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -.025em; font-weight: 600; }
   #evalView .hero-sub { margin: 0; color: var(--muted); font-size: 14.5px; display: block; }
   #evalView .eval-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-  #evalView .eval-subnav { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+  #evalView .eval-subnav { display: flex; flex-direction: column; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+  #evalView .eval-subnav-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
   #evalView .eval-subnav a { padding: 4px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); font: 500 12px var(--mono); }
-  #evalView .eval-subnav a:hover { border-color: var(--accent); color: var(--accent-text); }
+  #evalView .eval-subnav a.major { padding: 8px 16px; font: 600 13.5px var(--sans); color: var(--text); border-color: var(--line2); background: var(--bg2); }
+  #evalView .eval-subnav a:hover, #evalView .eval-subnav a.major:hover { border-color: var(--accent); color: var(--accent-text); }
+  #evalView .section-banner { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 28px 0 16px; padding-top: 22px; border-top: 1px solid var(--line2); }
+  #evalView .section-banner.first { margin-top: 6px; padding-top: 6px; border-top: 0; }
+  #evalView .section-banner .sec-kicker { display: inline-block; font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 4px; }
+  #evalView .section-banner h2 { margin: 0 0 4px; font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; letter-spacing: -.015em; }
+  #evalView .section-banner p { margin: 0; font-size: 13.5px; color: var(--muted); }
   #evalView .highlights-strip { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 18px; padding: 12px 16px; border: 1px solid var(--line); background: var(--panel); font-size: 13px; color: var(--muted); }
   #evalView .highlights-strip strong { color: var(--text); }
   #evalView .highlights-strip code { font-family: var(--mono); font-size: 12px; color: var(--accent-text); background: var(--accent-soft); padding: 1px 5px; }
@@ -369,8 +377,20 @@
   #evalView .neg { color: var(--danger); }
   #evalView .kpi-sub { font-size: 12px; color: var(--dim); }
   #evalView .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  #evalView #sec-models { margin-bottom: 18px; }
+  #evalView .aa-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  #evalView .aa-bars { display: grid; gap: 14px; margin-top: 8px; }
+  #evalView .aa-bar-row { display: grid; gap: 6px; }
+  #evalView .aa-bar-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 13px; }
+  #evalView .aa-bar-name { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); }
+  #evalView .aa-bar-val { font: 600 13px var(--mono); color: var(--text); }
+  #evalView .aa-bar-val small { margin-left: 6px; font-weight: 500; font-size: 11px; color: var(--accent-text); }
+  #evalView .aa-bar-track { height: 26px; border: 1px solid var(--line); background: var(--bg2); position: relative; overflow: hidden; }
+  #evalView .aa-bar-fill { height: 100%; transition: width .35s ease; }
+  #evalView .aa-bar-sub { display: flex; flex-wrap: wrap; gap: 12px; font: 11.5px var(--mono); color: var(--dim); }
   #evalView .panel { border: 1px solid var(--line); background: var(--panel); padding: 22px; box-shadow: none; }
-  #evalView .panel + .panel, #evalView #sec-dimensions, #evalView #sec-stacked, #evalView #sec-table { margin-top: 18px; }
+  #evalView .grid-2 > .panel { margin-top: 0; }
+  #evalView > .panel + .panel, #evalView #sec-dimensions, #evalView #sec-stacked, #evalView #sec-table { margin-top: 18px; }
   #evalView .panel-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
   #evalView .panel-head h2 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -.015em; }
   #evalView .panel-desc { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
@@ -478,7 +498,7 @@
   #evalView .trial-card-review { font-size: 12px; color: var(--muted); }
   #evalView .prompt-box { margin-top: 12px; border: 1px solid var(--line); background: var(--panel); padding: 10px 14px; }
   #evalView .prompt-box pre { margin: 10px 0 0; min-height: 0; padding: 12px; background: #1e293b; color: #e2e8f0; white-space: pre-wrap; font-size: 12px; }
-  #evalView .chart-grid { stroke: var(--line); stroke-dasharray: 2 3; }
+  #evalView line.chart-grid { stroke: var(--line); stroke-dasharray: 2 3; }
   #evalView .q-axis-lbl { fill: var(--dim); font: 10.5px var(--mono); }
   #evalView svg text { fill: var(--muted); font-family: var(--mono); }
   .eval-tooltip { position: fixed; z-index: 99; pointer-events: none; opacity: 0; transition: opacity .12s; min-width: 340px; max-width: 420px; padding: 12px 14px; border: 1px solid var(--line2); background: var(--panel); color: var(--text); font-size: 12px; box-shadow: 0 10px 28px rgba(0,0,0,.18); }
@@ -864,9 +884,31 @@
 <main id="evalView" class="wrap" hidden>
   <section class="eval-head" id="sec-kpi">
     <div>
-      <span class="kicker"><i></i>Eval Benchmark · V1 → V2</span>
-      <h1 data-i18n="evalBench.title"></h1>
-      <p class="hero-sub" data-i18n-html="evalBench.subHtml"></p>
+      <span class="kicker" id="evalKicker"><i></i>Eval Benchmark · Skill Ablation &amp; Model Arena</span>
+      <h1 id="evalHeroTitle" data-i18n="evalBench.title"></h1>
+      <p class="hero-sub" id="evalHeroSub" data-i18n-html="evalBench.heroSubHtml"></p>
+    </div>
+  </section>
+
+  <nav class="eval-subnav" id="evalSubnav" aria-label="Benchmark Sections">
+    <div class="eval-subnav-row">
+      <a class="major" href="#sec-ablation" data-i18n="evalBench.benchModeAblation"></a>
+      <a class="major" href="#sec-models-part" data-i18n="evalBench.benchModeModels"></a>
+    </div>
+    <div class="eval-subnav-row">
+      <a href="#sec-ablation" data-i18n="evalBench.navKpi"></a>
+      <a href="#sec-reliability" data-i18n="evalBench.navRel"></a>
+      <a href="#sec-dimensions" data-i18n="evalBench.navDim"></a>
+      <a href="#sec-stacked" data-i18n="evalBench.navStack"></a>
+      <a href="#sec-table" data-i18n="evalBench.navTable"></a>
+    </div>
+  </nav>
+
+  <div class="section-banner first" id="sec-ablation">
+    <div>
+      <span class="sec-kicker">Part 01 · Fixed Model: DeepSeek-V4.1-Flash</span>
+      <h2 data-i18n="evalBench.ablationTitle"></h2>
+      <p data-i18n-html="evalBench.subHtml"></p>
     </div>
     <div class="eval-controls">
       <div class="seg" id="scopeToggle">
@@ -874,15 +916,7 @@
         <button data-scope="inlimit" type="button" data-i18n="evalBench.scopeInLimit"></button>
       </div>
     </div>
-  </section>
-
-  <nav class="eval-subnav" aria-label="Benchmark Sections">
-    <a href="#sec-kpi" data-i18n="evalBench.navKpi"></a>
-    <a href="#sec-reliability" data-i18n="evalBench.navRel"></a>
-    <a href="#sec-dimensions" data-i18n="evalBench.navDim"></a>
-    <a href="#sec-stacked" data-i18n="evalBench.navStack"></a>
-    <a href="#sec-table" data-i18n="evalBench.navTable"></a>
-  </nav>
+  </div>
 
   <div class="highlights-strip" id="highlightsStrip"></div>
   <section class="kpi-grid" id="kpiGrid"></section>
@@ -955,7 +989,7 @@
     <details class="formula-card">
       <summary class="formula-head">
         <span class="fig" data-i18n="evalBench.formulaBadge"></span>
-        <span class="formula-eq">Score = <em>V</em> × ( 0.7 × <em>Pass@1</em> + 0.3 × <em>Pass@3</em> ) × max( 0, 1 − <em>t</em> / 45m )</span>
+        <span class="formula-eq">Total = 0.60 × <em>Cap</em> + 0.40 × <em>Spd</em> <small style="font-size:11.5px;color:var(--muted);font-weight:500">(Max 90)</small></span>
         <span class="formula-toggle" data-i18n="evalBench.formulaToggle"></span>
       </summary>
       <div class="formula-terms">
@@ -1009,6 +1043,50 @@
       </table>
     </div>
   </section>
+
+  <div class="section-banner" id="sec-models-part">
+    <div>
+      <span class="sec-kicker">Part 02 · Windows x64 · DSH 0.2.2-rc.5 · heron-pregel-csx V2</span>
+      <h2 data-i18n="evalBench.modelsTitle"></h2>
+      <p data-i18n-html="evalBench.modelsSubHtml"></p>
+    </div>
+  </div>
+
+  <div class="grid-2" id="sec-models" style="grid-template-columns: 1fr;">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="evalBench.scatterTitle"></h2>
+          <p class="panel-desc" data-i18n="evalBench.scatterDesc"></p>
+        </div>
+        <div class="aa-controls">
+          <div class="seg" id="scatterXToggle">
+            <button data-sx="dur" class="active" type="button" data-i18n="evalBench.scatterXDur"></button>
+            <button data-sx="tok" type="button" data-i18n="evalBench.scatterXTok"></button>
+          </div>
+        </div>
+      </div>
+      <div id="aaScatterChart"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="evalBench.barTitle"></h2>
+          <p class="panel-desc" data-i18n="evalBench.barDesc"></p>
+        </div>
+        <div class="seg" id="aaBarToggle">
+          <button data-bm="totalScore" class="active" type="button" data-i18n="evalBench.mTotal"></button>
+          <button data-bm="capScore" type="button" data-i18n="evalBench.mCap"></button>
+          <button data-bm="spdScore" type="button" data-i18n="evalBench.mSpd"></button>
+          <button data-bm="passAt1" type="button" data-i18n="evalBench.mPass1"></button>
+          <button data-bm="passPow3" type="button" data-i18n="evalBench.mPassPow3"></button>
+        </div>
+      </div>
+      <div id="aaBarChart"></div>
+    </section>
+  </div>
+  <div class="formula-box" style="margin-top:14px" data-i18n-html="evalBench.modelsWhyFlashHtml"></div>
 </main>
 <div class="eval-tooltip" id="tooltip"></div>
 
@@ -1024,9 +1102,9 @@
   </div>
 </footer>
 
-<script src="./i18n.js"></script>
-<script src="./eval-data.js"></script>
-<script src="./eval-panel.js"></script>
+<script src="./i18n.js?v=20261125-26"></script>
+<script src="./eval-data.js?v=20261125-26"></script>
+<script src="./eval-panel.js?v=20261125-26"></script>
 <script>
   const root = document.documentElement
   const zh = () => root.lang === 'zh-CN'

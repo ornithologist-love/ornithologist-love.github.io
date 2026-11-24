@@ -8,6 +8,8 @@ window.initEvalPanel = () => {
     curveMode: "both",    // both | pow | at
     dimMode: "category",  // category | tier | aiNode
     chartMode: "score-contrib", // score-contrib | trial-score | duration-trials | tokens-stack
+    scatterX: "dur",      // dur | tok
+    barMetric: "totalScore", // totalScore | capScore | spdScore | passAt1 | passPow3
     selectedDimKey: null,
     statusBucketFilter: null,
     quickFilter: "all",
@@ -37,7 +39,7 @@ window.initEvalPanel = () => {
 
   const BUCKET_META = {
     passed_in_limit: { get label() { return isZh() ? "有效通过 (≤45m)" : "Passed (≤45m)"; }, color: "var(--v2)", dot: "pass" },
-    passed_timeout: { get label() { return isZh() ? "超时通过 (≥45m·0分)" : "Timeout (≥45m·0pt)"; }, color: "var(--warn)", dot: "timeout" },
+    passed_timeout: { get label() { return isZh() ? "超 45m 跑通 (>45m)" : "Passed (>45m)"; }, color: "var(--warn)", dot: "timeout" },
     failed: { get label() { return isZh() ? "未通过" : "Failed"; }, color: "var(--danger)", dot: "fail" },
     environment_blocked: { get label() { return isZh() ? "环境阻塞" : "Env Blocked"; }, color: "#d49b27", dot: "blocked" },
     manual_stopped: { get label() { return isZh() ? "手动停止/中断" : "Stopped"; }, color: "var(--slate)", dot: "stopped" },
@@ -64,6 +66,126 @@ window.initEvalPanel = () => {
     tooltip.classList.remove("visible");
   }
 
+  function renderAAScatter() {
+    const wrap = document.getElementById("aaScatterChart");
+    if (!wrap || !DATA.models) return;
+    const z = isZh();
+    const models = DATA.models.filter(m => m.id !== "ds-v1");
+    const isDur = state.scatterX === "dur";
+    const W = 920, H = 260, L = 48, R = 890, T = 28, B = 216;
+    const xMin = 0;
+    const xMax = isDur ? 15 : 80000;
+    const yMin = 75, yMax = 93;
+    const xOf = (v) => L + ((v - xMin) / (xMax - xMin)) * (R - L);
+    const yOf = (v) => B - ((v - yMin) / (yMax - yMin)) * (B - T);
+
+    let svg = `<g class="chart-grid">`;
+    const xTicks = isDur ? [0, 3, 6, 9, 12, 15] : [0, 20000, 40000, 60000, 80000];
+    for (const xv of xTicks) {
+      const x = xOf(xv);
+      const lbl = isDur ? `${xv}m` : `${Math.round(xv / 1000)}k`;
+      svg += `<line x1="${x.toFixed(1)}" y1="${T}" x2="${x.toFixed(1)}" y2="${B}"/><text x="${x.toFixed(1)}" y="${B + 16}" text-anchor="middle">${lbl}</text>`;
+    }
+    for (const yv of [75, 80, 85, 90]) {
+      const y = yOf(yv);
+      svg += `<line x1="${L}" y1="${y.toFixed(1)}" x2="${R}" y2="${y.toFixed(1)}"/><text x="${L - 8}" y="${(y + 4).toFixed(1)}" text-anchor="end">${yv}</text>`;
+    }
+    svg += `</g>`;
+
+    // Cap = 90 full-score reference line
+    const y90 = yOf(90);
+    svg += `<line x1="${L}" y1="${y90.toFixed(1)}" x2="${R}" y2="${y90.toFixed(1)}" stroke="var(--accent)" stroke-opacity="0.4" stroke-dasharray="4 4" stroke-width="1"/>`;
+    svg += `<text x="${R}" y="${(y90 - 8).toFixed(1)}" text-anchor="end" style="font-size:9px;fill:var(--accent-text);opacity:0.85">${z ? "Cap 90 · 满分基线 (45/45)" : "Cap 90 · Full Pass Baseline (45/45)"}</text>`;
+
+    svg += `<text x="${(L + R) / 2}" y="${H - 6}" text-anchor="middle" style="font-size:10.5px;fill:var(--dim)">${isDur ? (z ? "中位耗时 P50（分钟，越靠左越快）" : "Median Duration P50 (min, lower is faster)") : (z ? "每跑通 1 次平均输出 Token（越靠左越省）" : "Output Tokens / Pass (lower is cheaper)")}</text>`;
+
+    const getX = (m) => isDur ? m.p50DurationMin : m.outputTokensPerPass;
+    const lblPos = {
+      "gemini-4-hydrogen-low-v2": { dx: 0, dy: -12, anchor: "middle" },
+      "glm-53-flash-v2":          { dx: 8, dy: -12, anchor: "start" },
+      "hy4-flash-v2":             { dx: 0, dy: 14,  anchor: "middle" },
+      "gpt-6-luna-v2":            { dx: 0, dy: -12, anchor: "middle" },
+      "hy4-v2":                   { dx: 0, dy: 14,  anchor: "middle" },
+      "glm-53-v2":                { dx: 9, dy: 0,   anchor: "start" },
+      "ds-v2":                    { dx: 0, dy: 14,  anchor: "middle" },
+      "claude-haiku-55-v2":       { dx: 9, dy: 0,   anchor: "start" },
+    };
+
+    models.forEach(m => {
+      const xv = getX(m);
+      if (xv == null) return;
+      const cx = xOf(xv);
+      const cy = yOf(m.capScore);
+      const pos = lblPos[m.id] || { dx: 9, dy: 0, anchor: "start" };
+      const valTag = isDur ? `${m.p50DurationMin.toFixed(1)}m` : fmtK(m.outputTokensPerPass);
+      svg += `<circle class="aa-dot" data-mid="${m.id}" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="4.5" fill="${m.color}" stroke="var(--panel)" stroke-width="1.6" style="cursor:pointer"/>`;
+      svg += `<text x="${(cx + pos.dx).toFixed(1)}" y="${(cy + pos.dy).toFixed(1)}" dominant-baseline="central" text-anchor="${pos.anchor}" style="font-size:8.5px;font-weight:600;fill:var(--text)">${esc(m.short)} · ${valTag}</text>`;
+    });
+
+    wrap.innerHTML = `<svg viewBox="0 0 ${W} ${H}">${svg}</svg>`;
+    wrap.querySelectorAll(".aa-dot").forEach(dot => {
+      dot.addEventListener("mousemove", (ev) => {
+        const m = models.find(x => x.id === dot.dataset.mid);
+        showTooltip(ev, `
+          <div class="tt-head"><span>${esc(m.name)}</span><span class="pill">${esc(m.badge)}</span></div>
+          <div class="tt-grid">
+            <span class="tt-k">${z ? "综合总分 (0–90)" : "Total Score (0–90)"}</span><span class="tt-v pos">${m.totalScore.toFixed(2)}</span>
+            <span class="tt-k">${z ? "能力分 Cap / 速度分 Spd" : "Cap / Spd Score"}</span><span class="tt-v">${m.capScore.toFixed(1)} / ${m.spdScore.toFixed(1)}</span>
+            <span class="tt-k">Pass@1 / Pass^3</span><span class="tt-v">${pct(m.passAt1)} / ${pct(m.passPow3)}</span>
+            <span class="tt-k">${z ? "中位耗时 P50" : "Median Duration P50"}</span><span class="tt-v">${m.p50DurationMin.toFixed(2)}m</span>
+            <span class="tt-k">${z ? "每次通过 Token" : "Tokens / Pass"}</span><span class="tt-v">${fmtK(m.outputTokensPerPass)}</span>
+          </div>
+        `);
+      });
+      dot.addEventListener("mouseleave", hideTooltip);
+    });
+  }
+
+  function renderBarList(targetId, metric) {
+    const wrap = document.getElementById(targetId);
+    if (!wrap || !DATA.models) return;
+    const isDur = metric === "p50DurationMin";
+    const isPct = metric === "passAt1" || metric === "passPow3";
+    const maxMap = { totalScore: 90, capScore: 90, spdScore: 90, passAt1: 1, passPow3: 1 };
+    const maxV = maxMap[metric] || 90;
+    const v2Models = DATA.models.filter(m => m.id !== "ds-v1");
+    const baseModel = v2Models.find(m => m.id === "ds-v2");
+    const sorted = v2Models.slice().sort((a, b) => isDur ? (a[metric] - b[metric]) : (b[metric] - a[metric]));
+
+    const fmtVal = (v) => isDur ? `${v.toFixed(2)}m` : isPct ? pct(v) : `${v.toFixed(2)} / 90`;
+    wrap.innerHTML = `<div class="aa-bars">${sorted.map(m => {
+      const v = m[metric];
+      const wPct = Math.min(100, Math.max(4, (v / maxV) * 100));
+      let deltaTxt = "";
+      if (baseModel && m.id !== "ds-v2") {
+        const bv = baseModel[metric];
+        const diffPct = ((v - bv) / bv) * 100;
+        deltaTxt = `${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% vs DeepSeek-V4.1-Flash`;
+      }
+      return `
+        <div class="aa-bar-row">
+          <div class="aa-bar-head">
+            <span class="aa-bar-name"><span class="swatch" style="background:${m.color}"></span>${esc(m.name)}</span>
+            <span class="aa-bar-val">${fmtVal(v)}${deltaTxt ? `<small>${deltaTxt}</small>` : ""}</span>
+          </div>
+          <div class="aa-bar-track"><div class="aa-bar-fill" style="width:${wPct.toFixed(1)}%;background:${m.color}"></div></div>
+          <div class="aa-bar-sub">
+            <span>Cap ${m.capScore.toFixed(1)}</span>
+            <span>Spd ${m.spdScore.toFixed(1)}</span>
+            <span>Pass@1 ${pct(m.passAt1)}</span>
+            <span>Pass^3 ${pct(m.passPow3)}</span>
+            <span>P50 ${m.p50DurationMin.toFixed(1)}m</span>
+            <span>${fmtK(m.outputTokensPerPass)}/pass</span>
+          </div>
+        </div>
+      `;
+    }).join("")}</div>`;
+  }
+
+  function renderAABarChart() {
+    renderBarList("aaBarChart", state.barMetric);
+  }
+
   function renderHeroAndKPI() {
     const v1 = DATA.versions.v1;
     const v2 = DATA.versions.v2;
@@ -82,13 +204,13 @@ window.initEvalPanel = () => {
 
     const z = isZh();
     document.getElementById("highlightsStrip").innerHTML = z ? `
-      <span><strong>通过率：</strong>单次通过 (Pass@1) <code>${pct(v1PassArr[0])} → ${pct(v2PassArr[0])}</code> · 三次全过 (Pass^3) <code>${pct(v1PowArr[2])} → ${pct(v2PowArr[2])}</code></span>
-      <span><strong>难题突破：</strong>05 性能日报 <code>0/3 → 3/3</code>（其中第 2 次耗时 94.9m 超时计 0 分）；18B 工具注入 <code>1/3 → 3/3</code></span>
-      <span><strong>中位耗时：</strong><code>${v1.durationSession.p50.toFixed(1)}m → ${v2.durationSession.p50.toFixed(1)}m</code>（缩短 68%）</span>
+      <span><strong>通过率跃升：</strong>单次通过率 (Pass@1) <code>${pct(v1PassArr[0])} → ${pct(v2PassArr[0])}</code> · 三次全过率 (Pass^3) <code>${pct(v1PowArr[2])} → ${pct(v2PowArr[2])}</code></span>
+      <span><strong>复合难题突破：</strong>05 端到端性能日报 <code>0/3 → 3/3</code>（含 1 次 94.9m 长耗时试次）；18B 无头 DSH 工具注入 <code>1/3 → 3/3</code></span>
+      <span><strong>耗时与成本：</strong>单次中位耗时 <code>${v1.durationSession.p50.toFixed(1)}m → ${v2.durationSession.p50.toFixed(1)}m</code>（<b>−68%</b>）· 单次跑通 Token <code>69.7k → 41.7k</code>（<b>−40%</b>）</span>
     ` : `
-      <span><strong>Pass Rate:</strong> First-try (Pass@1) <code>${pct(v1PassArr[0])} → ${pct(v2PassArr[0])}</code> · 3-of-3 stable (Pass^3) <code>${pct(v1PowArr[2])} → ${pct(v2PowArr[2])}</code></span>
-      <span><strong>Hard Tasks:</strong> 05 Daily Perf Report <code>0/3 → 3/3</code> (T2 took 94.9m, 0pt); 18B Mock MCP Injection <code>1/3 → 3/3</code></span>
-      <span><strong>Median Duration:</strong> <code>${v1.durationSession.p50.toFixed(1)}m → ${v2.durationSession.p50.toFixed(1)}m</code> (68% faster)</span>
+      <span><strong>Pass Rate Leap:</strong> First-try (Pass@1) <code>${pct(v1PassArr[0])} → ${pct(v2PassArr[0])}</code> · 3-of-3 stable (Pass^3) <code>${pct(v1PowArr[2])} → ${pct(v2PowArr[2])}</code></span>
+      <span><strong>Hard Tasks Solved:</strong> 05 Daily Perf Report <code>0/3 → 3/3</code> (incl. one 94.9m long run); 18B Mock MCP Injection <code>1/3 → 3/3</code></span>
+      <span><strong>Latency &amp; Cost:</strong> Median duration <code>${v1.durationSession.p50.toFixed(1)}m → ${v2.durationSession.p50.toFixed(1)}m</code> (<b>−68%</b>) · Tokens/pass <code>69.7k → 41.7k</code> (<b>−40%</b>)</span>
     `;
 
     const kpis = [
@@ -117,12 +239,12 @@ window.initEvalPanel = () => {
         sub: `Pass^2: ${pct(v1PowArr[1])} → ${pct(v2PowArr[1])}`,
       },
       {
-        label: z ? "综合得分（含耗时折算）" : "Weighted Score (Time-Adjusted)",
+        label: z ? "综合得分（能力 60% + 速度 40%）" : "Weighted Score (60% Cap + 40% Spd)",
         badge: z ? `满分 ${DATA.benchmark.maxPossibleScore}` : `Max ${DATA.benchmark.maxPossibleScore}`,
         before: v1.scoreBeforeFalseGreenReview.toFixed(2),
         after: v2.scoreBeforeFalseGreenReview.toFixed(2),
         delta: z ? `+${(v2.scoreBeforeFalseGreenReview - v1.scoreBeforeFalseGreenReview).toFixed(2)} 分` : `+${(v2.scoreBeforeFalseGreenReview - v1.scoreBeforeFalseGreenReview).toFixed(2)} pts`,
-        sub: z ? `耗时超 45 分钟计 0 分（V2 出现 ${v2.zeroPointPasses} 次）` : `Runs ≥45m score 0 pt (${v2.zeroPointPasses} in V2)`,
+        sub: z ? `能力分 ${v2.capScore.toFixed(1)} · 速度分 ${v2.spdScore.toFixed(1)}（四档反比例）` : `Cap ${v2.capScore.toFixed(1)} · Spd ${v2.spdScore.toFixed(1)} (4-tier decay)`,
       },
       {
         label: z ? "单次运行中位耗时 (P50)" : "Median Session Duration (P50)",
@@ -314,7 +436,7 @@ window.initEvalPanel = () => {
                 <td><strong>${esc(trMap("dimLabels", r.label))}</strong><div class="kpi-sub">${r.questionIds.join(", ")}</div></td>
                 <td class="num">${r.questionCount}</td>
                 <td class="num">${r.v1.passedTrials}/${r.v1.totalTrials} → <b>${r.v2.passedTrials}/${r.v2.totalTrials}</b></td>
-                <td class="num">${pct(p1)} → <b class="pos">${pct(p2)}</b><span class="mini-bar"><span style="width:${(p2 * 100).toFixed(1)}%;background:var(--v2)"></span></span></td>
+                <td class="num">${pct(p1)} → <b class="pos">${pct(p2)}</b></td>
                 <td class="num">${pct(s1)} → <b class="${s2 >= 0.99 ? "pos" : "warn-text"}">${pct(s2)}</b></td>
                 <td class="num">${r.v1.medianDurationMin.toFixed(1)}m → ${r.v2.medianDurationMin.toFixed(1)}m</td>
                 <td class="num">${r.v1.medianToolCalls} → ${r.v2.medianToolCalls}</td>
@@ -346,14 +468,14 @@ window.initEvalPanel = () => {
     const barW = 19;
 
     const titleMap = z ? {
-      "score-contrib": ["逐题总分对比（Pass@1 与 Pass@3 构成）", "深色是首过率 (70%) 得分，浅色是三次覆盖率 (30%) 得分；悬停看每次运行详情。"],
-      "trial-score": ["逐题 3 次运行得分堆叠（T1 + T2 + T3）", "按第 1 / 2 / 3 次运行自下而上堆叠得分，悬停看每次耗时与步骤数。"],
-      "duration-trials": ["逐题 3 次运行耗时堆叠（T1 + T2 + T3，分钟）", "按第 1 / 2 / 3 次运行自下而上堆叠耗时（分钟），悬停看单次耗时与是否超 45 分钟红线。"],
-      "tokens-stack": ["逐题 3 次运行输出 Token 堆叠（T1 + T2 + T3）", "按第 1 / 2 / 3 次运行自下而上堆叠输出 Token（单位 k），悬停看每次具体输出量与耗时。"],
+      "score-contrib": ["逐题单题得分对比（Pass@1 与 Pass@3 构成）", "单题按难度权重赋分（L1=1, L2=2, L3=3）：深色为首过率 Pass@1 (70%) 贡献，浅色为三次覆盖率 Pass@3 (30%) 贡献；悬停查看 3 次运行详情。"],
+      "trial-score": ["逐题 3 次运行得分堆叠（T1 + T2 + T3）", "按第 1 / 2 / 3 次运行自下而上堆叠单次得分，悬停查看每次耗时、步数与效率系数。"],
+      "duration-trials": ["逐题 3 次运行耗时堆叠（T1 + T2 + T3，分钟）", "按第 1 / 2 / 3 次运行自下而上堆叠耗时（分钟），悬停查看单次耗时与是否超过 45 分钟参考线。"],
+      "tokens-stack": ["逐题 3 次运行输出 Token 堆叠（T1 + T2 + T3）", "按第 1 / 2 / 3 次运行自下而上堆叠输出 Token（单位 k），悬停查看每次具体输出量与耗时。"],
     } : {
-      "score-contrib": ["Per-Task Score Breakdown (Pass@1 vs Pass@3 Contribution)", "Dark segment = Pass@1 (70%) contribution, light segment = Pass@3 (30%) contribution; hover for 3-trial breakdown."],
-      "trial-score": ["Per-Task 3-Trial Score Stack (T1 + T2 + T3)", "Stacks Trial 1 / 2 / 3 scores bottom-to-top; hover any segment to inspect duration and step count."],
-      "duration-trials": ["Per-Task 3-Trial Duration Stack (T1 + T2 + T3, Minutes)", "Stacks Trial 1 / 2 / 3 session durations bottom-to-top; hover to inspect individual trial duration and ≥45m timeout status."],
+      "score-contrib": ["Per-Task Score Breakdown (Pass@1 vs Pass@3 Contribution)", "Weighted by difficulty (L1=1, L2=2, L3=3): dark segment = Pass@1 (70%) contribution, light segment = Pass@3 (30%) contribution; hover for 3-trial breakdown."],
+      "trial-score": ["Per-Task 3-Trial Score Stack (T1 + T2 + T3)", "Stacks Trial 1 / 2 / 3 scores bottom-to-top; hover any segment to inspect duration, step count and time factor."],
+      "duration-trials": ["Per-Task 3-Trial Duration Stack (T1 + T2 + T3, Minutes)", "Stacks Trial 1 / 2 / 3 session durations bottom-to-top; hover to inspect individual trial duration and >45m status."],
       "tokens-stack": ["Per-Task 3-Trial Output Token Stack (T1 + T2 + T3)", "Stacks Trial 1 / 2 / 3 output tokens (k) bottom-to-top; hover any segment to inspect per-trial tokens and duration."],
     };
     document.getElementById("stackedTitle").textContent = titleMap[mode][0];
@@ -364,27 +486,27 @@ window.initEvalPanel = () => {
     const legendEl = document.getElementById("stackedLegend");
     if (mode === "score-contrib") {
       legendEl.innerHTML = z ? `
-        <span class="legend-item"><span class="swatch" style="background:var(--v1)"></span>V1 Pass@1 贡献</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--v1-soft)"></span>V1 Pass@3 贡献</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--v2)"></span>V2 Pass@1 贡献</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--v2-soft)"></span>V2 Pass@3 贡献</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>含 ≥45m 超时 0 分试次</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--v1)"></span>V1 Pass@1 贡献 (70%)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--v1-soft)"></span>V1 Pass@3 贡献 (30%)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--v2)"></span>V2 Pass@1 贡献 (70%)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--v2-soft)"></span>V2 Pass@3 贡献 (30%)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>含 >45m 长耗时试次</span>
       ` : `
         <span class="legend-item"><span class="swatch" style="background:var(--v1)"></span>V1 Pass@1 (70%)</span>
         <span class="legend-item"><span class="swatch" style="background:var(--v1-soft)"></span>V1 Pass@3 (30%)</span>
         <span class="legend-item"><span class="swatch" style="background:var(--v2)"></span>V2 Pass@1 (70%)</span>
         <span class="legend-item"><span class="swatch" style="background:var(--v2-soft)"></span>V2 Pass@3 (30%)</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>Has ≥45m Timeout (0pt)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>Has >45m Long Run</span>
       `;
     } else {
       legendEl.innerHTML = z ? `
         <span class="legend-item"><span class="swatch" style="background:var(--v1)"></span>V1 Trial 1/2/3（逐段叠加）</span>
         <span class="legend-item"><span class="swatch" style="background:var(--v2)"></span>V2 Trial 1/2/3（逐段叠加）</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>含 ≥45m 超时 0 分试次</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>含 >45m 长耗时试次</span>
       ` : `
         <span class="legend-item"><span class="swatch" style="background:var(--v1)"></span>V1 Trial 1/2/3 (Stacked)</span>
         <span class="legend-item"><span class="swatch" style="background:var(--v2)"></span>V2 Trial 1/2/3 (Stacked)</span>
-        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>Has ≥45m Timeout (0pt)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--warn)"></span>Has >45m Long Run</span>
       `;
     }
 
@@ -473,7 +595,7 @@ window.initEvalPanel = () => {
         if (late.length) {
           const warnY = Math.min(topY - 7, B - 12);
           svg += `<rect x="${p.x + barW / 2 - 14}" y="${(warnY - 11).toFixed(1)}" width="28" height="14" fill="var(--warn-bg)" stroke="var(--warn)" stroke-width="0.8"/>`;
-          svg += `<text x="${p.x + barW / 2}" y="${(warnY - 1).toFixed(1)}" text-anchor="middle" style="fill:var(--warn);font-size:9.5px;font-weight:700">${z ? "超时" : "TO×"}${late.length}</text>`;
+          svg += `<text x="${p.x + barW / 2}" y="${(warnY - 1).toFixed(1)}" text-anchor="middle" style="fill:var(--warn);font-size:9.5px;font-weight:700">&gt;45m</text>`;
         }
       });
 
@@ -516,7 +638,7 @@ window.initEvalPanel = () => {
         const segTitle = el.dataset.seg;
         const segVal = el.dataset.segval;
         const trialsHtml = qv.trials.map(t => {
-          const badge = t.timedOut ? (z ? "超时0分" : "Timeout 0pt") : (t.passed ? (z ? "通过" : "Pass") : BUCKET_META[t.bucket].label);
+          const badge = t.timedOut ? (z ? ">45m 跑通" : "Passed >45m") : (t.passed ? (z ? "通过" : "Pass") : BUCKET_META[t.bucket].label);
           return `<div class="tt-trial-row"><span>Trial ${t.trial} (${badge})</span><span class="num">${t.durationMin.toFixed(2)}m · ${t.steps}${z ? "步" : "st"} · ${fmtInt(t.tokens.output)} tok · <b>${t.score.toFixed(2)}${z ? "分" : "pt"}</b></span></div>`;
         }).join("");
 
@@ -652,7 +774,7 @@ window.initEvalPanel = () => {
                 <span class="q-title-text" title="${esc(trTitle(q))}">${esc(trTitle(q))}</span>
                 ${q.weight > 1 ? `<span class="q-flag warn" title="${z ? `权重 V=${q.weight}` : `Weight V=${q.weight}`}">×${q.weight}</span>` : ""}
                 ${q.aiNode ? `<span class="q-flag ai" title="${z ? "AI 节点" : "AI Node"}">AI</span>` : ""}
-                ${hasTimeout ? `<span class="q-flag warn" title="${z ? "T2 超时 0 分" : "T2 timeout 0pt"}">⏱</span>` : ""}
+                ${hasTimeout ? `<span class="q-flag warn" title="${z ? "含 >45m 长耗时试次" : "Has >45m long run"}">⏱</span>` : ""}
               </div>
               <div class="q-meta-line"><span class="q-tier ${tierCls}">${tierCode}</span><span>${esc(trMap("categories", q.category))}</span></div>
             </div>
@@ -734,6 +856,22 @@ window.initEvalPanel = () => {
     });
   });
 
+  document.querySelectorAll("#scatterXToggle button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.scatterX = btn.dataset.sx;
+      document.querySelectorAll("#scatterXToggle button").forEach(b => b.classList.toggle("active", b === btn));
+      renderAAScatter();
+    });
+  });
+
+  document.querySelectorAll("#aaBarToggle button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.barMetric = btn.dataset.bm;
+      document.querySelectorAll("#aaBarToggle button").forEach(b => b.classList.toggle("active", b === btn));
+      renderAABarChart();
+    });
+  });
+
   document.querySelectorAll("#chartModeToggle button").forEach(btn => {
     btn.addEventListener("click", () => {
       state.chartMode = btn.dataset.mode;
@@ -791,6 +929,8 @@ window.initEvalPanel = () => {
   function renderAll() {
     syncCatOptions();
     renderHeroAndKPI();
+    renderAAScatter();
+    renderAABarChart();
     renderReliabilityChart();
     renderStatusAndProcess();
     renderDimensionTable();
